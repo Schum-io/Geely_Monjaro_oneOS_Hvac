@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="80.0dip" android:width="80.0dip" android:viewportWidth="80.0" android:viewportHeight="80.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/oneoshmi_icon_background_color" android:pathData="M17,40C17,35.6871 18.1871,31.6515 20.2523,28.2021L17.3493,25.2991C14.5982,29.5292 13,34.5779 13,40C13,54.9117 25.0883,67 40,67C45.4221,67 50.4709,65.4018 54.7009,62.6507L51.7979,59.7477C48.3485,61.8129 44.3129,63 40,63C27.2975,63 17,52.7025 17,40Z" android:fillAlpha="0.9" />
+    <path android:fillColor="@color/oneoshmi_icon_background_color" android:pathData="M32,48C31.4477,48 31,47.5523 31,47V38.9497L35,42.9497V47C35,47.5523 34.5523,48 34,48H32Z" android:fillAlpha="0.9" />
+    <path android:fillColor="@color/oneoshmi_icon_background_color" android:pathData="M39,54C38.4477,54 38,53.5523 38,53V45.9497L42,49.9497V53C42,53.5523 41.5523,54 41,54H39Z" android:fillAlpha="0.9" />
+    <path android:fillColor="@color/oneoshmi_icon_background_color" android:pathData="M56,33C56,32.4477 55.5523,32 55,32H53C52.4477,32 52,32.4477 52,33V48H56V33Z" android:fillAlpha="0.9" />
+    <path android:fillColor="@color/oneoshmi_icon_background_color" android:pathData="M22.3745,19.546L17.4142,14.5858L14.5858,17.4142L62.5858,65.4142L65.4142,62.5858L60.454,57.6255C64.5333,52.8958 67,46.736 67,40C67,25.0883 54.9117,13 40,13C33.264,13 27.1042,15.4667 22.3745,19.546ZM42,39.1715L45,42.1715V36C45,35.4477 45.4477,35 46,35H48C48.5523,35 49,35.4477 49,36V45H47.8285L57.6165,54.788C60.9763,50.7897 63,45.6312 63,40C63,27.2975 52.7025,17 40,17C34.3688,17 29.2103,19.0237 25.212,22.3835L38,35.1715V27C38,26.4477 38.4477,26 39,26H41C41.5523,26 42,26.4477 42,27V39.1715Z" android:fillAlpha="0.9" android:fillType="evenOdd" />
+    <path android:fillColor="@color/oneoshmi_icon_background_color" android:pathData="M23,37C23,36.4477 23.4477,36 24,36H26C26.5523,36 27,36.4477 27,37V43C27,43.5523 26.5523,44 26,44H24C23.4477,44 23,43.5523 23,43V37Z" android:fillAlpha="0.9" />
+</vector>

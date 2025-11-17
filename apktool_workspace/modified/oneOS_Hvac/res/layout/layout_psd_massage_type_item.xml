@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.geely.hvac.component.ViewWithBackground android:tag="layout/layout_psd_massage_type_item_0" android:layout_width="fill_parent" android:layout_height="fill_parent" app:radius="@dimen/massage_set_type_item_radius" />
+    <com.geely.hvac.component.ViewWithBackground android:tag="layout/layout_psd_massage_type_item_1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="2.0px" android:layout_marginTop="2.0px" android:layout_marginRight="2.0px" android:layout_marginBottom="2.0px" app:radius="@dimen/massage_set_type_item_radius" />
+    <com.geely.toolchain.hmi.view.HmiImageView android:id="@id/icon" android:tag="layout/layout_psd_massage_type_item_2" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_marginTop="16.0dip" android:layout_marginStart="73.0dip" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.geely.toolchain.hmi.view.HmiTextView android:textSize="36.0sp" android:gravity="center_vertical" android:id="@id/tv" android:tag="layout/layout_psd_massage_type_item_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_marginStart="145.0dip" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</merge>

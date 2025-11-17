@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <item android:height="42.0dip" android:width="42.0dip">
+                <shape android:shape="oval">
+                    <solid android:color="@color/oneoshmi_delete_bton_bg_color" />
+                </shape>
+            </item>
+            <item android:gravity="center" android:height="4.0dip" android:width="22.0dip">
+                <shape>
+                    <corners android:radius="4.0dip" />
+                    <solid android:color="@color/oneoshmi_delete_bton_center_color" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.geely.hvac.viewmodel.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.geely.hvac.component.FragranceTypeItem
+            android:id="@id/type1"
+            android:layout_width="392.0dip"
+            android:layout_height="wrap_content"
+            app:fragranceTypeDes="@string/fragrance_type_1"
+            app:fragranceTypeIcon="@mipmap/fragrance_type1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.geely.hvac.component.FragranceTypeItem
+            android:id="@id/type2"
+            android:layout_width="392.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fragrance_type_item_margin"
+            app:fragranceTypeDes="@string/fragrance_type_2"
+            app:fragranceTypeIcon="@mipmap/fragrance_type2"
+            app:layout_constraintLeft_toRightOf="@id/type1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.geely.hvac.component.FragranceTypeItem
+            android:id="@id/type3"
+            android:layout_width="392.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fragrance_type_item_margin"
+            app:fragranceTypeDes="@string/fragrance_type_3"
+            app:fragranceTypeIcon="@mipmap/fragrance_type3"
+            app:layout_constraintLeft_toRightOf="@id/type2"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

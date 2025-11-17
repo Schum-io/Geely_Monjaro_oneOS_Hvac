@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/rootView" android:background="@drawable/oneoshmi_dialog_bg" android:layout_width="832.0dip" android:layout_height="386.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.geely.toolchain.hmi.view.HmiImageView android:id="@id/icon" android:layout_width="160.0dip" android:layout_height="160.0dip" android:layout_marginTop="73.0dip" android:src="@drawable/oneoshmi_loading" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.geely.toolchain.hmi.view.HmiTextView android:textSize="@dimen/oneoshmi_content_text_size" android:textColor="@color/oneoshmi_dialog_edit_text_color" android:id="@id/content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="正在恢复出厂设置..." app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

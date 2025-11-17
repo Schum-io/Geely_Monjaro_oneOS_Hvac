@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:background="@drawable/seat_massage_widget_bg" android:focusable="true" android:clickable="true" android:layout_width="516.0dip" android:layout_height="224.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textColor="@color/seat_massage_widget_text_color" android:gravity="center" android:background="@drawable/seat_massage_widget_title_bg" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="24.0dip" android:layout_marginTop="24.0dip" android:text="主" />
+    <ImageView android:id="@id/massage_level" android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_marginTop="40.0dip" android:src="@mipmap/seat_massage_widget_level_0" android:layout_marginStart="128.0dip" />
+    <TextView android:textSize="28.0sp" android:textColor="@color/seat_massage_widget_text_color" android:gravity="center" android:id="@id/massage_force" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26.0dip" android:text="@string/massage_level_off" android:layout_below="@id/massage_level" android:fontFamily="@font/alibaba_puhuiti_medium" android:layout_marginStart="136.0dip" />
+    <RelativeLayout android:id="@id/massage_type" android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_marginTop="40.0dip" android:layout_marginStart="308.0dip">
+        <ImageView android:id="@id/massage_type_icon" android:layout_width="80.0dip" android:layout_height="80.0dip" android:src="@drawable/cat_on" />
+        <ImageView android:layout_width="12.0dip" android:layout_height="12.0dip" android:src="@mipmap/seat_massage_info_arrow" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <TextView android:textSize="28.0sp" android:textColor="@color/seat_massage_widget_text_color" android:gravity="center" android:id="@id/massage_type_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26.0dip" android:text="Кошка" android:layout_below="@id/massage_type" android:fontFamily="@font/alibaba_puhuiti_medium" android:layout_marginStart="316.0dip" />
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="80.0dip" android:width="80.0dip" android:viewportWidth="80.0" android:viewportHeight="80.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/oneoshmi_icon_background_color" android:pathData="M56,20.3886V45.07C54.8233,44.3894 53.4571,43.9998 52,43.9998C47.5817,43.9998 44,47.5815 44,51.9998C44,56.4181 47.5817,59.9998 52,59.9998C56.4183,59.9998 60,56.4181 60,51.9998V19.1942C60,17.3263 58.3114,15.9126 56.4726,16.2409L30.4726,20.8838C29.0418,21.1393 28,22.3836 28,23.8371V50.07C26.8233,49.3894 25.4571,48.9998 24,48.9998C19.5817,48.9998 16,52.5815 16,56.9998C16,61.4181 19.5817,64.9998 24,64.9998C28.4183,64.9998 32,61.4181 32,56.9998V24.6743L56,20.3886Z" android:fillAlpha="0.9" />
+</vector>

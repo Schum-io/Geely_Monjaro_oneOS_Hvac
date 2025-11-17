@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.airbnb.lottie.LottieAnimationView android:id="@id/lottie" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.geely.toolchain.hmi.view.HmiImageView android:id="@id/img" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.6" />
+</merge>

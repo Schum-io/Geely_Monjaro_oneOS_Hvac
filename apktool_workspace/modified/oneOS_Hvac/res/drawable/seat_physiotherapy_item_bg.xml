@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/massage_set_type_item_bg_active" />
+    <stroke android:width="@dimen/seat_position_set_bg_line_width" android:color="@color/massage_set_type_item_bg_unactive" />
+</shape>

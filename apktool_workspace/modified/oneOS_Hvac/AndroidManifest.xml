@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:sharedUserId="android.uid.system" package="com.geely.hvac" platformBuildVersionCode="28" platformBuildVersionName="9">
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.geely.settings.permission.SETTING_CARMODEL"/>
+    <uses-permission android:name="android.permission.NETWORK_SETTINGS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.SET_TIME"/>
+    <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_MAP"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_STACK"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAR_POWER"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.OVERRIDE_WIFI_CONFIG"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.car.permission.CAR_CONTROL_AUDIO_VOLUME"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.MASTER_CLEAR"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.GRANT_RUNTIME_PERMISSIONS"/>
+    <uses-permission android:name="android.permission.REVOKE_RUNTIME_PERMISSIONS"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.MANAGE_APP_OPS_MODES"/>
+    <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS"/>
+    <uses-permission android:name="android.permission.MANAGE_NETWORK_POLICY"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:configChanges="locale" android:extractNativeLibs="false" android:icon="@mipmap/ic_launcher_new" android:label="@string/aircondition" android:name="com.geely.hvac.GlyAcApp" android:supportsRtl="true" android:theme="@style/App">
+        <provider android:authorities="com.geely.hvac" android:enabled="true" android:exported="true" android:name="com.geely.hvac.provider.HvacCommunicateContentProvider"/>
+        <activity android:name="com.geely.hvac.activity.TestActivity" android:theme="@style/Main.Activity"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.geely.hvac.activity.GlyMainActivity" android:theme="@style/Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:launchMode="singleInstance" android:name="com.geely.hvac.activity.AnionWindowHintActivity" android:theme="@style/Transparent"/>
+        <activity android:name="com.geely.hvac.activity.AcSetActivity" android:theme="@style/Transparent"/>
+        <activity android:excludeFromRecents="true" android:name="com.geely.hvac.activity.HeatSteeringWheelSetActivity" android:theme="@style/Transparent"/>
+        <activity android:exported="true" android:name="com.geely.hvac.activity.BuyFragranceActivity" android:theme="@style/Transparent"/>
+        <activity android:name="com.geely.hvac.activity.SeatSetActivity" android:theme="@style/Transparent"/>
+        <activity android:name="com.geely.hvac.activity.ConstantAcWarningActivity" android:theme="@style/Transparent"/>
+        <activity android:name="com.geely.hvac.activity.Pm25RequestActivity" android:theme="@style/Transparent"/>
+        <activity android:name="com.geely.hvac.activity.IonsCloseRequestActivity" android:theme="@style/Transparent"/>
+        <activity android:exported="true" android:launchMode="singleInstance" android:name="com.geely.hvac.activity.SeatSetDetailActivity" android:theme="@style/Transparent"/>
+        <activity android:name="com.geely.hvac.activity.MirrorHudSetActivity" android:theme="@style/Transparent"/>
+        <activity android:launchMode="singleTop" android:name="com.geely.hvac.activity.MassageDetailActivity" android:theme="@style/Transparent"/>
+        <activity android:launchMode="singleTop" android:name="com.geely.hvac.activity.AppWidgetMassageDetailActivity" android:taskAffinity="" android:theme="@style/Transparent"/>
+        <activity android:name="com.geely.hvac.activity.PhysiotherapyDetailLeftActivity" android:theme="@style/Transparent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|uiMode" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleInstance" android:name="com.geely.hvac.psd.activity.GlySettingsSeatSecondDisplayActivity" android:theme="@style/Theme.AirCondition"/>
+        <receiver android:name="com.geely.hvac.receiver.EventReceiver">
+            <intent-filter>
+                <action android:name="com.geely.setting.ACTION_SETTING_CARMODEL"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.geely.hvac.service.HvacStartService">
+            <intent-filter>
+                <action android:name="android.intent.action.GEELY_HVAC"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.geely.hvac.SensorsDataContentProvider" android:enabled="true" android:exported="false" android:name="com.sensorsdata.analytics.android.sdk.data.SensorsDataContentProvider"/>
+        <meta-data android:name="com.sensorsdata.analytics.android.MainProcessName" android:value="com.geely.hvac"/>
+        <meta-data android:name="com.sensorsdata.analytics.android.version" android:value="0.1.8"/>
+    </application>
+</manifest>

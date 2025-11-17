@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="@dimen/oneoshmi_hmiswitch_view_layout_showHeight" android:width="@dimen/oneoshmi_hmiswitch_view_layout_showWidth" />
+    <corners android:radius="40.0dip" />
+    <solid android:color="@color/oneoshmi_switcher_color_unchecked" />
+</shape>

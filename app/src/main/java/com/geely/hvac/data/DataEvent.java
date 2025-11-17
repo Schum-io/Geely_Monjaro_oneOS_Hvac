@@ -1,0 +1,57 @@
+package com.geely.hvac.data;
+
+/* loaded from: classes.dex */
+public class DataEvent {
+    public static final String AC_ANIONPURIFICATIONREMINDER_EV = "ac_AnionPurificationReminder_ev";
+    public static final String AC_ANIONPURIFICATIONREMINDOPERATION_EV = "ac_AnionPurificationRemindOperation_ev";
+    public static final String AC_COMFORTWINDOWREMINDER_EV = "ac_ComfortWindowReminder_ev";
+    public static final String AC_FRONTAC_AIRFLOWCONTROL_EV = "ac_FrontAC_AirflowControl_ev";
+    public static final String AC_FRONTAC_CLICK_EV = "ac_FrontAC_Click_ev";
+    public static final String AC_FRONTAC_DIRECTIONCONTROL_EV = "ac_FrontAC_DirectionControl_ev";
+    public static final String AC_FRONTAC_MODECLICK_EV = "ac_FrontAC_ModeClick_ev";
+    public static final String AC_FRONTAC_OPENWAY_EV = "ac_FrontAC_OpenWay_ev";
+    public static final String AC_FRONTAC_OPERATION_EV = "ac_FrontAC_Operation_ev";
+    public static final String AC_FRONTAC_ROWSWITCH_EV = "ac_FrontAC_RowSwitch_ev";
+    public static final String AC_FRONTAC_SETTINGCLICK_EV = "ac_FrontAC_SettingClick_ev";
+    public static final String AC_FRONTAC_SETTING_EV = "ac_FrontAC_Setting_ev";
+    public static final String AC_FRONTAC_TEMPCONTROL_EV = "ac_FrontAC_TempControl_ev";
+    public static final String AC_FRONTAC_TEMPSYNC_EV = "ac_FrontAC_TempSync_ev";
+    public static final String AC_NEWWISDOMOFFREMINDER_EV = "ac_NewWisdomOffReminder_ev";
+    public static final String AC_NEWWISDOMOFFREMINDOPERATION_EV = "ac_NewWisdomOffRemindOperation_ev";
+    public static final String AC_NEWWISDOMREMINDER_EV = "ac_NewWisdomReminder_ev";
+    public static final String AC_NEWWISDOMREMINDOPERATION_EV = "ac_NewWisdomRemindOperation_ev";
+    public static final String AC_PERFUME_ANTHYPNOTIC_EV = "ac_Perfume_Anthypnotic_ev";
+    public static final String AC_PERFUME_CLICK_EV = "ac_Perfume_Click_ev";
+    public static final String AC_PERFUME_DENSITY_EV = "ac_Perfume_Density_ev";
+    public static final String AC_PERFUME_GETPERFUMECLICK_EV = "ac_Perfume_GetPerfumeClick_ev";
+    public static final String AC_PERFUME_TYPECHOOSE_EV = "ac_Perfume_TypeChoose_ev";
+    public static final String AC_PM25REMINDOPERATION_EV = "ac_PM25RemindOperation_ev";
+    public static final String AC_PM25REMIND_EV = "ac_PM25Remind_ev";
+    public static final String AC_REARAC_AIRFLOWCONTROL_EV = "ac_RearAC_AirflowControl_ev";
+    public static final String AC_REARAC_DIRECTIONCONTROL_EV = "ac_RearAC_DirectionControl_ev";
+    public static final String AC_REARAC_LOCK_EV = "ac_RearAC_Lock_ev";
+    public static final String AC_REARAC_MODECHOOSE_EV = "ac_RearAC_ModeChoose_ev";
+    public static final String AC_REARAC_OPERATION_EV = "ac_RearAC_Operation_ev";
+    public static final String AC_REARAC_TEMPCONTROL_EV = "ac_RearAC_TempControl_ev";
+    public static final String AC_REARAC_THIRDROWOPERATION_EV = "ac_RearAC_ThirdRowOperation_ev";
+    public static final String AC_SEAT_AUTOWHEELHEAT_EV = "ac_Seat_AutoWheelHeat_ev";
+    public static final String AC_SEAT_CLICK_EV = "ac_Seat_Click_ev";
+    public static final String AC_SEAT_HEATCLICK_EV = "ac_Seat_HeatClick_ev";
+    public static final String AC_SEAT_HEAT_EV = "ac_Seat_Heat_ev";
+    public static final String AC_SEAT_LOCATIONCHOOSE_EV = "ac_Seat_LocationChoose_ev";
+    public static final String AC_SEAT_LOCATIONCLICK_EV = "ac_Seat_LocationClick_ev";
+    public static final String AC_SEAT_MASSAGEADJUST_EV = "ac_Seat_MassageAdjust_ev";
+    public static final String AC_SEAT_MASSAGECLICK_EV = "ac_Seat_MassageClick_ev";
+    public static final String AC_SEAT_MASSAGECLOSE_EV = "ac_Seat_MassageClose_ev";
+    public static final String AC_SEAT_MASSAGEOPEN_EV = "ac_Seat_MassageOpen_ev";
+    public static final String AC_SEAT_MASSAGE_EV = "ac_Seat_Massage_ev";
+    public static final String AC_SEAT_PHYSIOTHERAPYADJUST_EV = "ac_Seat_PhysiotherapyAdjust_ev";
+    public static final String AC_SEAT_PHYSIOTHERAPYCLICK_EV = "ac_Seat_PhysiotherapyClick_ev";
+    public static final String AC_SEAT_PHYSIOTHERAPYCLOSE_EV = "ac_Seat_PhysiotherapyClose_ev";
+    public static final String AC_SEAT_PHYSIOTHERAPYOPEN_EV = "ac_Seat_PhysiotherapyOpen_ev";
+    public static final String AC_SEAT_PHYSIOTHERAPY_EV = "ac_Seat_Physiotherapy_ev";
+    public static final String AC_SEAT_REPOSITIONLOCATIONCLICK_EV = "ac_Seat_RepositionLocationClick_ev";
+    public static final String AC_SEAT_TIMINGSETTING_EV = "ac_Seat_TimingSetting_ev";
+    public static final String AC_SEAT_VENTILATIONCLICK_EV = "ac_Seat_VentilationClick_ev";
+    public static final String AC_SEAT_VENTILATION_EV = "ac_Seat_Ventilation_ev";
+}

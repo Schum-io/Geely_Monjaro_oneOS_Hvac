@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ac_row1">FRONT</string>
+    <string name="ac_row2">BEHIND</string>
+    <string name="aircondition">AirCondition</string>
+    <string name="app_name">AirCondition</string>
+    <string name="auto_fragrance_remind">AUTO FRAGRANCE REMIND</string>
+    <string name="close_behind_ac">CLOSE BEHIDN</string>
+    <string name="eco">ECO</string>
+    <string name="fragrance">Fragrance</string>
+    <string name="fragrance_level_1">LEVEL1</string>
+    <string name="fragrance_level_2">LEVEL2</string>
+    <string name="fragrance_level_3">LEVEL3</string>
+    <string name="fragrance_level_off">OFF</string>
+    <string name="fragrance_type_1">type1</string>
+    <string name="fragrance_type_2">type2</string>
+    <string name="fragrance_type_3">type3</string>
+    <string name="main_seat">Mian Seat</string>
+    <string name="massage_level_1">LEVEL1</string>
+    <string name="massage_level_2">LEVEL2</string>
+    <string name="massage_level_3">LEVEL3</string>
+    <string name="massage_level_off">OFF</string>
+    <string name="open_behind_ac">OPEN BEHIND</string>
+    <string name="seat">Seat</string>
+    <string name="seat_position_save">save</string>
+    <string name="seat_position_save_text1">Habit1</string>
+    <string name="seat_position_save_text2">Habit2</string>
+    <string name="seat_position_save_text3">Habit3</string>
+    <string name="seat_position_set">set</string>
+    <string name="temperature_sync">SYNC</string>
+    <string name="test_str">this is a test String</string>
+    <string name="therapy_mode_goddess_rest">女神休养</string>
+</resources>

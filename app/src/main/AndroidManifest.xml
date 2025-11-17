@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:name="com.geely.hvac.GlyAcApp"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:configChanges="locale"
+        android:extractNativeLibs="false"
+        android:icon="@mipmap/ic_launcher_new"
+        android:label="@string/aircondition"
+        android:supportsRtl="true"
+        android:theme="@style/App">
+<!--        <provider-->
+<!--            android:name="com.geely.hvac.provider.HvacCommunicateContentProvider"-->
+<!--            android:authorities="com.geely.hvac"-->
+<!--            android:enabled="true"-->
+<!--            android:exported="true" />-->
+
+        <activity
+            android:name="com.geely.hvac.activity.TestActivity"
+            android:theme="@style/Main.Activity" />
+        <activity
+            android:name="com.geely.hvac.activity.GlyMainActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+<!--        <activity-->
+<!--            android:name="com.geely.hvac.activity.AnionWindowHintActivity"-->
+<!--            android:exported="true"-->
+<!--            android:launchMode="singleInstance"-->
+<!--            android:theme="@style/Transparent" />-->
+<!--        <activity-->
+<!--            android:name="com.geely.hvac.activity.AcSetActivity"-->
+<!--            android:theme="@style/Transparent" />-->
+<!--        <activity-->
+<!--            android:name="com.geely.hvac.activity.HeatSteeringWheelSetActivity"-->
+<!--            android:excludeFromRecents="true"-->
+<!--            android:theme="@style/Transparent" />-->
+<!--        <activity-->
+<!--            android:name="com.geely.hvac.activity.BuyFragranceActivity"-->
+<!--            android:exported="true"-->
+<!--            android:theme="@style/Transparent" />-->
+<!--        <activity-->
+<!--            android:name="com.geely.hvac.activity.SeatSetActivity"-->
+<!--            android:theme="@style/Transparent" />-->
+<!--        <activity-->
+<!--            android:name="com.geely.hvac.activity.ConstantAcWarningActivity"-->
+<!--            android:theme="@style/Transparent" />-->
+<!--        <activity-->
+<!--            android:name="com.geely.hvac.activity.Pm25RequestActivity"-->
+<!--            android:theme="@style/Transparent" />-->
+<!--        <activity-->
+<!--            android:name="com.geely.hvac.activity.IonsCloseRequestActivity"-->
+<!--            android:theme="@style/Transparent" />-->
+<!--        <activity-->
+<!--            android:name="com.geely.hvac.activity.SeatSetDetailActivity"-->
+<!--            android:exported="true"-->
+<!--            android:launchMode="singleInstance"-->
+<!--            android:theme="@style/Transparent" />-->
+<!--        <activity-->
+<!--            android:name="com.geely.hvac.activity.MirrorHudSetActivity"-->
+<!--            android:theme="@style/Transparent" />-->
+<!--        <activity-->
+<!--            android:name="com.geely.hvac.activity.MassageDetailActivity"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:theme="@style/Transparent" />-->
+<!--        <activity-->
+<!--            android:name="com.geely.hvac.activity.AppWidgetMassageDetailActivity"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:taskAffinity=""-->
+<!--            android:theme="@style/Transparent" />-->
+<!--        <activity-->
+<!--            android:name="com.geely.hvac.activity.PhysiotherapyDetailLeftActivity"-->
+<!--            android:theme="@style/Transparent" />-->
+<!--        <activity-->
+<!--            android:name="com.geely.hvac.psd.activity.GlySettingsSeatSecondDisplayActivity"-->
+<!--            android:configChanges="keyboard|keyboardHidden|uiMode"-->
+<!--            android:excludeFromRecents="true"-->
+<!--            android:exported="true"-->
+<!--            android:launchMode="singleInstance"-->
+<!--            android:theme="@style/Theme.AirCondition" />-->
+    </application>
+</manifest>

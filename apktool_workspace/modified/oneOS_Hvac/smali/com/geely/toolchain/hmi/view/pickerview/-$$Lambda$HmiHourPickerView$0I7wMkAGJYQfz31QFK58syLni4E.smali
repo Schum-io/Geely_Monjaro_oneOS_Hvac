@@ -1,0 +1,34 @@
+.class public final synthetic Lcom/geely/toolchain/hmi/view/pickerview/-$$Lambda$HmiHourPickerView$0I7wMkAGJYQfz31QFK58syLni4E;
+.super Ljava/lang/Object;
+.source "lambda"
+
+# interfaces
+.implements Lcom/geely/toolchain/hmi/view/pickerview/HmiWheelView$OnItemSelectedListener;
+
+
+# instance fields
+.field public final synthetic f$0:Lcom/geely/toolchain/hmi/view/pickerview/HmiHourPickerView;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/geely/toolchain/hmi/view/pickerview/HmiHourPickerView;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/geely/toolchain/hmi/view/pickerview/-$$Lambda$HmiHourPickerView$0I7wMkAGJYQfz31QFK58syLni4E;->f$0:Lcom/geely/toolchain/hmi/view/pickerview/HmiHourPickerView;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onItemSelected(I)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/geely/toolchain/hmi/view/pickerview/-$$Lambda$HmiHourPickerView$0I7wMkAGJYQfz31QFK58syLni4E;->f$0:Lcom/geely/toolchain/hmi/view/pickerview/HmiHourPickerView;
+
+    invoke-virtual {v0, p1}, Lcom/geely/toolchain/hmi/view/pickerview/HmiHourPickerView;->lambda$new$0$HmiHourPickerView(I)V
+
+    return-void
+.end method

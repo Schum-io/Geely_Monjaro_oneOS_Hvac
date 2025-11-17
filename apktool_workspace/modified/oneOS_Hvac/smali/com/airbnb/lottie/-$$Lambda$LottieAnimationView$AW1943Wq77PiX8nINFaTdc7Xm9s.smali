@@ -1,0 +1,44 @@
+.class public final synthetic Lcom/airbnb/lottie/-$$Lambda$LottieAnimationView$AW1943Wq77PiX8nINFaTdc7Xm9s;
+.super Ljava/lang/Object;
+.source "lambda"
+
+# interfaces
+.implements Lcom/airbnb/lottie/LottieListener;
+
+
+# static fields
+.field public static final synthetic INSTANCE:Lcom/airbnb/lottie/-$$Lambda$LottieAnimationView$AW1943Wq77PiX8nINFaTdc7Xm9s;
+
+
+# direct methods
+.method static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/airbnb/lottie/-$$Lambda$LottieAnimationView$AW1943Wq77PiX8nINFaTdc7Xm9s;
+
+    invoke-direct {v0}, Lcom/airbnb/lottie/-$$Lambda$LottieAnimationView$AW1943Wq77PiX8nINFaTdc7Xm9s;-><init>()V
+
+    sput-object v0, Lcom/airbnb/lottie/-$$Lambda$LottieAnimationView$AW1943Wq77PiX8nINFaTdc7Xm9s;->INSTANCE:Lcom/airbnb/lottie/-$$Lambda$LottieAnimationView$AW1943Wq77PiX8nINFaTdc7Xm9s;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onResult(Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    invoke-static {p1}, Lcom/airbnb/lottie/LottieAnimationView;->lambda$static$0(Ljava/lang/Throwable;)V
+
+    return-void
+.end method

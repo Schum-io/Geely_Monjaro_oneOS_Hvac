@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.geely.hvac.component.SeatDetailType" />
+
+        <variable
+            name="mainModel"
+            type="com.geely.hvac.viewmodel.AppMainViewModel" />
+
+    </data>
+
+    <merge
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.geely.hvac.component.ViewWithBackground
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:tag="layout/layout_set_detail_type_0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:normalColor="@color/seat_seat_detail_type_bg_color"
+            app:radius="@dimen/seat_set_detail_type_bg_radius" />
+
+        <com.geely.hvac.component.ViewWithBackground
+            android:id="@id/indicator"
+            android:layout_width="@dimen/seat_set_detail_type_indicator_width"
+            android:layout_height="@dimen/seat_set_detail_type_indicator_height"
+            android:layout_marginTop="@dimen/seat_set_detail_type_indicator_top"
+            android:tag="layout/layout_set_detail_type_1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:normalColor="@color/seat_seat_detail_type_indicator_color"
+            app:radius="@dimen/seat_set_detail_type_bg_radius" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:tag="layout/layout_set_detail_type_2">
+
+            <com.geely.toolchain.hmi.view.HmiTextView
+                android:id="@id/item0"
+                style="@style/seat_set_detail_type_item"
+                android:tag="binding_3"
+                android:text="@string/seat_set_detail_type_seat" />
+
+            <View
+                android:id="@id/line0"
+                android:layout_width="69.0px"
+                android:layout_height="1.0px"
+                android:background="@color/seat_set_detail_type_item_divider"
+                android:tag="binding_4" />
+
+            <com.geely.toolchain.hmi.view.HmiTextView
+                android:id="@id/item1"
+                style="@style/seat_set_detail_type_item"
+                android:tag="binding_5"
+                android:text="@string/seat_set_detail_type_waist" />
+
+            <View
+                android:id="@id/line1"
+                android:layout_width="69.0px"
+                android:layout_height="1.0px"
+                android:background="@color/seat_set_detail_type_item_divider"
+                android:tag="binding_6" />
+
+            <com.geely.toolchain.hmi.view.HmiTextView
+                android:id="@id/item2"
+                style="@style/seat_set_detail_type_item"
+                android:tag="binding_7"
+                android:text="@string/seat_set_detail_type_leg" />
+
+            <com.geely.toolchain.hmi.view.HmiTextView
+                android:id="@id/item3"
+                style="@style/seat_set_detail_type_item"
+                android:tag="binding_8"
+                android:text="@string/seat_set_detail_type_cushion" />
+        </LinearLayout>
+    </merge>
+</layout>

@@ -1,0 +1,21 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.geely.hvac.viewmodel.AppMainViewModel" />
+    </data>
+
+    <RelativeLayout android:tag="layout/fragment_seat_physical_therapy_0" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.geely.toolchain.hmi.view.HmiImageView android:layout_width="2268.0dip" android:layout_height="fill_parent" android:layout_marginBottom="216.0dip" android:src="@mipmap/seat_bg" android:layout_marginEnd="306.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toRightOf="parent" />
+        <com.geely.toolchain.hmi.view.HmiImageView android:layout_width="600.0dip" android:layout_height="600.0dip" android:layout_marginTop="24.0dip" android:src="@mipmap/right_600" android:layout_marginStart="780.0dip" />
+        <com.geely.toolchain.hmi.view.HmiImageView android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:src="@mipmap/seat_wind_bg_shadow3" android:layout_marginStart="815.0dip" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <com.geely.hvac.trackballview.TrackballHmiImageView android:tag="binding_2" android:layout_width="@dimen/seat_feature_level_width" android:layout_height="@dimen/seat_feature_level_height" android:layout_marginTop="96.0dip" android:src="@mipmap/psd_air_conditioning_seat_heating_off_normal" android:layout_marginStart="888.0dip" app:layout_constraintCircleRadius="56.0dip" />
+        <com.geely.hvac.trackballview.TrackballHmiImageView android:tag="binding_3" android:layout_width="@dimen/seat_feature_level_width" android:layout_height="@dimen/seat_feature_level_height" android:layout_marginTop="96.0dip" android:src="@mipmap/psd_air_conditioning_seat_ventilation_off_normal" android:layout_marginStart="888.0dip" app:layout_constraintCircleRadius="56.0dip" />
+        <com.geely.hvac.trackballview.TrackballHmiImageView android:id="@id/row1_right_physiotherapy" android:tag="binding_4" android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_marginTop="112.0dip" android:layout_marginStart="904.0dip" />
+        <com.geely.toolchain.hmi.view.HmiTextView android:textSize="40.0sp" android:textColor="@color/psd_title_text" android:layout_width="wrap_content" android:layout_height="56.0dip" android:layout_marginTop="64.0dip" android:text="@string/psd_physiotherapy_title" android:layout_marginStart="1704.0dip" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <com.geely.hvac.psd.component.PsdPhysiotherapyType android:tag="binding_5" android:layout_width="696.0dip" android:layout_height="448.0dip" android:layout_marginTop="120.0dip" android:layout_marginStart="1664.0dip" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+
+</layout>

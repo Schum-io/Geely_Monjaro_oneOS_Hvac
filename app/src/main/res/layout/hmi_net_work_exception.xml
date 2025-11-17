@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <com.geely.toolchain.hmi.view.HmiImageView android:layout_width="320.0dip" android:layout_height="240.0dip" android:src="@drawable/ic_oneshmi_network_exception" />
+        <com.geely.toolchain.hmi.view.HmiTextView android:textSize="34.0sp" android:textColor="@color/oneoshmi_default_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="网络异常，请刷新重试" />
+        <com.geely.toolchain.hmi.view.HmiStateButton android:textSize="34.0sp" android:textStyle="bold" android:textColor="@color/oneoshmi_color_button_text_color" android:gravity="center" android:id="@id/btn_retry" android:layout_width="240.0dip" android:layout_height="96.0dip" android:layout_marginTop="64.0dip" android:text="重新加载" app:hmiBtnColor="@color/oneoshmi_color_button_bg_color" app:hmiBtnRadius="2.0dip" />
+    </LinearLayout>
+</RelativeLayout>

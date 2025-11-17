@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="8.0dip" android:width="108.0dip" android:top="@dimen/oneoshmi_scrollview_top" android:end="16.0dip">
+        <shape>
+            <corners android:radius="4.0dip" />
+            <solid android:color="@color/oneoshmi_netscroll_bar_bg" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="80.0dip" android:width="80.0dip" android:viewportWidth="80.0" android:viewportHeight="80.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/oneoshmi_icon_background_color" android:pathData="M36,20C24.9543,20 16,28.9543 16,40C16,51.0457 24.9543,60 36,60C37.6228,60 39.2004,59.8067 40.7112,59.442C41.3304,60.7118 42.1032,61.893 43.0054,62.9615C40.7893,63.6368 38.437,64 36,64C22.7452,64 12,53.2548 12,40C12,26.7452 22.7452,16 36,16C47.6717,16 57.3975,24.3317 59.5542,35.3721C58.4079,35.1283 57.219,35 56,35C55.79,35 55.581,35.0038 55.3728,35.0114C53.1566,26.3795 45.3233,20 36,20Z" android:fillAlpha="0.9" />
+    <path android:fillColor="@color/oneoshmi_icon_background_color" android:pathData="M56,40C49.3726,40 44,45.3726 44,52C44,58.6274 49.3726,64 56,64C62.6274,64 68,58.6274 68,52C68,45.3726 62.6274,40 56,40ZM48,52C48,47.5817 51.5817,44 56,44C60.4183,44 64,47.5817 64,52C64,56.4183 60.4183,60 56,60C51.5817,60 48,56.4183 48,52Z" android:fillAlpha="0.9" android:fillType="evenOdd" />
+</vector>

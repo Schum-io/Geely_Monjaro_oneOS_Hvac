@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="fill_horizontal|center" android:id="@android:id/background">
+        <layer-list>
+            <item>
+                <shape>
+                    <corners android:radius="32.0dip" />
+                    <size android:height="64.0dip" />
+                    <solid android:color="@color/oneoshmi_color_seekbar_bg" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:gravity="fill_horizontal|center" android:id="@android:id/progress" android:left="4.0dip" android:top="4.0dip" android:right="4.0dip" android:bottom="4.0dip">
+        <clip>
+            <layer-list>
+                <item>
+                    <shape>
+                        <size android:height="56.0dip" />
+                        <solid android:color="@color/oneoshmi_main_theme_color" />
+                        <corners android:radius="28.0dip" />
+                    </shape>
+                </item>
+            </layer-list>
+        </clip>
+    </item>
+</layer-list>

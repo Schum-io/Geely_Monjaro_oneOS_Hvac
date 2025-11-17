@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/buy_fragrance_btn_radius" />
+    <stroke android:width="@dimen/seat_position_set_bg_line_width" android:color="@color/seat_position_set_bg_line" />
+</shape>

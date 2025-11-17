@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="80.0dip" android:width="80.0dip" android:viewportWidth="80.0" android:viewportHeight="80.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/oneoshmi_icon_background_color" android:pathData="M41,23C40.4477,23 40,23.4477 40,24V40C40,40.5523 40.4477,41 41,41H43C43.5523,41 44,40.5523 44,40V24C44,23.4477 43.5523,23 43,23H41Z" android:fillAlpha="0.9" />
+    <path android:fillColor="@color/oneoshmi_icon_background_color" android:pathData="M32,24C32,23.4477 32.4477,23 33,23H35C35.5523,23 36,23.4477 36,24V40C36,40.5523 35.5523,41 35,41H33C32.4477,41 32,40.5523 32,40V24Z" android:fillAlpha="0.9" />
+    <path android:fillColor="@color/oneoshmi_icon_background_color" android:pathData="M49,23C48.4477,23 48,23.4477 48,24V40C48,40.5523 48.4477,41 49,41H51C51.5523,41 52,40.5523 52,40V24C52,23.4477 51.5523,23 51,23H49Z" android:fillAlpha="0.9" />
+    <path android:fillColor="@color/oneoshmi_icon_background_color" android:pathData="M54.5,14C57.8137,14 60.5,16.6863 60.5,20V60C60.5,63.3137 57.8137,66 54.5,66H24C20.6863,66 18,63.3137 18,60V45.0184C18,43.7387 18.6123,42.5362 19.6473,41.7835L23.5,38.9816V20C23.5,16.6863 26.1863,14 29.5,14H54.5ZM56.5,20C56.5,18.8954 55.6046,18 54.5,18H29.5C28.3954,18 27.5,18.8954 27.5,20V41.0184L22,45.0184V60C22,61.1046 22.8954,62 24,62H54.5C55.6046,62 56.5,61.1046 56.5,60V20Z" android:fillAlpha="0.9" android:fillType="evenOdd" />
+</vector>

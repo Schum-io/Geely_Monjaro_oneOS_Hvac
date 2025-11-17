@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:tag="layout/pager_item_seat_0">
+
+    <com.geely.toolchain.hmi.view.HmiImageView
+        android:id="@id/heat_bg"
+        android:layout_width="@dimen/seat_heat_bg_width"
+        android:layout_height="@dimen/seat_heat_bg_height"
+        android:layout_marginRight="25.0px"
+        android:scaleType="matrix"
+        android:tag="binding_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.geely.toolchain.hmi.view.HmiImageView
+        android:id="@id/iv_seat_set_tips"
+        android:layout_width="@dimen/seat_set_tips_width"
+        android:layout_height="@dimen/seat_set_tips_height"
+        android:layout_marginTop="@dimen/seat_set_tips_margin_top"
+        android:layout_marginRight="@dimen/seat_set_tips_margin_end"
+        android:src="@drawable/selector_seat_set_info"
+        android:tag="binding_2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/heat_steering_wheel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:tag="binding_3">
+
+        <com.geely.hvac.component.SteeringWheelHeatLevel
+            android:id="@id/steering_wheel_status"
+            android:layout_width="@dimen/seat_feature_level_width"
+            android:layout_height="@dimen/seat_feature_level_height"
+            android:layout_marginStart="@dimen/seat_wind_row1_left_margin_left"
+            android:layout_marginTop="@dimen/seat_heat_steering_wheel_margin_top"
+            android:tag="binding_4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:seatFeatureLevel0LightPath="lottie/light/sw_heat0"
+            app:seatFeatureLevel0NightPath="lottie/night/sw_heat0"
+            app:seatFeatureLevel1LightPath="lottie/light/sw_heat1"
+            app:seatFeatureLevel1NightPath="lottie/night/sw_heat1"
+            app:seatFeatureLevel2LightPath="lottie/light/sw_heat2"
+            app:seatFeatureLevel2NightPath="lottie/night/sw_heat2"
+            app:seatFeatureLevel3LightPath="lottie/light/sw_heat3"
+            app:seatFeatureLevel3NightPath="lottie/night/sw_heat3"
+            app:seatFeatureLevelBgRadius="@dimen/seat_feature_level_radius"
+            app:seatFeatureLevelDisableBgColor="@color/seat_heat_status_bg_disable"
+            app:seatFeatureLevelDisableImg="@mipmap/steering_wheel_disable_status" />
+
+        <com.geely.toolchain.hmi.view.HmiImageView
+            android:id="@id/steering_wheel_auto_status"
+            android:layout_width="@dimen/seat_feature_level_width"
+            android:layout_height="@dimen/seat_feature_level_height"
+            android:background="@drawable/steering_auto_bg"
+            android:src="@mipmap/steering_auto_heat"
+            android:tag="binding_5"
+            app:layout_constraintLeft_toLeftOf="@id/steering_wheel_status"
+            app:layout_constraintTop_toTopOf="@id/steering_wheel_status" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.geely.hvac.component.ViewWithBackground
+        android:id="@id/heat_steering_wheel_setting_bg"
+        android:layout_width="@dimen/set_region_width"
+        android:layout_height="@dimen/set_region_height"
+        android:layout_marginEnd="@dimen/set_region_margin_right"
+        android:layout_marginBottom="@dimen/below_region_margin_bottom"
+        android:tag="binding_6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:radius="@dimen/ac_btn_region_bg_corner" />
+
+    <com.geely.hvac.component.BoolStateLottieView
+        android:id="@id/heat_steering_wheel_setting"
+        android:layout_width="@dimen/ac_icon_width"
+        android:layout_height="@dimen/ac_icon_height"
+        android:tag="binding_7"
+        app:boolStateLottieViewDisableFalseImage="@drawable/ac_set"
+        app:boolStateLottieViewDisableTrueImage="@drawable/ac_set"
+        app:boolStateLottieViewLightOpen="lottie/light/set"
+        app:boolStateLottieViewNightOpen="lottie/night/set"
+        app:layout_constraintBottom_toBottomOf="@id/heat_steering_wheel_setting_bg"
+        app:layout_constraintLeft_toLeftOf="@id/heat_steering_wheel_setting_bg"
+        app:layout_constraintRight_toRightOf="@id/heat_steering_wheel_setting_bg"
+        app:layout_constraintTop_toTopOf="@id/heat_steering_wheel_setting_bg" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/heat_wrap"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:tag="binding_8">
+
+        <com.geely.toolchain.hmi.view.HmiImageView
+            android:layout_width="222.0dip"
+            android:layout_height="222.0dip"
+            android:layout_marginStart="@dimen/seat_row1_heat_left"
+            android:layout_marginTop="@dimen/seat_line1_heat_top"
+            android:tag="binding_9"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.geely.hvac.component.SeatHeatLevel
+            android:id="@id/row1_left_seat_heat_status"
+            android:layout_width="@dimen/seat_feature_level_width"
+            android:layout_height="@dimen/seat_feature_level_height"
+            android:layout_marginStart="@dimen/seat_wind_row1_left_margin_left"
+            android:layout_marginTop="@dimen/seat_heat_row1_left_margin_top"
+            android:tag="binding_10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:seatFeatureLevel0LightPath="lottie/light/seat_heat_level0"
+            app:seatFeatureLevel0NightPath="lottie/night/seat_heat_level0"
+            app:seatFeatureLevel1LightPath="lottie/light/seat_heat_level1"
+            app:seatFeatureLevel1NightPath="lottie/night/seat_heat_level1"
+            app:seatFeatureLevel2LightPath="lottie/light/seat_heat_level2"
+            app:seatFeatureLevel2NightPath="lottie/night/seat_heat_level2"
+            app:seatFeatureLevel3LightPath="lottie/light/seat_heat_level3"
+            app:seatFeatureLevel3NightPath="lottie/night/seat_heat_level3"
+            app:seatFeatureLevelBgRadius="@dimen/seat_feature_level_radius"
+            app:seatFeatureLevelDisableBgColor="@color/seat_heat_status_bg_disable"
+            app:seatFeatureLevelDisableImg="@mipmap/seat_heat_disable_status" />
+
+        <com.geely.hvac.component.TextViewWithBg
+            android:layout_width="@dimen/seat_heat_auto_width"
+            android:layout_height="@dimen/seat_heat_auto_height"
+            android:layout_marginTop="@dimen/seat_heat_auto_top"
+            android:gravity="center"
+            android:tag="binding_11"
+            android:text="@string/seat_heat_auto"
+            android:textSize="@dimen/seat_heat_auto_size"
+            app:disableBackColor="@color/seat_auto_back_disable"
+            app:disableTextColor="@color/seat_auto_text_disable"
+            app:layout_constraintLeft_toLeftOf="@id/row1_left_seat_heat_status"
+            app:layout_constraintRight_toRightOf="@id/row1_left_seat_heat_status"
+            app:layout_constraintTop_toBottomOf="@id/row1_left_seat_heat_status"
+            app:normalColor="@color/seat_tab_item_bg"
+            app:normalTextColor="@color/auto_txt_unactive"
+            app:pressColor="@color/seat_tab_item_bg_on"
+            app:pressTextColor="@color/auto_txt_active"
+            app:radius="@dimen/seat_heat_auto_radius" />
+
+        <com.geely.toolchain.hmi.view.HmiImageView
+            android:layout_width="222.0dip"
+            android:layout_height="222.0dip"
+            android:layout_marginTop="@dimen/seat_line1_heat_top"
+            android:layout_marginEnd="@dimen/seat_row1_heat_right"
+            android:tag="binding_12"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.geely.hvac.component.SeatHeatLevel
+            android:id="@id/row1_right_seat_heat_status"
+            android:layout_width="@dimen/seat_feature_level_width"
+            android:layout_height="@dimen/seat_feature_level_height"
+            android:layout_marginTop="@dimen/seat_heat_row1_left_margin_top"
+            android:layout_marginEnd="@dimen/seat_heat_row1_right_margin_right"
+            android:tag="binding_13"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:seatFeatureLevel0LightPath="lottie/light/seat_heat_level0"
+            app:seatFeatureLevel0NightPath="lottie/night/seat_heat_level0"
+            app:seatFeatureLevel1LightPath="lottie/light/seat_heat_level1"
+            app:seatFeatureLevel1NightPath="lottie/night/seat_heat_level1"
+            app:seatFeatureLevel2LightPath="lottie/light/seat_heat_level2"
+            app:seatFeatureLevel2NightPath="lottie/night/seat_heat_level2"
+            app:seatFeatureLevel3LightPath="lottie/light/seat_heat_level3"
+            app:seatFeatureLevel3NightPath="lottie/night/seat_heat_level3"
+            app:seatFeatureLevelBgRadius="@dimen/seat_feature_level_radius"
+            app:seatFeatureLevelDisableBgColor="@color/seat_heat_status_bg_disable"
+            app:seatFeatureLevelDisableImg="@mipmap/seat_heat_disable_status" />
+
+        <com.geely.hvac.component.TextViewWithBg
+            android:layout_width="@dimen/seat_heat_auto_width"
+            android:layout_height="@dimen/seat_heat_auto_height"
+            android:layout_marginTop="@dimen/seat_heat_auto_top"
+            android:gravity="center"
+            android:tag="binding_14"
+            android:text="@string/seat_heat_auto"
+            android:textSize="@dimen/seat_heat_auto_size"
+            app:disableBackColor="@color/seat_auto_back_disable"
+            app:disableTextColor="@color/seat_auto_text_disable"
+            app:layout_constraintLeft_toLeftOf="@id/row1_right_seat_heat_status"
+            app:layout_constraintRight_toRightOf="@id/row1_right_seat_heat_status"
+            app:layout_constraintTop_toBottomOf="@id/row1_right_seat_heat_status"
+            app:normalColor="@color/seat_tab_item_bg"
+            app:normalTextColor="@color/auto_txt_unactive"
+            app:pressColor="@color/seat_tab_item_bg_on"
+            app:pressTextColor="@color/auto_txt_active"
+            app:radius="@dimen/seat_heat_auto_radius" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/row2_heat_wrap"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:tag="binding_15">
+
+            <com.geely.hvac.component.SeatHeatLevel
+                android:id="@id/row2_left_seat_heat_status"
+                android:layout_width="@dimen/seat_feature_level_width"
+                android:layout_height="@dimen/seat_feature_level_height"
+                android:layout_marginStart="@dimen/seat_wind_row1_left_margin_left"
+                android:layout_marginTop="@dimen/seat_heat_row2_left_margin_top"
+                android:tag="binding_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:seatFeatureLevel0LightPath="lottie/light/seat_heat_level0"
+                app:seatFeatureLevel0NightPath="lottie/night/seat_heat_level0"
+                app:seatFeatureLevel1LightPath="lottie/light/seat_heat_level1"
+                app:seatFeatureLevel1NightPath="lottie/night/seat_heat_level1"
+                app:seatFeatureLevel2LightPath="lottie/light/seat_heat_level2"
+                app:seatFeatureLevel2NightPath="lottie/night/seat_heat_level2"
+                app:seatFeatureLevel3LightPath="lottie/light/seat_heat_level3"
+                app:seatFeatureLevel3NightPath="lottie/night/seat_heat_level3"
+                app:seatFeatureLevelBgRadius="@dimen/seat_feature_level_radius"
+                app:seatFeatureLevelDisableBgColor="@color/seat_heat_status_bg_disable"
+                app:seatFeatureLevelDisableImg="@mipmap/seat_heat_disable_status" />
+
+            <com.geely.hvac.component.SeatHeatLevel
+                android:id="@id/row2_right_seat_heat_status"
+                android:layout_width="@dimen/seat_feature_level_width"
+                android:layout_height="@dimen/seat_feature_level_height"
+                android:layout_marginTop="@dimen/seat_heat_row2_left_margin_top"
+                android:layout_marginEnd="@dimen/seat_heat_row1_right_margin_right"
+                android:tag="binding_17"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:seatFeatureLevel0LightPath="lottie/light/seat_heat_level0"
+                app:seatFeatureLevel0NightPath="lottie/night/seat_heat_level0"
+                app:seatFeatureLevel1LightPath="lottie/light/seat_heat_level1"
+                app:seatFeatureLevel1NightPath="lottie/night/seat_heat_level1"
+                app:seatFeatureLevel2LightPath="lottie/light/seat_heat_level2"
+                app:seatFeatureLevel2NightPath="lottie/night/seat_heat_level2"
+                app:seatFeatureLevel3LightPath="lottie/light/seat_heat_level3"
+                app:seatFeatureLevel3NightPath="lottie/night/seat_heat_level3"
+                app:seatFeatureLevelBgRadius="@dimen/seat_feature_level_radius"
+                app:seatFeatureLevelDisableBgColor="@color/seat_heat_status_bg_disable"
+                app:seatFeatureLevelDisableImg="@mipmap/seat_heat_disable_status" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/seat_wind_wrap"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:tag="binding_18">
+
+        <com.geely.toolchain.hmi.view.HmiImageView
+            android:layout_width="222.0dip"
+            android:layout_height="222.0dip"
+            android:layout_marginStart="@dimen/seat_wind_row1_left_shadow_margin_left"
+            android:layout_marginTop="@dimen/seat_wind_row1_left_shadow_margin_top"
+            android:src="@mipmap/seat_wind_bg_shadow"
+            android:tag="binding_19"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.geely.hvac.component.SeatVentilateLevel
+            android:id="@id/row1_left_seat_wind_status"
+            android:layout_width="@dimen/seat_feature_level_width"
+            android:layout_height="@dimen/seat_feature_level_height"
+            android:layout_marginStart="@dimen/seat_wind_row1_left_margin_left"
+            android:layout_marginTop="@dimen/seat_heat_row1_left_margin_top"
+            android:tag="binding_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:seatFeatureLevel0LightPath="lottie/light/seat_ventilate0"
+            app:seatFeatureLevel0NightPath="lottie/night/seat_ventilate0"
+            app:seatFeatureLevel1LightPath="lottie/light/seat_ventilate1"
+            app:seatFeatureLevel1NightPath="lottie/night/seat_ventilate1"
+            app:seatFeatureLevel2LightPath="lottie/light/seat_ventilate2"
+            app:seatFeatureLevel2NightPath="lottie/night/seat_ventilate2"
+            app:seatFeatureLevel3LightPath="lottie/light/seat_ventilate3"
+            app:seatFeatureLevel3NightPath="lottie/night/seat_ventilate3"
+            app:seatFeatureLevelBgRadius="@dimen/seat_feature_level_radius"
+            app:seatFeatureLevelDisableBgColor="@color/seat_wind_status_bg_disable"
+            app:seatFeatureLevelDisableImg="@drawable/seat_wind_disable_status" />
+
+        <com.geely.hvac.component.TextViewWithBg
+            android:layout_width="@dimen/seat_heat_auto_width"
+            android:layout_height="@dimen/seat_heat_auto_height"
+            android:layout_marginTop="@dimen/seat_heat_auto_top"
+            android:gravity="center"
+            android:tag="binding_21"
+            android:text="@string/seat_heat_auto"
+            android:textSize="@dimen/seat_heat_auto_size"
+            app:disableBackColor="@color/seat_auto_back_disable"
+            app:disableTextColor="@color/seat_auto_text_disable"
+            app:layout_constraintLeft_toLeftOf="@id/row1_left_seat_wind_status"
+            app:layout_constraintRight_toRightOf="@id/row1_left_seat_wind_status"
+            app:layout_constraintTop_toBottomOf="@id/row1_left_seat_wind_status"
+            app:normalColor="@color/seat_tab_item_bg"
+            app:normalTextColor="@color/auto_txt_unactive"
+            app:pressColor="@color/seat_tab_item_bg_on"
+            app:pressTextColor="@color/auto_txt_active"
+            app:radius="@dimen/seat_heat_auto_radius" />
+
+        <com.geely.toolchain.hmi.view.HmiImageView
+            android:layout_width="222.0dip"
+            android:layout_height="222.0dip"
+            android:layout_marginTop="@dimen/seat_wind_row1_left_shadow_margin_top"
+            android:layout_marginEnd="@dimen/seat_wind_row1_right_shadow_margin_right"
+            android:src="@mipmap/seat_wind_bg_shadow"
+            android:tag="binding_22"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.geely.hvac.component.SeatVentilateLevel
+            android:id="@id/row1_right_seat_wind_status"
+            android:layout_width="@dimen/seat_feature_level_width"
+            android:layout_height="@dimen/seat_feature_level_height"
+            android:layout_marginTop="@dimen/seat_heat_row1_left_margin_top"
+            android:layout_marginEnd="@dimen/seat_heat_row1_right_margin_right"
+            android:tag="binding_23"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:seatFeatureLevel0LightPath="lottie/light/seat_ventilate0"
+            app:seatFeatureLevel0NightPath="lottie/night/seat_ventilate0"
+            app:seatFeatureLevel1LightPath="lottie/light/seat_ventilate1"
+            app:seatFeatureLevel1NightPath="lottie/night/seat_ventilate1"
+            app:seatFeatureLevel2LightPath="lottie/light/seat_ventilate2"
+            app:seatFeatureLevel2NightPath="lottie/night/seat_ventilate2"
+            app:seatFeatureLevel3LightPath="lottie/light/seat_ventilate3"
+            app:seatFeatureLevel3NightPath="lottie/night/seat_ventilate3"
+            app:seatFeatureLevelBgRadius="@dimen/seat_feature_level_radius"
+            app:seatFeatureLevelDisableBgColor="@color/seat_wind_status_bg_disable"
+            app:seatFeatureLevelDisableImg="@drawable/seat_wind_disable_status" />
+
+        <com.geely.hvac.component.TextViewWithBg
+            android:layout_width="@dimen/seat_heat_auto_width"
+            android:layout_height="@dimen/seat_heat_auto_height"
+            android:layout_marginTop="@dimen/seat_heat_auto_top"
+            android:gravity="center"
+            android:tag="binding_24"
+            android:text="@string/seat_heat_auto"
+            android:textSize="@dimen/seat_heat_auto_size"
+            app:disableBackColor="@color/seat_auto_back_disable"
+            app:disableTextColor="@color/seat_auto_text_disable"
+            app:layout_constraintLeft_toLeftOf="@id/row1_right_seat_wind_status"
+            app:layout_constraintRight_toRightOf="@id/row1_right_seat_wind_status"
+            app:layout_constraintTop_toBottomOf="@id/row1_right_seat_wind_status"
+            app:normalColor="@color/seat_tab_item_bg"
+            app:normalTextColor="@color/auto_txt_unactive"
+            app:pressColor="@color/seat_tab_item_bg_on"
+            app:pressTextColor="@color/auto_txt_active"
+            app:radius="@dimen/seat_heat_auto_radius" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/massage_wrap"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:tag="binding_25">
+
+        <com.geely.toolchain.hmi.view.HmiImageView
+            android:layout_width="222.0dip"
+            android:layout_height="222.0dip"
+            android:layout_marginStart="@dimen/seat_row1_heat_left"
+            android:layout_marginTop="@dimen/seat_line1_heat_top"
+            android:src="@mipmap/seat_wind_bg_shadow3"
+            android:tag="binding_26"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.geely.hvac.component.SeatMassageLevel
+            android:id="@id/row1_left_massage"
+            android:layout_width="@dimen/seat_feature_level_width"
+            android:layout_height="@dimen/seat_feature_level_height"
+            android:layout_marginStart="@dimen/seat_wind_row1_left_margin_left"
+            android:layout_marginTop="@dimen/seat_heat_row1_left_margin_top"
+            android:tag="binding_27"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:seatFeatureLevel0LightPath="lottie/light/seat_massage0"
+            app:seatFeatureLevel0NightPath="lottie/night/seat_massage0"
+            app:seatFeatureLevel1LightPath="lottie/light/seat_massage1"
+            app:seatFeatureLevel1NightPath="lottie/night/seat_massage1"
+            app:seatFeatureLevel2LightPath="lottie/light/seat_massage2"
+            app:seatFeatureLevel2NightPath="lottie/night/seat_massage2"
+            app:seatFeatureLevel3LightPath="lottie/light/seat_massage3"
+            app:seatFeatureLevel3NightPath="lottie/night/seat_massage3"
+            app:seatFeatureLevelBgRadius="@dimen/seat_feature_level_radius"
+            app:seatFeatureLevelDisableBgColor="@color/seat_heat_status_bg_disable"
+            app:seatFeatureLevelDisableImg="@mipmap/seat_massage_disable" />
+
+        <com.geely.hvac.component.MassageInfo
+            android:layout_width="@dimen/massage_info_width"
+            android:layout_height="@dimen/massage_info_height"
+            android:layout_marginTop="@dimen/seat_heat_auto_top"
+            android:tag="binding_28"
+            app:layout_constraintLeft_toLeftOf="@id/row1_left_massage"
+            app:layout_constraintRight_toRightOf="@id/row1_left_massage"
+            app:layout_constraintTop_toBottomOf="@id/row1_left_massage" />
+
+        <com.geely.toolchain.hmi.view.HmiImageView
+            android:layout_width="222.0dip"
+            android:layout_height="222.0dip"
+            android:layout_marginTop="@dimen/seat_line1_heat_top"
+            android:layout_marginEnd="@dimen/seat_row1_heat_right"
+            android:src="@mipmap/seat_wind_bg_shadow3"
+            android:tag="binding_29"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.geely.hvac.component.SeatMassageLevel
+            android:id="@id/row1_right_massage"
+            android:layout_width="@dimen/seat_feature_level_width"
+            android:layout_height="@dimen/seat_feature_level_height"
+            android:layout_marginTop="@dimen/seat_massage_level_left1_top"
+            android:layout_marginEnd="@dimen/seat_heat_row1_right_margin_right"
+            android:tag="binding_30"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:seatFeatureLevel0LightPath="lottie/light/seat_massage0"
+            app:seatFeatureLevel0NightPath="lottie/night/seat_massage0"
+            app:seatFeatureLevel1LightPath="lottie/light/seat_massage1"
+            app:seatFeatureLevel1NightPath="lottie/night/seat_massage1"
+            app:seatFeatureLevel2LightPath="lottie/light/seat_massage2"
+            app:seatFeatureLevel2NightPath="lottie/night/seat_massage2"
+            app:seatFeatureLevel3LightPath="lottie/light/seat_massage3"
+            app:seatFeatureLevel3NightPath="lottie/night/seat_massage3"
+            app:seatFeatureLevelBgRadius="@dimen/seat_feature_level_radius"
+            app:seatFeatureLevelDisableBgColor="@color/seat_heat_status_bg_disable"
+            app:seatFeatureLevelDisableImg="@mipmap/seat_massage_disable" />
+
+        <com.geely.hvac.component.MassageInfo
+            android:layout_width="@dimen/massage_info_width"
+            android:layout_height="@dimen/massage_info_height"
+            android:layout_marginTop="@dimen/seat_heat_auto_top"
+            android:tag="binding_31"
+            app:layout_constraintLeft_toLeftOf="@id/row1_right_massage"
+            app:layout_constraintRight_toRightOf="@id/row1_right_massage"
+            app:layout_constraintTop_toBottomOf="@id/row1_right_massage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/physiotherapy"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:tag="binding_32">
+
+        <com.geely.toolchain.hmi.view.HmiImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/massage_shadow_bg_column1_left"
+            android:layout_marginTop="@dimen/massage_shadow_bg_row1_top"
+            android:src="@mipmap/seat_wind_bg_shadow3"
+            android:tag="binding_33"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.geely.toolchain.hmi.view.HmiImageView
+            android:layout_width="112.0dip"
+            android:layout_height="112.0dip"
+            android:layout_marginStart="@dimen/seat_massage_level_left1_right"
+            android:layout_marginTop="@dimen/seat_massage_level_left1_top"
+            android:src="@mipmap/air_conditioning_seat_heating_off_normal"
+            android:tag="binding_34"
+            app:layout_constraintCircleRadius="56.0dip"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.geely.toolchain.hmi.view.HmiImageView
+            android:layout_width="112.0dip"
+            android:layout_height="112.0dip"
+            android:layout_marginStart="@dimen/seat_massage_level_left1_right"
+            android:layout_marginTop="@dimen/seat_massage_level_left1_top"
+            android:src="@mipmap/air_conditioning_seat_ventilation_off_normal"
+            android:tag="binding_35"
+            app:layout_constraintCircleRadius="56.0dip"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.geely.toolchain.hmi.view.HmiImageView
+            android:id="@id/row1_left_physiotherapy"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_marginStart="682.0dip"
+            android:layout_marginTop="360.0dip"
+            android:tag="binding_36"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.geely.hvac.component.PhysiotherapyInfo
+            android:layout_width="@dimen/massage_info_width"
+            android:layout_height="@dimen/massage_info_height"
+            android:layout_marginBottom="@dimen/massage_info_bottom"
+            android:tag="binding_37"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/row1_left_physiotherapy"
+            app:layout_constraintRight_toRightOf="@id/row1_left_physiotherapy" />
+
+        <com.geely.toolchain.hmi.view.HmiImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/massage_shadow_bg_row1_top"
+            android:layout_marginEnd="@dimen/massage_shadow_bg_column2_right"
+            android:src="@mipmap/seat_wind_bg_shadow3"
+            android:tag="binding_38"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.geely.toolchain.hmi.view.HmiImageView
+            android:layout_width="112.0dip"
+            android:layout_height="112.0dip"
+            android:layout_marginTop="@dimen/seat_massage_level_left1_top"
+            android:layout_marginEnd="@dimen/seat_massage_level_right1_right"
+            android:src="@mipmap/air_conditioning_seat_heating_off_normal"
+            android:tag="binding_39"
+            app:layout_constraintCircleRadius="56.0dip"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.geely.toolchain.hmi.view.HmiImageView
+            android:layout_width="112.0dip"
+            android:layout_height="112.0dip"
+            android:layout_marginTop="@dimen/seat_massage_level_left1_top"
+            android:layout_marginEnd="@dimen/seat_massage_level_right1_right"
+            android:src="@mipmap/air_conditioning_seat_ventilation_off_normal"
+            android:tag="binding_40"
+            app:layout_constraintCircleRadius="56.0dip"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.geely.toolchain.hmi.view.HmiImageView
+            android:id="@id/row1_right_physiotherapy"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_marginTop="360.0dip"
+            android:layout_marginEnd="360.0dip"
+            android:tag="binding_41"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.geely.hvac.component.PhysiotherapyInfo
+            android:layout_width="@dimen/massage_info_width"
+            android:layout_height="@dimen/massage_info_height"
+            android:layout_marginBottom="@dimen/massage_info_bottom"
+            android:tag="binding_42"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/row1_right_physiotherapy"
+            app:layout_constraintRight_toRightOf="@id/row1_right_physiotherapy" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/position_wrap"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:tag="binding_43">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/seat_heat_bg_width"
+            android:layout_height="@dimen/seat_heat_bg_height"
+            android:layout_marginRight="25.0px"
+            android:tag="binding_44"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Space
+                android:id="@id/seat_set_base_line"
+                android:layout_width="1.0px"
+                android:layout_height="1.0px"
+                android:tag="binding_45"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <com.geely.toolchain.hmi.view.HmiImageView
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                android:src="@mipmap/seat_set_mask"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:tag="binding_46">
+
+            <View
+                android:layout_width="@dimen/seat_length_arrow_line_width"
+                android:layout_height="@dimen/seat_length_arrow_line_height"
+                android:background="@color/seat_length_arrow_line_bg"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="@id/front_left_seat_forward"
+                app:layout_constraintRight_toRightOf="@id/front_left_seat_forward"
+                app:layout_constraintTop_toBottomOf="@id/front_left_seat_forward" />
+
+            <com.geely.hvac.component.ImageViewWithUpDown
+                android:id="@id/front_left_seat_forward"
+                android:layout_width="@dimen/seat_length_arrow_width"
+                android:layout_height="@dimen/seat_length_arrow_height"
+                android:layout_marginStart="@dimen/seat_length_arrow_left_top_left"
+                android:layout_marginTop="@dimen/seat_length_arrow_left_top_top"
+                android:tag="binding_47"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:normalImg="@mipmap/seat_forward" />
+
+            <com.geely.hvac.component.ImageViewWithUpDown
+                android:id="@id/front_left_seat_backward"
+                android:layout_width="@dimen/seat_length_arrow_width"
+                android:layout_height="@dimen/seat_length_arrow_height"
+                android:layout_marginStart="@dimen/seat_length_arrow_left_bottom_left"
+                android:layout_marginTop="@dimen/seat_length_arrow_left_bottom_top"
+                android:tag="binding_48"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:normalImg="@mipmap/seat_backward" />
+
+            <View
+                android:layout_width="@dimen/seat_length_arrow_line_width"
+                android:layout_height="@dimen/seat_length_arrow_line_height"
+                android:background="@color/seat_length_arrow_line_bg"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="@id/front_right_seat_forward"
+                app:layout_constraintRight_toRightOf="@id/front_right_seat_forward"
+                app:layout_constraintTop_toBottomOf="@id/front_right_seat_forward" />
+
+            <com.geely.hvac.component.ImageViewWithUpDown
+                android:id="@id/front_right_seat_forward"
+                android:layout_width="@dimen/seat_length_arrow_width"
+                android:layout_height="@dimen/seat_length_arrow_height"
+                android:layout_marginTop="@dimen/seat_length_arrow_right_top_top"
+                android:layout_marginEnd="@dimen/seat_length_arrow_right_top_right"
+                android:tag="binding_49"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:normalImg="@mipmap/seat_forward" />
+
+            <com.geely.hvac.component.ImageViewWithUpDown
+                android:id="@id/front_right_seat_backward"
+                android:layout_width="@dimen/seat_length_arrow_width"
+                android:layout_height="@dimen/seat_length_arrow_height"
+                android:layout_marginTop="@dimen/seat_length_arrow_right_bottom_top"
+                android:layout_marginEnd="@dimen/seat_length_arrow_right_bottom_right"
+                android:tag="binding_50"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:normalImg="@mipmap/seat_backward" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="188.0dip"
+                android:layout_height="280.0dip"
+                android:layout_marginLeft="681.0dip"
+                android:layout_marginTop="208.0dip"
+                android:tag="binding_51"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.geely.hvac.component.ViewWithBackground
+                android:id="@id/row1_seat_position_left_more_bg"
+                android:layout_width="@dimen/seat_position_more_bg_width"
+                android:layout_height="@dimen/seat_position_more_bg_height"
+                android:layout_marginStart="@dimen/seat_wind_row1_left_margin_left"
+                android:layout_marginTop="@dimen/seat_heat_row1_left_margin_top"
+                android:tag="binding_52"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:normalColor="@color/seat_position_more_bg"
+                app:radius="@dimen/seat_position_more_bg_radius" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/seat_position_more_width"
+                android:layout_height="@dimen/seat_position_more_height"
+                android:src="@drawable/seat_position_more"
+                android:tag="binding_53"
+                app:layout_constraintBottom_toBottomOf="@id/row1_seat_position_left_more_bg"
+                app:layout_constraintLeft_toLeftOf="@id/row1_seat_position_left_more_bg"
+                app:layout_constraintRight_toRightOf="@id/row1_seat_position_left_more_bg"
+                app:layout_constraintTop_toTopOf="@id/row1_seat_position_left_more_bg" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="188.0dip"
+                android:layout_height="280.0dip"
+                android:layout_marginTop="208.0dip"
+                android:layout_marginRight="685.0dip"
+                android:tag="binding_54"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.geely.hvac.component.ViewWithBackground
+                android:id="@id/seat_position_right_more_bg"
+                android:layout_width="@dimen/seat_position_more_bg_width"
+                android:layout_height="@dimen/seat_position_more_bg_height"
+                android:layout_marginTop="@dimen/seat_heat_row1_left_margin_top"
+                android:layout_marginEnd="@dimen/seat_heat_row1_right_margin_right"
+                android:tag="binding_55"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:normalColor="@color/seat_position_more_bg"
+                app:radius="@dimen/seat_position_more_bg_radius" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/seat_position_more_width"
+                android:layout_height="@dimen/seat_position_more_height"
+                android:src="@drawable/seat_position_more"
+                android:tag="binding_56"
+                app:layout_constraintBottom_toBottomOf="@id/seat_position_right_more_bg"
+                app:layout_constraintLeft_toLeftOf="@id/seat_position_right_more_bg"
+                app:layout_constraintRight_toRightOf="@id/seat_position_right_more_bg"
+                app:layout_constraintTop_toTopOf="@id/seat_position_right_more_bg" />
+
+            <com.geely.toolchain.hmi.view.HmiTextView
+                android:id="@id/main_seat_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/main_seat_txt_left"
+                android:layout_marginBottom="@dimen/main_seat_txt_bottom"
+                android:fontFamily="@font/alibaba_puhuiti_medium"
+                android:text="@string/main_seat"
+                android:textColor="@color/main_seat_txt"
+                android:textSize="@dimen/main_seat_txt_size"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <com.geely.hvac.component.TextViewWithBg
+                android:layout_width="@dimen/seat_position_save_width"
+                android:layout_height="@dimen/seat_position_save_height"
+                android:layout_marginStart="@dimen/seat_position_save_left"
+                android:layout_marginBottom="@dimen/seat_position_save_bottom"
+                android:gravity="center"
+                android:tag="binding_57"
+                android:text="@string/seat_position_save"
+                android:textColor="@color/seat_position_save_tab_label_txt"
+                android:textSize="@dimen/seat_position_save_tab_item_txt_size"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:normalColor="@color/seat_position_save_bg"
+                app:radius="@dimen/seat_position_save_radius" />
+
+            <com.geely.toolchain.hmi.view.HmiTextView
+                android:layout_width="@dimen/seat_position_save_width"
+                android:layout_height="@dimen/seat_position_save_height"
+                android:layout_marginEnd="@dimen/seat_position_set_right"
+                android:layout_marginBottom="@dimen/seat_position_set_bottom"
+                android:background="@drawable/seat_position_set_bg"
+                android:gravity="center"
+                android:tag="binding_58"
+                android:text="@string/seat_position_set"
+                android:textColor="@color/seat_position_set_tab_item_txt"
+                android:textSize="@dimen/seat_position_save_tab_item_txt_size"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <com.geely.hvac.component.SeatPositionSaveTab
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/seat_position_set_save_tab_left"
+                android:orientation="horizontal"
+                android:tag="binding_59"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/main_seat_label"
+                app:layout_constraintLeft_toRightOf="@id/main_seat_label"
+                app:layout_constraintTop_toTopOf="@id/main_seat_label" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.geely.hvac.component.SeatTab
+        android:id="@id/seat_tab"
+        android:layout_width="@dimen/seat_tab_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/seat_tab_margin_left"
+        android:layout_marginTop="@dimen/seat_tab_margin_top"
+        android:tag="binding_60"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

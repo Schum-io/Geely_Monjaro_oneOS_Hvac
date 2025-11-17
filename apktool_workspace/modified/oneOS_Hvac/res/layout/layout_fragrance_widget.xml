@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:focusable="true" android:clickable="true" android:layout_width="704.0dip" android:layout_height="224.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bg_img" android:background="@mipmap/widget_fragrance_bg_on" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:textSize="32.0sp" android:textColor="@color/widget_fragrance_label_color_on" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/widget_fragrance_label_top" android:text="@string/widget_fragrance_label" android:lineSpacingMultiplier="1.4" android:fontFamily="@font/alibaba_puhuiti_medium" android:layout_marginStart="@dimen/widget_fragrance_label_left" android:textFontWeight="500" />
+    <ImageView android:id="@id/fragrance_widget_level" android:layout_width="@dimen/fragrance_widget_level_img_width" android:layout_height="@dimen/fragrance_widget_level_img_height" android:layout_marginTop="@dimen/fragrance_widget_level_img_top" android:src="@mipmap/fragrance_widget_level_0" android:layout_marginStart="@dimen/fragrance_widget_level_img_left" />
+    <RelativeLayout android:id="@id/type_wrap1" android:layout_width="@dimen/widget_fragrance_type_wrap_width" android:layout_height="fill_parent" android:layout_marginStart="@dimen/widget_fragrance_type1_img_left">
+        <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/widget_fragrance_type_wrap_height">
+            <ImageView android:id="@id/type_img1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/widget_fragrance_type1_off" />
+        </RelativeLayout>
+        <TextView android:id="@id/type_text1" android:text="@string/default_fragrance" style="@style/widget_fragrance_type_text" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/type_wrap2" android:layout_width="@dimen/widget_fragrance_type_wrap_width" android:layout_height="fill_parent" android:layout_marginStart="@dimen/widget_fragrance_type2_img_left">
+        <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/widget_fragrance_type_wrap_height">
+            <ImageView android:id="@id/type_img2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/widget_fragrance_type2_off" />
+        </RelativeLayout>
+        <TextView android:id="@id/type_text2" android:text="@string/default_fragrance" style="@style/widget_fragrance_type_text" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/type_wrap3" android:layout_width="@dimen/widget_fragrance_type_wrap_width" android:layout_height="fill_parent" android:layout_marginStart="@dimen/widget_fragrance_type3_img_left">
+        <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/widget_fragrance_type_wrap_height">
+            <ImageView android:id="@id/type_img3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/widget_fragrance_type3_off" />
+        </RelativeLayout>
+        <TextView android:id="@id/type_text3" android:text="@string/default_fragrance" style="@style/widget_fragrance_type_text" />
+    </RelativeLayout>
+    <TextView android:textSize="28.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/no_normal" android:background="@drawable/seat_position_set_bg_normal_launcher" android:visibility="gone" android:layout_width="246.0dip" android:layout_height="64.0dip" android:layout_marginTop="80.0dip" android:text="获取香氛胶囊" android:fontFamily="@font/alibaba_puhuiti_medium" android:layout_marginStart="244.0dip" />
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="view"
+            type="com.geely.hvac.component.MassageTypeItem" />
+    </data>
+
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.geely.hvac.component.ViewWithBackground
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:tag="layout/layout_massage_type_item_0"
+        app:radius="@dimen/massage_set_type_item_radius" />
+
+    <com.geely.hvac.component.ViewWithBackground
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="2.0px"
+        android:layout_marginTop="2.0px"
+        android:layout_marginRight="2.0px"
+        android:layout_marginBottom="2.0px"
+        android:tag="layout/layout_massage_type_item_1"
+        app:radius="@dimen/massage_set_type_item_radius" />
+
+    <com.geely.toolchain.hmi.view.HmiImageView
+        android:id="@id/icon"
+        android:layout_width="@dimen/massage_set_type_item_icon_width"
+        android:layout_height="@dimen/massage_set_type_item_icon_height"
+        android:layout_marginTop="@dimen/massage_set_type_item_icon_top"
+        android:tag="layout/layout_massage_type_item_2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.geely.toolchain.hmi.view.HmiTextView
+        android:id="@id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/massage_set_type_item_text_top"
+        android:tag="layout/layout_massage_type_item_3"
+        android:textSize="@dimen/massage_set_type_item_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</merge>
+</layout>
