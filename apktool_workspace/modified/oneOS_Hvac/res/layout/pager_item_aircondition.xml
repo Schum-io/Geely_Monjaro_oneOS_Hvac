@@ -793,7 +793,7 @@
         app:pressTextColor="@color/auto_txt_active"
         app:radius="@dimen/seat_heat_auto_radius" />
 
-<!--    Кнопка массажа водителя -->
+    <!--    Кнопка массажа водителя -->
     <com.geely.hvac.component.SeatMassageLevel
         android:id="@id/row1_left_massage"
         android:layout_width="@dimen/seat_feature_level_width"

@@ -47,6 +47,7 @@
         Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController$Row1RightHeatRunnable;,
         Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController$Row1LeftWindRunnable;,
         Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController$Row1RightWindRunnable;,
+        Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController$Row1LeftMassageRunnable;,
         Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController$Row2LeftRunnable;,
         Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController$Row2RightRunnable;
     }
@@ -137,6 +138,14 @@
 .field private row1RightSeatHeatAutoObservable:Landroidx/databinding/ObservableInt;
 .field private row1LeftSeatWindAutoObservable:Landroidx/databinding/ObservableInt;
 .field private row1RightSeatWindAutoObservable:Landroidx/databinding/ObservableInt;
+
+# Row1 (front) massage button - shown on front panel, hidden on back panel
+# row1LeftMassageView - massage button (ID: 0x7f090265)
+# row1LeftMassageLevelObservable - massage level (0-3)
+# row1LeftMassageSupportedObservable - massage support status
+.field private row1LeftMassageView:Landroid/view/View;
+.field private row1LeftMassageLevelObservable:Landroidx/databinding/ObservableInt;
+.field private row1LeftMassageSupportedObservable:Landroidx/databinding/ObservableInt;
 
 
 #############################################################################
@@ -240,9 +249,17 @@
     :cond_check_row1_right_wind_auto
     # ---- Check ROW1 RIGHT WIND AUTO ----
     iget-object v1, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->row1RightSeatWindAutoView:Landroid/view/View;
+    if-eqz v1, :cond_check_row1_left_massage
+    if-ne p1, v1, :cond_check_row1_left_massage
+    invoke-virtual {v0, p1}, Lcom/geely/hvac/viewmodel/AppMainViewModel;->row1RightAutoSeatVentilateClick(Landroid/view/View;)V
+    return-void
+
+    :cond_check_row1_left_massage
+    # ---- Check ROW1 LEFT MASSAGE ----
+    iget-object v1, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->row1LeftMassageView:Landroid/view/View;
     if-eqz v1, :cond_check_row2_left
     if-ne p1, v1, :cond_check_row2_left
-    invoke-virtual {v0, p1}, Lcom/geely/hvac/viewmodel/AppMainViewModel;->row1RightAutoSeatVentilateClick(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Lcom/geely/hvac/viewmodel/AppMainViewModel;->massageLevelClick(Landroid/view/View;)V
     return-void
 
     :cond_check_row2_left
@@ -496,9 +513,26 @@
     :cond_check_row1_right_wind_auto
     # ---- CHECK 12: Is it row1 RIGHT WIND AUTO observable? ----
     iget-object v1, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->row1RightSeatWindAutoObservable:Landroidx/databinding/ObservableInt;
+    if-eqz v1, :cond_check_row1_left_massage_lev
+    if-ne p1, v1, :cond_check_row1_left_massage_lev
+    invoke-virtual {p0}, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->updateRow1RightSeatWindAuto()V
+    return-void
+
+    :cond_check_row1_left_massage_lev
+    # ---- CHECK 13: Is it row1 LEFT MASSAGE level or supported? ----
+    iget-object v1, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->row1LeftMassageLevelObservable:Landroidx/databinding/ObservableInt;
+    if-eqz v1, :cond_check_row1_left_massage_sup
+    if-eq p1, v1, :cond_row1_left_massage_update
+
+    :cond_check_row1_left_massage_sup
+    iget-object v1, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->row1LeftMassageSupportedObservable:Landroidx/databinding/ObservableInt;
     if-eqz v1, :cond_end
     if-ne p1, v1, :cond_end
-    invoke-virtual {p0}, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->updateRow1RightSeatWindAuto()V
+
+    :cond_row1_left_massage_update
+    new-instance v1, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController$Row1LeftMassageRunnable;
+    invoke-direct {v1, p0}, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController$Row1LeftMassageRunnable;-><init>(Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
     return-void
 
     :cond_end
@@ -610,6 +644,13 @@
     :cond_row1_right_wind_auto
     # ---- Update row1 right seat wind AUTO button visibility ----
     iget-object v0, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->row1RightSeatWindAutoView:Landroid/view/View;
+    if-eqz v0, :cond_row1_left_massage
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_row1_left_massage
+    # ---- Update row1 left massage button visibility ----
+    # Note: uses v2 (front elements visibility) - shown on front, hidden on back
+    iget-object v0, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->row1LeftMassageView:Landroid/view/View;
     if-eqz v0, :cond_row2_left_heat
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
@@ -870,6 +911,9 @@
     invoke-virtual {p0}, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->updateRow1RightSeatHeatAuto()V
     invoke-virtual {p0}, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->updateRow1LeftSeatWindAuto()V
     invoke-virtual {p0}, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->updateRow1RightSeatWindAuto()V
+
+    # Update row1 left massage button
+    invoke-virtual {p0}, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->updateRow1LeftMassage()V
 
     # Update row2 rear seat buttons
     invoke-virtual {p0}, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->updateRow2Left()V
@@ -1260,6 +1304,35 @@
 
 
 #############################################################################
+# ROW1 LEFT MASSAGE SETTERS
+#############################################################################
+
+# setRow1LeftMassageView - Sets the row1 left massage button view
+.method public setRow1LeftMassageView(Landroid/view/View;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->row1LeftMassageView:Landroid/view/View;
+
+    return-void
+.end method
+
+
+# setRow1LeftMassageObservables - Sets row1 left massage observables
+#
+# Parameters:
+# p1 = row1LeftMassageLevelObservable (massage level 0-3)
+# p2 = row1LeftMassageSupportedObservable (massage support status)
+.method public setRow1LeftMassageObservables(Landroidx/databinding/ObservableInt;Landroidx/databinding/ObservableInt;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->row1LeftMassageLevelObservable:Landroidx/databinding/ObservableInt;
+    iput-object p2, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->row1LeftMassageSupportedObservable:Landroidx/databinding/ObservableInt;
+
+    return-void
+.end method
+
+
+#############################################################################
 # AUTO BUTTON UPDATE METHODS
 #############################################################################
 
@@ -1380,6 +1453,49 @@
     
     # Pass (autoValue, 1) - matches original binding
     invoke-static {v0, v1, v2}, Lcom/geely/hvac/component/TextViewWithBg;->bindSeatLevel(Lcom/geely/hvac/component/TextViewWithBg;II)V
+
+    :cond_end
+    return-void
+.end method
+
+
+# updateRow1LeftMassage - Updates row1 LEFT massage button (enabled + level)
+#
+# Called by: Row1LeftMassageRunnable (when massage level or supported changes)
+#
+# Uses:
+# - SeatFeatureLevel.bindSeatFeatureLevelEnable() for enabled state
+# - SeatFeatureLevel.bindSeatFeatureLevelLevel() for level display
+.method public updateRow1LeftMassage()V
+    .locals 5
+
+    iget-object v0, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->model:Lcom/geely/hvac/viewmodel/AppMainViewModel;
+    if-eqz v0, :cond_end
+
+    iget-object v1, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->row1LeftMassageView:Landroid/view/View;
+    if-eqz v1, :cond_end
+
+    iget-object v2, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->row1LeftMassageLevelObservable:Landroidx/databinding/ObservableInt;
+    if-eqz v2, :cond_end
+
+    iget-object v3, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->row1LeftMassageSupportedObservable:Landroidx/databinding/ObservableInt;
+    if-eqz v3, :cond_end
+
+    invoke-virtual {v3}, Landroidx/databinding/ObservableInt;->get()I
+    move-result v3
+
+    invoke-virtual {v0, v3}, Lcom/geely/hvac/viewmodel/AppMainViewModel;->isSeatHeatVentilateAvailable(I)Z
+    move-result v4
+
+    check-cast v1, Lcom/geely/hvac/component/SeatFeatureLevel;
+
+    invoke-static {v1, v4}, Lcom/geely/hvac/component/SeatFeatureLevel;->bindSeatFeatureLevelEnable(Lcom/geely/hvac/component/SeatFeatureLevel;Z)V
+
+    # ALWAYS update level (component handles display based on enable state)
+    invoke-virtual {v2}, Landroidx/databinding/ObservableInt;->get()I
+    move-result v3
+
+    invoke-static {v1, v3}, Lcom/geely/hvac/component/SeatFeatureLevel;->bindSeatFeatureLevelLevel(Lcom/geely/hvac/component/SeatFeatureLevel;I)V
 
     :cond_end
     return-void

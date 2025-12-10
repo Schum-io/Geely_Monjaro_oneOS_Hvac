@@ -847,6 +847,67 @@
     :skip_r1rwa_click
 
     #########################################################################
+    # STEP 14.5: Find and configure row1 left massage button
+    # ID: 0x7f090265 (row1_left_massage)
+    # Zone: 1 (SEAT_ROW_1_LEFT)
+    #########################################################################
+    
+    # Find row1_left_massage by ID 0x7f090265
+    const v5, 0x7f090265
+    invoke-virtual {v0, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    move-result-object v5
+    if-eqz v5, :skip_massage_setup
+
+    # Set view in controller
+    invoke-virtual {v2, v5}, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->setRow1LeftMassageView(Landroid/view/View;)V
+
+    # Set tag with zone ID (1 = SEAT_ROW_1_LEFT) for massageLevelClick
+    const/4 v6, 0x1
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v6
+    invoke-virtual {v5, v6}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    # Set click listener
+    invoke-virtual {v5, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    # Initialize massage button with default values (enabled = true, level = 0)
+    check-cast v5, Lcom/geely/hvac/component/SeatFeatureLevel;
+    const/4 v6, 0x1
+    invoke-static {v5, v6}, Lcom/geely/hvac/component/SeatFeatureLevel;->bindSeatFeatureLevelEnable(Lcom/geely/hvac/component/SeatFeatureLevel;Z)V
+    const/4 v6, 0x0
+    invoke-static {v5, v6}, Lcom/geely/hvac/component/SeatFeatureLevel;->bindSeatFeatureLevelLevel(Lcom/geely/hvac/component/SeatFeatureLevel;I)V
+
+    :skip_massage_setup
+
+    #########################################################################
+    # STEP 14.6: Get and subscribe to row1 left massage observables
+    #########################################################################
+    
+    # Get massage level observable: getMassageLevel(1) where 1 = SEAT_ROW_1_LEFT
+    const/4 v5, 0x1
+    invoke-virtual {v1, v5}, Lcom/geely/hvac/viewmodel/AppMainViewModel;->getMassageLevel(I)Landroidx/databinding/ObservableInt;
+    move-result-object v7
+
+    # Get massage support observable via getSupportObservable
+    # Signal ID: 0x10050a00 (massage level support), Zone: 1 (SEAT_ROW_1_LEFT)
+    const v6, 0x10050a00
+    invoke-virtual {v1, v6, v5}, Lcom/geely/hvac/viewmodel/AppMainViewModel;->getSupportObservable(II)Landroidx/databinding/ObservableInt;
+    move-result-object v8
+
+    # If both observables exist, set them and subscribe
+    if-eqz v7, :skip_massage_obs
+    if-eqz v8, :skip_massage_obs
+
+    # Set observables in controller
+    invoke-virtual {v2, v7, v8}, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->setRow1LeftMassageObservables(Landroidx/databinding/ObservableInt;Landroidx/databinding/ObservableInt;)V
+
+    # Subscribe controller to receive property change callbacks
+    invoke-virtual {v7, v2}, Landroidx/databinding/ObservableInt;->addOnPropertyChangedCallback(Landroidx/databinding/Observable$OnPropertyChangedCallback;)V
+    invoke-virtual {v8, v2}, Landroidx/databinding/ObservableInt;->addOnPropertyChangedCallback(Landroidx/databinding/Observable$OnPropertyChangedCallback;)V
+
+    :skip_massage_obs
+
+    #########################################################################
     # STEP 15: Subscribe to panel state observable
     #########################################################################
     
