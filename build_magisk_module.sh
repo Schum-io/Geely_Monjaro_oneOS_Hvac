@@ -3,7 +3,6 @@
 # Список файлов для копирования
 FILES_TO_COPY=(
     "app/src/main/res/layout/pager_item_aircondition.xml:apktool_workspace/modified/oneOS_Hvac/res/layout/pager_item_aircondition.xml"
-#    "app/src/main/res/values/ids.xml:apktool_workspace/modified/oneOS_Hvac/res/values/ids.xml"
 )
 
 # Цвета для вывода

@@ -1,6 +1,6 @@
 id=oneOS_Hvac
 name=oneOS_Hvac
-version=2.12.1
-versionCode=2
+version=1.0.20240929G(181)
+versionCode=385
 author=https://github.com/Schum-io
 description=Replaces the stock oneOS_Hvac app with a modified version.
