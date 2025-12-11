@@ -888,22 +888,28 @@
     invoke-virtual {v1, v5}, Lcom/geely/hvac/viewmodel/AppMainViewModel;->getMassageLevel(I)Landroidx/databinding/ObservableInt;
     move-result-object v7
 
-    # Get massage support observable via getSupportObservable
-    # Signal ID: 0x10050a00 (massage level support), Zone: 1 (SEAT_ROW_1_LEFT)
-    const v6, 0x10050a00
-    invoke-virtual {v1, v6, v5}, Lcom/geely/hvac/viewmodel/AppMainViewModel;->getSupportObservable(II)Landroidx/databinding/ObservableInt;
+    # Get massage state observable: getMassageState(1) - boolean on/off
+    invoke-virtual {v1, v5}, Lcom/geely/hvac/viewmodel/AppMainViewModel;->getMassageState(I)Landroidx/databinding/ObservableBoolean;
     move-result-object v8
 
-    # If both observables exist, set them and subscribe
+    # Get massage support observable via getSupportObservable
+    # Signal ID: 0x10050a00 (HVAC_FUNC_SEAT_MASSAGE_SWITCH), Zone: 1 (SEAT_ROW_1_LEFT)
+    const v6, 0x10050a00
+    invoke-virtual {v1, v6, v5}, Lcom/geely/hvac/viewmodel/AppMainViewModel;->getSupportObservable(II)Landroidx/databinding/ObservableInt;
+    move-result-object v9
+
+    # If all observables exist, set them and subscribe
     if-eqz v7, :skip_massage_obs
     if-eqz v8, :skip_massage_obs
+    if-eqz v9, :skip_massage_obs
 
-    # Set observables in controller
-    invoke-virtual {v2, v7, v8}, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->setRow1LeftMassageObservables(Landroidx/databinding/ObservableInt;Landroidx/databinding/ObservableInt;)V
+    # Set observables in controller (level, state, supported)
+    invoke-virtual {v2, v7, v8, v9}, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->setRow1LeftMassageObservables(Landroidx/databinding/ObservableInt;Landroidx/databinding/ObservableBoolean;Landroidx/databinding/ObservableInt;)V
 
-    # Subscribe controller to receive property change callbacks
+    # Subscribe controller to receive property change callbacks for all 3 observables
     invoke-virtual {v7, v2}, Landroidx/databinding/ObservableInt;->addOnPropertyChangedCallback(Landroidx/databinding/Observable$OnPropertyChangedCallback;)V
-    invoke-virtual {v8, v2}, Landroidx/databinding/ObservableInt;->addOnPropertyChangedCallback(Landroidx/databinding/Observable$OnPropertyChangedCallback;)V
+    invoke-virtual {v8, v2}, Landroidx/databinding/ObservableBoolean;->addOnPropertyChangedCallback(Landroidx/databinding/Observable$OnPropertyChangedCallback;)V
+    invoke-virtual {v9, v2}, Landroidx/databinding/ObservableInt;->addOnPropertyChangedCallback(Landroidx/databinding/Observable$OnPropertyChangedCallback;)V
 
     :skip_massage_obs
 
