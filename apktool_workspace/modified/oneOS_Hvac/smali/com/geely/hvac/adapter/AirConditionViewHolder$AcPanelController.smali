@@ -1470,15 +1470,17 @@
 
 # updateRow1LeftMassage - Updates row1 LEFT massage button (enabled + level)
 #
-# Called by: Row1LeftMassageRunnable (when massage level or supported changes)
+# Called by: Row1LeftMassageRunnable (when massage level, state, or supported changes)
 #
 # Uses:
 # - SeatFeatureLevel.bindSeatFeatureLevelEnable() for enabled state (via isFunctionAvailable)
 # - SeatFeatureLevel.bindSeatFeatureLevelLevel() for level display
+# - SeatMassageLevel.getLevel(state, rawLevel) to convert raw level to display level
 #
 # Note: Massage uses isFunctionAvailable() instead of isSeatHeatVentilateAvailable()
+# Raw level values like 0x10050701/02/03 must be converted via getLevel(state, level) to 1/2/3
 .method public updateRow1LeftMassage()V
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->model:Lcom/geely/hvac/viewmodel/AppMainViewModel;
     if-eqz v0, :cond_end
@@ -1489,27 +1491,40 @@
     iget-object v2, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->row1LeftMassageLevelObservable:Landroidx/databinding/ObservableInt;
     if-eqz v2, :cond_end
 
-    iget-object v3, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->row1LeftMassageSupportedObservable:Landroidx/databinding/ObservableInt;
+    iget-object v3, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->row1LeftMassageStateObservable:Landroidx/databinding/ObservableBoolean;
     if-eqz v3, :cond_end
 
-    # Get support status value
-    invoke-virtual {v3}, Landroidx/databinding/ObservableInt;->get()I
-    move-result v3
+    iget-object v4, p0, Lcom/geely/hvac/adapter/AirConditionViewHolder$AcPanelController;->row1LeftMassageSupportedObservable:Landroidx/databinding/ObservableInt;
+    if-eqz v4, :cond_end
 
-    # Check if massage function is available using isFunctionAvailable (not isSeatHeatVentilateAvailable)
-    invoke-virtual {v0, v3}, Lcom/geely/hvac/viewmodel/AppMainViewModel;->isFunctionAvailable(I)Z
+    # Get support status value and check availability
+    invoke-virtual {v4}, Landroidx/databinding/ObservableInt;->get()I
     move-result v4
+
+    # Check if massage function is available using isFunctionAvailable
+    invoke-virtual {v0, v4}, Lcom/geely/hvac/viewmodel/AppMainViewModel;->isFunctionAvailable(I)Z
+    move-result v5
 
     check-cast v1, Lcom/geely/hvac/component/SeatFeatureLevel;
 
     # Update enabled state
-    invoke-static {v1, v4}, Lcom/geely/hvac/component/SeatFeatureLevel;->bindSeatFeatureLevelEnable(Lcom/geely/hvac/component/SeatFeatureLevel;Z)V
+    invoke-static {v1, v5}, Lcom/geely/hvac/component/SeatFeatureLevel;->bindSeatFeatureLevelEnable(Lcom/geely/hvac/component/SeatFeatureLevel;Z)V
 
-    # ALWAYS update level (component handles display based on enable state)
-    invoke-virtual {v2}, Landroidx/databinding/ObservableInt;->get()I
+    # Get massage state (on/off boolean)
+    invoke-virtual {v3}, Landroidx/databinding/ObservableBoolean;->get()Z
     move-result v3
 
-    invoke-static {v1, v3}, Lcom/geely/hvac/component/SeatFeatureLevel;->bindSeatFeatureLevelLevel(Lcom/geely/hvac/component/SeatFeatureLevel;I)V
+    # Get raw massage level (e.g. 0x10050701, 0x10050702, 0x10050703)
+    invoke-virtual {v2}, Landroidx/databinding/ObservableInt;->get()I
+    move-result v4
+
+    # Convert raw level to display level (0-3) using SeatMassageLevel.getLevel(state, rawLevel)
+    # Returns 0 if state=false, otherwise converts 0x10050701->1, 0x10050702->2, 0x10050703->3
+    invoke-static {v3, v4}, Lcom/geely/hvac/component/SeatMassageLevel;->getLevel(ZI)I
+    move-result v4
+
+    # Update level display with converted value
+    invoke-static {v1, v4}, Lcom/geely/hvac/component/SeatFeatureLevel;->bindSeatFeatureLevelLevel(Lcom/geely/hvac/component/SeatFeatureLevel;I)V
 
     :cond_end
     return-void
