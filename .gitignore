@@ -38,7 +38,7 @@ replay_pid*
 # --- Security & Config ---
 .env
 *.keystore
-.sig
+*.sig
 
 # --- VCS ---
 *.orig

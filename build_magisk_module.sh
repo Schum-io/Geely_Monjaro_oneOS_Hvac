@@ -1,5 +1,11 @@
 #!/bin/bash
 
+#
+# oneOS_Hvac Enhanced Climate Controls - Build Script
+# Author: https://github.com/Schum-io
+# Description: Adds heating, ventilation and massage controls to the main climate screen
+#
+
 # Список файлов для копирования
 FILES_TO_COPY=(
     "app/src/main/res/layout/pager_item_aircondition.xml:apktool_workspace/modified/oneOS_Hvac/res/layout/pager_item_aircondition.xml"
@@ -39,7 +45,7 @@ if [ ! -f "oneOS_Hvac.keystore" ]; then
         -validity 10000 \
         -storepass "$KEYSTORE_PASSWORD" \
         -keypass "$KEYSTORE_PASSWORD" \
-        -dname "CN=oneOS_Hvac, OU=Development, O=Geely, L=Unknown, ST=Unknown, C=US" \
+        -dname "CN=oneOS_Hvac, OU=Schum-io, O=GitHub, L=Unknown, ST=Unknown, C=US" \
         -noprompt
     
     if [ $? -ne 0 ]; then
@@ -66,6 +72,64 @@ if [ ! -d "$BUILD_DIR" ]; then
     exit 1
 fi
 
+# Функция для удаления data binding разметки из XML файла
+remove_data_binding() {
+    local input_file="$1"
+    local output_file="$2"
+    local temp_file="${output_file}.tmp"
+    
+    # Используем awk для удаления data binding разметки
+    awk '
+        BEGIN { 
+            in_data = 0
+            after_xml_declaration = 0
+            found_root = 0
+        }
+        # Печатаем XML декларацию
+        /^<\?xml/ { 
+            print
+            after_xml_declaration = 1
+            next 
+        }
+        # Пропускаем строку с открывающим тегом <layout>
+        /<layout>/ { 
+            next 
+        }
+        # Начинаем пропускать блок <data>
+        /<data>/ { 
+            in_data = 1
+            next 
+        }
+        # Заканчиваем пропускать блок </data>
+        /<\/data>/ { 
+            in_data = 0
+            next 
+        }
+        # Пропускаем закрывающий тег </layout> в самом конце
+        /<\/layout>$/ { 
+            next 
+        }
+        # Пропускаем пустые строки сразу после XML декларации
+        after_xml_declaration == 1 && /^[[:space:]]*$/ {
+            next
+        }
+        # Печатаем все остальные строки, если мы не внутри блока data
+        !in_data { 
+            after_xml_declaration = 0
+            # Убираем лишние отступы у первого реального элемента после XML декларации (корневой элемент)
+            if (found_root == 0 && /<[a-zA-Z]/) {
+                found_root = 1
+                # Убираем ведущие пробелы у корневого элемента
+                sub(/^[[:space:]]+/, "")
+            }
+            print 
+        }
+    ' "$input_file" > "$temp_file"
+    
+    # Перемещаем временный файл в выходной
+    mv "$temp_file" "$output_file"
+}
+
 # Копирование модифицированных файлов из app/ в apktool_workspace
 echo -e "${YELLOW}Копируем модифицированные файлы...${NC}"
 
@@ -89,13 +153,25 @@ for file_pair in "${FILES_TO_COPY[@]}"; do
     dest_dir=$(dirname "$dest_file")
     mkdir -p "$dest_dir"
     
-    # Копируем файл
-    cp "$source_file" "$dest_file"
-    
-    if [ $? -eq 0 ]; then
-        echo -e "${GREEN}  ✓ Скопирован: $source_file -> $dest_file${NC}"
+    # Проверяем, является ли файл XML layout файлом
+    if [[ "$source_file" =~ \.xml$ ]] && [[ "$source_file" =~ /res/layout/ ]]; then
+        # Для XML layout файлов удаляем data binding разметку
+        remove_data_binding "$source_file" "$dest_file"
+        
+        if [ $? -eq 0 ]; then
+            echo -e "${GREEN}  ✓ Скопирован с удалением data binding: $source_file -> $dest_file${NC}"
+        else
+            echo -e "${RED}  ✗ Ошибка при копировании: $source_file${NC}"
+        fi
     else
-        echo -e "${RED}  ✗ Ошибка при копировании: $source_file${NC}"
+        # Для остальных файлов просто копируем
+        cp "$source_file" "$dest_file"
+        
+        if [ $? -eq 0 ]; then
+            echo -e "${GREEN}  ✓ Скопирован: $source_file -> $dest_file${NC}"
+        else
+            echo -e "${RED}  ✗ Ошибка при копировании: $source_file${NC}"
+        fi
     fi
 done
 

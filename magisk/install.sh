@@ -60,9 +60,10 @@ REPLACE="
 # Set what you want to display when installing your module
 
 print_modname() {
-  ui_print "****************************************"
-  ui_print "    oneOS_Hvac   Replacement Module     "
-  ui_print "****************************************"
+  ui_print "********************************************"
+  ui_print "  oneOS_Hvac Enhanced Climate Controls    "
+  ui_print "  Heating | Ventilation | Massage         "
+  ui_print "********************************************"
 }
 
 # Copy/extract your module files into $MODPATH in on_install.

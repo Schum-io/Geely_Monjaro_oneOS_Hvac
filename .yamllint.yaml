@@ -1,0 +1,30 @@
+---
+extends: default
+rules:
+  braces:
+    min-spaces-inside: 0
+    max-spaces-inside: 1
+  line-length:
+    max: 110
+  document-start: disable
+  truthy:
+    allowed-values:
+      - 'yes'
+      - 'no'
+      - 'true'
+      - 'false'
+      - 'True'
+      - 'False'
+  comments:
+    min-spaces-from-content: 1
+  quoted-strings:
+    quote-type: single
+    required: only-when-needed
+    extra-allowed:
+      - '.*/'
+    extra-required:
+      - '^http://'
+      - '^https://'
+      - '^ftp://'
+      - '.{80,}'
+      - '\{\{'
