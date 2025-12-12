@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/rootView" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.geely.toolchain.hmi.view.HmiTextView android:textSize="30.0sp" android:textColor="@color/oneoshmi_dialog_content_color" android:gravity="center" android:id="@id/tabItemText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="48.0dip" android:paddingEnd="48.0dip" app:layout_constraintTop_toTopOf="parent" />
+    <View android:id="@id/tabItemIndicator" android:background="@drawable/oneoshmi_tab_item_indicator_shape" android:visibility="gone" android:layout_width="30.0dip" android:layout_height="4.0dip" android:layout_marginTop="8.0dip" app:layout_constraintEnd_toEndOf="@id/tabItemText" app:layout_constraintStart_toStartOf="@id/tabItemText" app:layout_constraintTop_toBottomOf="@id/tabItemText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

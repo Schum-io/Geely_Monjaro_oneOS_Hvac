@@ -1,0 +1,109 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.geely.hvac.viewmodel.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/dialog_gray_bg"
+        android:tag="layout/layout_fragrance_tips_0">
+
+        <com.geely.hvac.component.ConstraintLayoutWithBg
+            android:layout_width="@dimen/fragrance_tips_content_width"
+            android:layout_height="@dimen/fragrance_tips_content_height"
+            android:layout_marginTop="@dimen/fragrance_tips_content_top"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:normalColor="@color/buy_fragrance_content_bg"
+            app:radius="@dimen/fragrance_tips_content_radius">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/close"
+                android:layout_width="@dimen/buy_fragrance_close_width"
+                android:layout_height="@dimen/buy_fragrance_close_height"
+                android:layout_marginStart="@dimen/buy_fragrance_close_left"
+                android:layout_marginTop="@dimen/buy_fragrance_close_top"
+                android:src="@drawable/buy_fragrance_close"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alibaba_puhuiti_medium"
+                android:lineHeight="56.0dip"
+                android:text="@string/fragrance_tips_txt"
+                android:textColor="@color/fragrance_tips_title_color"
+                android:textSize="@dimen/fragrance_tips_title_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/close"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/close" />
+
+            <com.geely.hvac.component.ConstraintLayoutWithBg
+                android:id="@id/card_view"
+                android:layout_width="@dimen/fragrance_tips_pt_width"
+                android:layout_height="@dimen/fragrance_tips_pt_height"
+                android:layout_marginTop="@dimen/fragrance_tips_pt_top"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:normalColor="@color/fragrance_tips_vp_color"
+                app:radius="@dimen/fragrance_tips_content_radius">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@id/vp_fragrance_tips"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+
+                <RelativeLayout
+                    android:layout_width="46.0dip"
+                    android:layout_height="12.0dip"
+                    android:layout_marginTop="365.0dip"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@id/fragment_tips_tab_0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/fragrance_tips_tab_0" />
+
+                    <ImageView
+                        android:id="@id/fragment_tips_tab_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/fragrance_tips_tab_1" />
+                </RelativeLayout>
+            </com.geely.hvac.component.ConstraintLayoutWithBg>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/tv_fragrance_tips_txt1"
+                android:layout_width="700.0dip"
+                android:layout_height="290.0dip"
+                android:layout_marginBottom="32.0dip"
+                android:fontFamily="@font/alibaba_puhuiti_medium"
+                android:lineHeight="44.0dip"
+                android:text="@string/fragrance_tips_txt1"
+                android:textColor="@color/fragrance_tips_txt1"
+                android:textSize="@dimen/fragrance_tips_txt1_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </com.geely.hvac.component.ConstraintLayoutWithBg>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,18 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.geely.hvac.viewmodel.AppMainViewModel" />
+    </data>
+
+    <com.geely.hvac.component.ConstraintLayoutWithBg android:id="@id/root" android:tag="layout/layout_temperature_toast_0" android:background="@android:color/transparent" android:layout_width="1920.0dip" android:layout_height="720.0dip" android:alpha="0.0">
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/content" android:layout_width="232.0dip" android:layout_height="720.0dip" android:layout_marginStart="120.0dip" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <com.geely.hvac.util.TemperatureToastRoot android:id="@id/wrap" android:layout_width="@dimen/temperature_width" android:layout_height="@dimen/temperature_height" android:layout_marginStart="@dimen/temperature_margin" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent">
+                <com.geely.hvac.component.Temperature android:id="@id/temperature" android:tag="binding_1" android:layout_width="@dimen/temperature_width" android:layout_height="@dimen/temperature_height" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" app:maxPickerTextAlpha="0.95" app:maxPickerTextSize="@dimen/temperature_max_text_size" app:minPickerTextAlpha="0.18" app:minPickerTextSize="@dimen/temperature_min_text_size" app:pickerTextAlign="1" app:pickerTextColor="@color/temperature_text_color" />
+            </com.geely.hvac.util.TemperatureToastRoot>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.geely.hvac.component.ConstraintLayoutWithBg>
+
+</layout>

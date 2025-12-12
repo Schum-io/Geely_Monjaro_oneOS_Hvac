@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@android:color/transparent" android:padding="13.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="332.0dip" android:layout_height="332.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.geely.toolchain.hmi.view.HmiShadowLayerBlurView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" app:blurAlpha="1.0" app:blurCornerRadiusDP="@dimen/oneoshmi_dialog_input_volume_bg_radius" app:blurLuminance="1.0" app:blurRadius="@dimen/oneoshmi_dialog_volume_blur_radius" app:hmiElevation="4.0dip" app:hmiRadius="@dimen/oneoshmi_dialog_input_volume_bg_radius">
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/rootView" android:background="@drawable/oneoshmi_dialog_volume_bg" android:layout_width="280.0dip" android:layout_height="280.0dip">
+            <com.geely.toolchain.hmi.view.HmiImageView android:id="@id/funIcon" android:layout_width="112.0dip" android:layout_height="112.0dip" android:layout_marginTop="52.0dip" android:layout_marginStart="84.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <ProgressBar android:id="@id/volumeProgress" android:layout_width="168.0dip" android:layout_height="8.0dip" android:layout_marginBottom="66.0dip" android:max="100" android:progressDrawable="@drawable/oneoshmi_dialog_progress_drawable" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.geely.toolchain.hmi.view.HmiShadowLayerBlurView>
+</LinearLayout>

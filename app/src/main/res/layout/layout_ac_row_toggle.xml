@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.geely.hvac.viewmodel.MainViewModel" />
+    </data>
+
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.geely.toolchain.hmi.view.HmiImageView
+        android:id="@id/arrow"
+        android:layout_width="@dimen/ac_row_toggle_arrow_width"
+        android:layout_height="@dimen/ac_row_toggle_arrow_height"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.geely.toolchain.hmi.view.HmiTextView
+        android:id="@id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ac_row_toggle_txt_margin"
+        android:fontFamily="@font/alibaba_puhuiti_regular"
+        android:textColor="@color/ac_row_toggle_text"
+        android:textSize="@dimen/ac_row_toggle_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/arrow" />
+</merge>
+</layout>

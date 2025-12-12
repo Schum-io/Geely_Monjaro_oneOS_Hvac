@@ -1,0 +1,6 @@
+id=oneOS_Hvac
+name=oneOS_Hvac
+version=1.0.20240929G(181)
+versionCode=385
+author=https://github.com/Schum-io
+description=Adds heating, ventilation and massage controls to the main climate screen.

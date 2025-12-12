@@ -1,0 +1,55 @@
+name: APKTool Build Check
+
+#
+# oneOS_Hvac Enhanced Climate Controls - CI Build
+# Author: https://github.com/Schum-io
+# Description: Builds APK to verify apktool workspace integrity
+#
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  apktool-build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+    - name: Install APKTool
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget
+        wget https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool -O apktool
+        wget https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.9.3.jar -O apktool.jar
+        chmod +x apktool
+        sudo mv apktool apktool.jar /usr/local/bin/
+
+    - name: Build APK with APKTool
+      run: |
+        BUILD_DIR="apktool_workspace/modified/oneOS_Hvac"
+        
+        if [ ! -d "$BUILD_DIR" ]; then
+            echo "Error: directory $BUILD_DIR not found!"
+            exit 1
+        fi
+        
+        echo "Building APK from $BUILD_DIR..."
+        apktool b "$BUILD_DIR" -o oneOS_Hvac_unsigned.apk
+        
+        if [ ! -f "oneOS_Hvac_unsigned.apk" ]; then
+            echo "Error: APK file was not created!"
+            exit 1
+        fi
+        
+        echo "✓ APK build successful"
+        ls -lh oneOS_Hvac_unsigned.apk

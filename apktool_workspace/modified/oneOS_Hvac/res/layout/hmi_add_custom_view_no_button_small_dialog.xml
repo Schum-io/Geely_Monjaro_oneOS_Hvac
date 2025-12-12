@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/rootView" android:background="@drawable/oneoshmi_dialog_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="864.0dip" android:layout_height="wrap_content" android:maxHeight="680.0dip">
+        <com.geely.toolchain.hmi.view.HmiImageView android:id="@id/close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="48.0dip" app:layout_constraintBottom_toBottomOf="@id/title" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/title" />
+        <com.geely.toolchain.hmi.view.HmiTextView android:textSize="@dimen/oneoshmi_dialog_title_size" android:textStyle="bold" android:textColor="@color/oneoshmi_dialog_title_color" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="48.0dip" android:maxWidth="624.0dip" android:layout_marginStart="48.0dip" android:layout_marginEnd="48.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout android:orientation="vertical" android:id="@id/customView" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/title" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

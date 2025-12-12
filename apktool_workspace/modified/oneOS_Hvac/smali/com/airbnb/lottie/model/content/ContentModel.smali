@@ -1,0 +1,20 @@
+.class public interface abstract Lcom/airbnb/lottie/model/content/ContentModel;
+.super Ljava/lang/Object;
+.source "ContentModel.java"
+
+
+# virtual methods
+.method public abstract toContent(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/LottieComposition;Lcom/airbnb/lottie/model/layer/BaseLayer;)Lcom/airbnb/lottie/animation/content/Content;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "drawable",
+            "composition",
+            "layer"
+        }
+    .end annotation
+.end method

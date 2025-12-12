@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/layout_seat_position_save_tab_0" android:layout_width="@dimen/seat_position_save_tab_item_width" android:layout_height="@dimen/seat_position_save_tab_item_height">
+        <com.geely.hvac.component.ViewWithBackground android:id="@id/id1" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent" app:radius="@dimen/seat_position_save_tab_item_radius" />
+        <com.geely.toolchain.hmi.view.HmiTextView android:id="@id/label1" android:tag="binding_2" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/seat_save_length_tab_item_text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/layout_seat_position_save_tab_3" android:layout_width="@dimen/seat_position_save_tab_item_width" android:layout_height="@dimen/seat_position_save_tab_item_height" android:layout_marginStart="@dimen/seat_position_save_tab_item_margin">
+        <com.geely.hvac.component.ViewWithBackground android:id="@id/id2" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="fill_parent" app:radius="@dimen/seat_position_save_tab_item_radius" />
+        <com.geely.toolchain.hmi.view.HmiTextView android:id="@id/label2" android:tag="binding_5" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/seat_save_length_tab_item_text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/layout_seat_position_save_tab_6" android:layout_width="@dimen/seat_position_save_tab_item_width" android:layout_height="@dimen/seat_position_save_tab_item_height" android:layout_marginStart="@dimen/seat_position_save_tab_item_margin">
+        <com.geely.hvac.component.ViewWithBackground android:id="@id/id3" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="fill_parent" app:radius="@dimen/seat_position_save_tab_item_radius" />
+        <com.geely.toolchain.hmi.view.HmiTextView android:id="@id/label3" android:tag="binding_8" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/seat_save_length_tab_item_text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

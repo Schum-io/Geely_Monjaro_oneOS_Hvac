@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:focusable="true" android:clickable="true" android:layout_width="224.0dip" android:layout_height="224.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bg_img" android:background="@mipmap/widget_fragrance_bg_on1" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:textSize="32.0sp" android:textColor="@color/widget_fragrance_label_color_on" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/widget_fragrance_label_top" android:text="@string/widget_fragrance_label" android:lineSpacingMultiplier="1.4" android:fontFamily="@font/alibaba_puhuiti_medium" android:layout_marginStart="@dimen/widget_fragrance_label_left" android:textFontWeight="500" />
+    <ImageView android:id="@id/fragrance_widget_level" android:layout_width="@dimen/fragrance_widget_level_img_width" android:layout_height="@dimen/fragrance_widget_level_img_height" android:layout_marginTop="@dimen/fragrance_widget_level_img_top" android:src="@mipmap/fragrance_widget_level_0" android:layout_marginStart="128.0dip" />
+</RelativeLayout>

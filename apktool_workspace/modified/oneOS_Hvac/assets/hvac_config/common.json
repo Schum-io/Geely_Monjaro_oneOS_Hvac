@@ -1,0 +1,149 @@
+{
+  "airCondition": {
+    "common": {
+      "intelligentExcludeSmell": false,
+      "intelligentFreshWind": false,
+      "ions": false,
+      "acMax": true,
+      "ac": true,
+      "frontDefrost": true,
+      "electronFrontDefrost": false,
+      "behindDefrost": true,
+      "cycle": true,
+      "eco": true,
+      "gClean": true,
+      "pm25": true,
+      "ai": false,
+      "constantTemperature": false,
+      "autoCloseWindowRemind": true,
+      "ionsCloseWindowRemind": false,
+      "parkClimate": false,
+      "residuePowerAc": false
+    },
+    "row1": {
+      "enable": true,
+      "auto": true,
+      "blowMode": {
+        "window": true,
+        "face": true,
+        "leg": true
+      },
+      "temperature": {
+        "enable": true,
+        "all": false,
+        "left": true,
+        "right": true,
+        "sync": true
+      },
+      "fanLevel": {
+        "enable": true,
+        "type": 3
+      },
+      "windDirectionMode": {
+        "enable": false
+      },
+      "sweepMode": {
+        "enable": false
+      }
+    },
+    "row2": {
+      "enable": true,
+      "auto": true,
+      "blowMode": {
+        "window": false,
+        "face": true,
+        "leg": true
+      },
+      "temperature": {
+        "enable": true,
+        "all": true,
+        "left": false,
+        "right": false,
+        "sync": false
+      },
+      "fanLevel": {
+        "enable": false
+      },
+      "windDirectionMode": {
+        "enable": false
+      },
+      "sweepMode": {
+        "enable": false
+      }
+    },
+    "row3": {
+      "enable": false
+    }
+  },
+  "seat": {
+    "heat": {
+      "left1": true,
+      "right1": true,
+      "left2": false,
+      "right2": false,
+      "left3": false,
+      "right3": false
+    },
+    "heatTime": {
+      "left1": true,
+      "right1": true,
+      "left2": false,
+      "right2": false,
+      "left3": false,
+      "right3": false
+    },
+    "ventilate": {
+      "left1": true,
+      "right1": false,
+      "left2": false,
+      "right2": false,
+      "left3": false,
+      "right3": false
+    },
+    "ventilateTime": {
+      "left1": true,
+      "right1": false,
+      "left2": false,
+      "right2": false,
+      "left3": false,
+      "right3": false
+    },
+    "steeringWheelHeat": {
+      "enable": true
+    },
+    "steeringWheelHeatTime": {
+      "enable": true
+    }
+  },
+  "fragrance": {
+    "enable": false,
+    "fragranceLevel": {
+      "enable": false
+    },
+    "fragranceType": {
+      "enable": false,
+      "values": [
+        {
+          "type": "ROSE",
+          "name": "玫瑰"
+        },
+        {
+          "type": "LILY",
+          "name": "百合"
+        },
+        {
+          "type": "LAVENDER",
+          "name": "薰衣草"
+        },
+        {
+          "type": "LONGJING",
+          "name": "龙井"
+        },
+        {
+          "type": "SANDALWOOD",
+          "name": "茉莉"
+        }
+      ]
+    }
+  }
+}

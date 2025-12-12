@@ -1,0 +1,31 @@
+name: Conventional PR
+
+on:
+  pull_request:
+    branches: [ "main" ]
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  lint-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Validate PR title
+      uses: CondeNast/conventional-pull-request-action@v0.2.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        # Override config-conventional rules
+        commitlintRulesPath: "./commitlint.rules.js"
+        # If PR contains a single commit, fail if commit message and PR title don't match
+        commitTitleMatch: "true"
+        # Disable linting of commits if you squash merge PRs
+        ignoreCommits: "true"

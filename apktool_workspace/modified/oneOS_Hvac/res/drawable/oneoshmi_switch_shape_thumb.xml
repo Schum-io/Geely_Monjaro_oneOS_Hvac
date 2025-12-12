@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="oval"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="@dimen/oneoshmi_hmiswitch_view_layout_showHeight" android:width="@dimen/oneoshmi_hmiswitch_view_layout_showHeight" />
+    <solid android:color="@color/oneoshmi_switcher_color_thumb" />
+    <stroke android:width="3.0dip" android:color="@android:color/transparent" />
+</shape>

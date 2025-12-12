@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:drawable="@drawable/shape_seat_second_display_function_on_bg" />
+    <item android:state_selected="false" android:drawable="@drawable/shape_seat_second_display_function_off_bg" />
+    <item android:drawable="@drawable/shape_seat_second_display_function_off_bg" />
+</selector>

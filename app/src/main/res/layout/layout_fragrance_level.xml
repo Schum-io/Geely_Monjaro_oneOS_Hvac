@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.geely.hvac.viewmodel.MainViewModel" />
+    </data>
+
+
+<merge
+    android:layout_width="@dimen/fragrance_level_region_width"
+    android:layout_height="@dimen/fragrance_level_region_height">
+
+    <com.geely.hvac.component.ViewWithBackground
+        android:id="@id/bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:normalColor="@color/fragrance_region_bg"
+        app:radius="@dimen/fragrance_level_region_radius" />
+
+    <com.geely.hvac.component.ViewWithBackground
+        android:id="@id/indicator"
+        android:layout_width="@dimen/fragrance_level_indicator_width"
+        android:layout_height="@dimen/fragrance_level_indicator_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:normalColor="@color/fragrance_level_indicator_bg"
+        app:radius="@dimen/fragrance_level_indicator_radius" />
+
+    <com.geely.toolchain.hmi.view.HmiTextView
+        android:id="@id/close"
+        style="@style/fragrance_level_item_text"
+        android:text="@string/fragrance_level_off"
+        android:textColor="@color/fragrance_active_txt_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.geely.toolchain.hmi.view.HmiTextView
+        android:id="@id/level1"
+        style="@style/fragrance_level_item_text"
+        android:text="@string/fragrance_level_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/close"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.geely.toolchain.hmi.view.HmiTextView
+        android:id="@id/level2"
+        style="@style/fragrance_level_item_text"
+        android:text="@string/fragrance_level_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/level1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.geely.toolchain.hmi.view.HmiTextView
+        android:id="@id/level3"
+        style="@style/fragrance_level_item_text"
+        android:text="@string/fragrance_level_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/level2"
+        app:layout_constraintTop_toTopOf="parent" />
+</merge>
+</layout>

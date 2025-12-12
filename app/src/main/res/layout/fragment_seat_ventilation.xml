@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.geely.hvac.viewmodel.MainViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:tag="layout/fragment_seat_ventilation_0">
+
+        <com.geely.toolchain.hmi.view.HmiImageView
+            android:layout_width="2268.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginEnd="306.0dip"
+            android:layout_marginBottom="216.0dip"
+            android:src="@mipmap/seat_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <com.geely.toolchain.hmi.view.HmiImageView
+            android:layout_width="600.0dip"
+            android:layout_height="600.0dip"
+            android:layout_marginStart="780.0dip"
+            android:layout_marginTop="24.0dip"
+            android:src="@mipmap/right_600" />
+
+        <com.geely.toolchain.hmi.view.HmiImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="815.0dip"
+            android:layout_marginTop="6.0dip"
+            android:src="@mipmap/seat_wind_bg_shadow"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.geely.hvac.psd.component.PsdSeatVentilateLevel
+            android:id="@+id/psd_row1_right_seat_wind_status"
+            android:layout_width="@dimen/seat_feature_level_width"
+            android:layout_height="@dimen/seat_feature_level_height"
+            android:layout_marginStart="888.0dip"
+            android:layout_marginTop="96.0dip"
+            app:seatFeatureLevel0LightPath="lottie/light/seat_ventilate0"
+            app:seatFeatureLevel0NightPath="lottie/night/seat_ventilate0"
+            app:seatFeatureLevel1LightPath="lottie/light/seat_ventilate1"
+            app:seatFeatureLevel1NightPath="lottie/night/seat_ventilate1"
+            app:seatFeatureLevel2LightPath="lottie/light/seat_ventilate2"
+            app:seatFeatureLevel2NightPath="lottie/night/seat_ventilate2"
+            app:seatFeatureLevel3LightPath="lottie/light/seat_ventilate3"
+            app:seatFeatureLevel3NightPath="lottie/night/seat_ventilate3"
+            app:seatFeatureLevelBgRadius="@dimen/seat_feature_level_radius"
+            app:seatFeatureLevelDisableImg="@drawable/seat_wind_disable_status" />
+
+        <com.geely.hvac.trackballview.TrackballTextViewWithBg
+            android:layout_width="262.0dip"
+            android:layout_height="80.0dip"
+            android:layout_marginStart="939.0dip"
+            android:layout_marginTop="564.0dip"
+            android:gravity="center"
+            android:text="@string/seat_heat_auto"
+            android:textSize="36.0sp"
+            app:disableBackColor="@color/seat_auto_back_disable"
+            app:disableTextColor="@color/seat_auto_text_disable"
+            app:normalColor="@color/psd_auto_heat_ventilation_unchecked_button"
+            app:normalTextColor="@color/psd_auto_heat_ventilation_unchecked_text"
+            app:pressColor="@color/psd_auto_heat_ventilation_checked_button"
+            app:pressTextColor="@color/psd_auto_heat_ventilation_checked_text"
+            app:radius="14.0dip" />
+
+        <com.geely.hvac.trackballview.TrackballHmiImageView
+            android:id="@+id/psd_wind_info"
+            android:layout_width="64.0dip"
+            android:layout_height="64.0dip"
+            android:layout_marginStart="1428.0dip"
+            android:layout_marginTop="24.0dip"
+            android:src="@drawable/selector_seat_set_info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </RelativeLayout>
+</layout>

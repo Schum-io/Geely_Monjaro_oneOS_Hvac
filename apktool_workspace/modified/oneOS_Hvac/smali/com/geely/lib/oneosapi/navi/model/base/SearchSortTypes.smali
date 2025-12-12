@@ -1,0 +1,36 @@
+.class public interface abstract annotation Lcom/geely/lib/oneosapi/navi/model/base/SearchSortTypes;
+.super Ljava/lang/Object;
+.source "SearchSortTypes.java"
+
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
+
+
+# annotations
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->SOURCE:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
+
+.annotation runtime Ljava/lang/annotation/Target;
+    value = {
+        .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->METHOD:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->PARAMETER:Ljava/lang/annotation/ElementType;
+    }
+.end annotation
+
+
+# static fields
+.field public static final DEFAULT:I = 0x0
+
+.field public static final FURTHEST:I = 0x2
+
+.field public static final HIGHEST_AVERAGE:I = 0x5
+
+.field public static final HIGHEST_RATING:I = 0x3
+
+.field public static final LOWEST_AVERAGE:I = 0x6
+
+.field public static final LOWEST_RATING:I = 0x4
+
+.field public static final NEAREST:I = 0x1

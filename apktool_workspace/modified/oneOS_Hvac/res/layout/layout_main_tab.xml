@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/tab_wrap" android:tag="layout/layout_main_tab_0" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent">
+        <com.geely.toolchain.hmi.view.HmiTextView android:id="@id/ac" android:tag="binding_1" android:text="@string/aircondition" style="@style/main_tab_item_txt" />
+        <com.geely.toolchain.hmi.view.HmiTextView android:id="@id/seat" android:tag="binding_2" android:visibility="visible" android:text="@string/seat" style="@style/main_tab_item_txt" />
+        <com.geely.toolchain.hmi.view.HmiTextView android:id="@id/fragrance" android:tag="binding_3" android:visibility="gone" android:text="@string/fragrance" style="@style/main_tab_item_txt" />
+    </LinearLayout>
+    <com.geely.hvac.component.ViewWithBackground android:id="@id/indicator" android:tag="layout/layout_main_tab_4" android:layout_width="@dimen/main_tab_item_indicator_width" android:layout_height="@dimen/main_tab_item_indicator_height" android:layout_marginTop="@dimen/main_tab_item_indicator_top" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="@id/tab_wrap" app:normalColor="@color/main_tab_item_txt_color_active" app:radius="@dimen/main_tab_item_indicator_radius" />
+</merge>
