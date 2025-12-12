@@ -1,5 +1,11 @@
 name: APKTool Build Check
 
+#
+# oneOS_Hvac Enhanced Climate Controls - CI Build
+# Author: https://github.com/Schum-io
+# Description: Builds APK to verify apktool workspace integrity
+#
+
 on:
   push:
     branches: [ "main" ]
@@ -27,28 +33,6 @@ jobs:
         wget https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.9.3.jar -O apktool.jar
         chmod +x apktool
         sudo mv apktool apktool.jar /usr/local/bin/
-
-    - name: Copy modified files from app to apktool workspace
-      run: |
-        # Список файлов для копирования (синхронизировано с build_magisk_module.sh)
-        FILES_TO_COPY=(
-            "app/src/main/res/layout/pager_item_aircondition.xml:apktool_workspace/modified/oneOS_Hvac/res/layout/pager_item_aircondition.xml"
-        )
-        
-        echo "Copying modified files..."
-        for file_pair in "${FILES_TO_COPY[@]}"; do
-            IFS=':' read -r source_file dest_file <<< "$file_pair"
-            
-            if [ ! -f "$source_file" ]; then
-                echo "Warning: file $source_file not found, skipping..."
-                continue
-            fi
-            
-            dest_dir=$(dirname "$dest_file")
-            mkdir -p "$dest_dir"
-            cp "$source_file" "$dest_file"
-            echo "✓ Copied: $source_file -> $dest_file"
-        done
 
     - name: Build APK with APKTool
       run: |
