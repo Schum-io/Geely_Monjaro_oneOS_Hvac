@@ -1,88 +1,134 @@
+# oneOS_Hvac — расширение климата для Geely Monjaro REST 1
 
-### Список измененых файлов
-- `app/src/main/res/layout/pager_item_aircondition.xml`
-- `apktool_workspace/modified/oneOS_Hvac/smali/com/geely/hvac/adapter/AirConditionViewHolder%24AcPanelController%24ContainerRunnable.smali`
-- `apktool_workspace/modified/oneOS_Hvac/smali/com/geely/hvac/adapter/AirConditionViewHolder%24AcPanelController%24Row1LeftHeatRunnable.smali`
-- `apktool_workspace/modified/oneOS_Hvac/smali/com/geely/hvac/adapter/AirConditionViewHolder%24AcPanelController%24Row1LeftWindRunnable.smali`
-- `apktool_workspace/modified/oneOS_Hvac/smali/com/geely/hvac/adapter/AirConditionViewHolder%24AcPanelController%24Row1RightHeatRunnable.smali`
-- `apktool_workspace/modified/oneOS_Hvac/smali/com/geely/hvac/adapter/AirConditionViewHolder%24AcPanelController%24Row1RightWindRunnable.smali`
-- `apktool_workspace/modified/oneOS_Hvac/smali/com/geely/hvac/adapter/AirConditionViewHolder%24AcPanelController%24Row1SteeringWheelHeatRunnable.smali`
-- `apktool_workspace/modified/oneOS_Hvac/smali/com/geely/hvac/adapter/AirConditionViewHolder%24AcPanelController%24Row2LeftRunnable.smali`
-- `apktool_workspace/modified/oneOS_Hvac/smali/com/geely/hvac/adapter/AirConditionViewHolder%24AcPanelController%24Row2RightRunnable.smali`
-- `apktool_workspace/modified/oneOS_Hvac/smali/com/geely/hvac/adapter/AirConditionViewHolder%24AcPanelController.smali`
-  
-### Как работать с APK через apktool
+Magisk-модуль, расширяющий стандартное приложение климата (HVAC) головного устройства **Geely Monjaro REST 1**.
 
-#### Распаковка APK
-Чтобы распаковать apk файл в каталог `apktool_workspace/modified/oneOS_Hvac`, используйте команду:
+За основу взят APK из прошивки **GMC** (Geely Mod Custom).
+
+Добавляет на главный экран климата управление обогревом, вентиляцией и массажем сидений — функции, которые в оригинальном приложении спрятаны в дополнительном меню.
+
+---
+
+## Скриншоты результата
+
+### Передний ряд (1 ряд)
+
+| Все функции активны | Обогрев сидений включён | Вентиляция сидений включена |
+|---|---|---|
+| ![Обогрев руля, вентиляция и обогрев сидений](docs/img/front_row1_heat_and_vent_active.jpg) | ![Обогрев сидений включён](docs/img/front_row1_heat_on.jpg) | ![Вентиляция сидений включена](docs/img/front_row1_vent_on.jpg) |
+
+### Задний ряд (2 ряд)
+
+| Обогрев включён | Обогрев выключен |
+|---|---|
+| ![Обогрев задних сидений включён](docs/img/rear_row2_heat_on.jpg) | ![Обогрев задних сидений выключен](docs/img/rear_row2_heat_off.jpg) |
+
+---
+
+## Изменённые файлы
+
+### Layout
+
+| Файл | Описание |
+|------|----------|
+| `app/src/main/res/layout/pager_item_aircondition.xml` | Главный экран климата — добавлены новые элементы управления |
+
+### Smali (декомпилированный байткод)
+
+Все файлы находятся в пакете `com/geely/hvac/adapter/`:
+
+| Класс | Описание |
+|-------|----------|
+| `AirConditionViewHolder$AcPanelController` | Основной контроллер панели климата |
+| `AirConditionViewHolder$AcPanelController$ContainerRunnable` | Управление контейнером панели |
+| `AirConditionViewHolder$AcPanelController$Row1LeftHeatRunnable` | Обогрев, левая сторона (ряд 1) |
+| `AirConditionViewHolder$AcPanelController$Row1LeftWindRunnable` | Вентиляция, левая сторона (ряд 1) |
+| `AirConditionViewHolder$AcPanelController$Row1RightHeatRunnable` | Обогрев, правая сторона (ряд 1) |
+| `AirConditionViewHolder$AcPanelController$Row1RightWindRunnable` | Вентиляция, правая сторона (ряд 1) |
+| `AirConditionViewHolder$AcPanelController$Row1SteeringWheelHeatRunnable` | Обогрев руля (ряд 1) |
+| `AirConditionViewHolder$AcPanelController$Row2LeftRunnable` | Управление, левая сторона (ряд 2) |
+| `AirConditionViewHolder$AcPanelController$Row2RightRunnable` | Управление, правая сторона (ряд 2) |
+
+---
+
+## Работа с APK через apktool
+
+### Распаковка APK
+
+Распаковать оригинальный APK в рабочий каталог:
 ```bash
-apktool d исходный_файл.apk -o apktool_workspace/modified/oneOS_Hvac
+apktool d oneOS_Hvac.apk -o apktool_workspace/modified/oneOS_Hvac
 ```
-Где `исходный_файл.apk` - это путь к исходному APK файлу, который нужно распаковать.
-После этого появится папка `apktool_workspace/modified/oneOS_Hvac` с ресурсами и smali-кодом. **Приложение собирается из этого каталога.**
 
-#### Работа с layout файлами
-1. **Редактирование layout файлов:**
-   - Layout файлы редактируются в каталоге `app/src/main/res/layout/`
-   - Это основной каталог для работы с XML layout файлами
+После этого в `apktool_workspace/modified/oneOS_Hvac/` появятся ресурсы и smali-код.
+**Сборка APK происходит из этого каталога.**
 
-2. **Копирование изменений в apktool_workspace:**
-   После внесения изменений в layout файлы в каталоге `app/`, их нужно скопировать в `apktool_workspace/modified/oneOS_Hvac/res/layout/`:
-   ```bash
-   cp app/src/main/res/layout/*.xml apktool_workspace/modified/oneOS_Hvac/res/layout/
-   ```
-   Или для конкретного файла:
-   ```bash
-   cp app/src/main/res/layout/имя_файла.xml apktool_workspace/modified/oneOS_Hvac/res/layout/
-   ```
-   
-   **Примечание:** Скрипт `build_magisk_module.sh` автоматически копирует модифицированные файлы из списка `FILES_TO_COPY` в каталог `apktool_workspace/modified/oneOS_Hvac`.
+### Редактирование layout файлов
 
-#### Сборка APK
-Приложение собирается из каталога `apktool_workspace/modified/oneOS_Hvac`. Чтобы собрать приложение обратно, используйте команду:
+Layout файлы редактируются в каталоге `app/src/main/res/layout/` — здесь используется Android Data Binding.
+
+После внесения изменений скрипт сборки (`build_magisk_module.sh`) **автоматически** копирует их в `apktool_workspace/modified/oneOS_Hvac/res/layout/` с удалением Data Binding-разметки, несовместимой с apktool.
+
+Для ручного копирования:
+```bash
+cp app/src/main/res/layout/pager_item_aircondition.xml \
+   apktool_workspace/modified/oneOS_Hvac/res/layout/
+```
+
+### Сборка APK
+
 ```bash
 apktool b apktool_workspace/modified/oneOS_Hvac -o magisk/system/app/oneOS_Hvac/oneOS_Hvac.apk
 ```
-Эта команда создаст новый apk файл `oneOS_Hvac.apk` в каталоге `magisk/system/app/oneOS_Hvac/`
 
-#### Подпись APK
-Чтобы приложение можно было установить на устройство, его нужно подписать.
+### Подпись APK
 
-1.  **Создание ключа (если у вас его нет):**
+1. **Создание keystore** (только при первом использовании):
     ```bash
-    keytool -genkey -v -keystore oneOS_Hvac.keystore -alias oneOS_Hvac -keyalg RSA -keysize 2048 -validity 10000
+    keytool -genkey -v -keystore oneOS_Hvac.keystore \
+        -alias oneOS_Hvac -keyalg RSA -keysize 2048 -validity 10000
     ```
-    Вам нужно будет придумать пароли для хранилища ключей и для самого ключа.
 
-2.  **Настройка .env файла:**
-    Создайте файл `.env` в корне проекта и добавьте в него пароль от хранилища ключей:
+2. **Настройка `.env` файла** в корне проекта:
     ```
     KEYSTORE_PASSWORD=ваш_пароль
     ```
 
-3.  **Подпись приложения с помощью `jarsigner`:**
+3. **Подпись APK**:
     ```bash
-    jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore oneOS_Hvac.keystore magisk/system/app/oneOS_Hvac/oneOS_Hvac.apk oneOS_Hvac
+    jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 \
+        -keystore oneOS_Hvac.keystore \
+        -storepass "$KEYSTORE_PASSWORD" \
+        magisk/system/app/oneOS_Hvac/oneOS_Hvac.apk oneOS_Hvac
     ```
-    Вам нужно будет ввести пароль от хранилища ключей (или использовать переменную из .env файла).
 
-После этого `oneOS_Hvac.apk` будет подписан и готов к установке.
+---
 
-### Автоматическая сборка
-Для автоматической сборки APK, подписи и создания модуля Magisk используйте скрипт:
+## Автоматическая сборка модуля Magisk
+
 ```bash
 ./build_magisk_module.sh
 ```
 
-Скрипт автоматически:
-- Копирует модифицированные файлы из списка `FILES_TO_COPY` в каталог `apktool_workspace/modified/oneOS_Hvac`
-- Собирает APK файл из каталога `apktool_workspace/modified/oneOS_Hvac` в каталог `magisk/system/app/oneOS_Hvac/oneOS_Hvac.apk`
-- Подписывает его (пароль берется из `.env` файла)
-- Создает модуль Magisk `./build/oneOS_Hvac.zip`
+Скрипт выполняет весь цикл автоматически:
 
-**Важно:** Модифицированные файлы, указанные в списке `FILES_TO_COPY` в скрипте, автоматически копируются в каталог `apktool_workspace/modified/oneOS_Hvac` перед сборкой.
+1. Копирует изменённые layout файлы из `app/src/main/res/layout/` в `apktool_workspace/modified/oneOS_Hvac/res/layout/` (с удалением Data Binding)
+2. Собирает APK: `apktool b apktool_workspace/modified/oneOS_Hvac`
+3. Подписывает APK (пароль берётся из `.env`)
+4. Создаёт архив модуля: `./build/oneOS_Hvac.zip`
 
-### Просмотр логов
-на ГУ запустить терминал и в нем ввести команду:
-1. `su`
-2. `logcat -f /storage/sdcard/crash_log.txt`
+> **Требования:** файл `.env` с переменной `KEYSTORE_PASSWORD` должен существовать до запуска скрипта.
+
+### Установка модуля
+
+Готовый модуль `./build/oneOS_Hvac.zip` устанавливается через **Magisk Manager** на устройстве:
+`Magisk → Modules → Установить из хранилища → oneOS_Hvac.zip`
+
+---
+
+## Просмотр логов
+
+На головном устройстве открыть терминал и выполнить:
+```bash
+su
+logcat -f /storage/sdcard/crash_log.txt
+```
