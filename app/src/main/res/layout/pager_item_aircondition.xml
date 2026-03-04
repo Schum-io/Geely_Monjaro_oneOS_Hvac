@@ -299,6 +299,19 @@
             app:stateFalseImage="@drawable/gclean_off"
             app:stateTrueImage="@drawable/gclean_on" />
 
+        <com.geely.hvac.component.ViewWithBackground
+            android:id="@id/front_below_region_bg"
+            android:layout_width="746dp"
+            android:layout_height="@dimen/below_region_height"
+            android:layout_marginLeft="@dimen/temperature_margin_left"
+            android:layout_marginRight="48.0dip"
+            android:layout_marginBottom="@dimen/below_region_margin_bottom"
+            android:tag="binding_27"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/power_region_bg"
+            app:normalColor="@color/ac_btn_region_bg"
+            app:radius="@dimen/ac_btn_region_bg_corner" />
+
         <com.geely.hvac.component.BoolStateLottieView
             android:id="@id/front_defrost"
             android:layout_width="@dimen/ac_icon_width"
@@ -329,19 +342,6 @@
             app:layout_constraintLeft_toRightOf="@id/front_wind_blow_leg"
             app:layout_constraintRight_toRightOf="@id/front_below_region_bg"
             app:layout_constraintTop_toTopOf="@id/front_below_region_bg" />
-
-        <com.geely.hvac.component.ViewWithBackground
-            android:id="@id/front_below_region_bg"
-            android:layout_width="746dp"
-            android:layout_height="@dimen/below_region_height"
-            android:layout_marginLeft="@dimen/temperature_margin_left"
-            android:layout_marginRight="48.0dip"
-            android:layout_marginBottom="@dimen/below_region_margin_bottom"
-            android:tag="binding_27"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/power_region_bg"
-            app:normalColor="@color/ac_btn_region_bg"
-            app:radius="@dimen/ac_btn_region_bg_corner" />
 
         <com.geely.hvac.component.BoolStateLottieView
             android:id="@id/front_wind_blow_window"
