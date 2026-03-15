@@ -1,5 +1,9 @@
 # oneOS_Hvac — расширение климата для Geely Monjaro REST 1
 
+[![Release](https://img.shields.io/github/v/release/Schum-io/Geely_Monjaro_oneOS_Hvac)](https://github.com/Schum-io/Geely_Monjaro_oneOS_Hvac/releases)
+[![Downloads](https://img.shields.io/github/downloads/Schum-io/Geely_Monjaro_oneOS_Hvac/total)](https://github.com/Schum-io/Geely_Monjaro_oneOS_Hvac/releases)
+[![Download Latest](https://img.shields.io/badge/Download-Latest%20Release-blue)](https://github.com/Schum-io/Geely_Monjaro_oneOS_Hvac/releases)
+
 Magisk-модуль, расширяющий стандартное приложение климата (HVAC) головного устройства **Geely Monjaro REST 1**.
 
 За основу взят APK из прошивки **GMC** (Geely Mod Custom).
