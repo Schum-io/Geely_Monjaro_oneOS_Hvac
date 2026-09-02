@@ -11,7 +11,7 @@ import android.graphics.Point;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.geely.hvac.common.R;
+import com.geely.hvac.R;
 import com.geely.hvac.utils.LogUtil;
 import com.sensorsdata.analytics.android.autotrack.aop.SensorsDataAutoTrackHelper;
 

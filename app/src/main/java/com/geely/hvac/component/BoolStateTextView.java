@@ -36,6 +36,11 @@ public class BoolStateTextView extends AppCompatTextView {
         this.mTrueText = typedArrayObtainStyledAttributes.getString(3);
         this.mFalseText = typedArrayObtainStyledAttributes.getString(1);
         typedArrayObtainStyledAttributes.recycle();
+        if (isInEditMode()) {
+            // Data binding is not executed by Layout Preview for this
+            // decompiled layout, so display a useful default state ourselves.
+            setStatus(false);
+        }
     }
 
     public static void bind(BoolStateTextView view, boolean isOn) {

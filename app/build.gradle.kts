@@ -1,10 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
 }
 
 android {
     namespace = "com.geely.hvac"
+
     compileSdk {
         version = release(36)
     }
@@ -41,6 +41,11 @@ android {
     }
 
     buildToolsVersion = "36.1.0"
+    packaging {
+        jniLibs {
+            useLegacyPackaging = false
+        }
+    }
 }
 
 dependencies {

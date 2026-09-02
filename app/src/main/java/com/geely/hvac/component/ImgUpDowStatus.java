@@ -5,7 +5,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import androidx.appcompat.widget.AppCompatImageView;
-import com.geely.hvac.common.R;
+import com.geely.hvac.R;
 
 /* loaded from: classes.dex */
 public class ImgUpDowStatus extends AppCompatImageView {

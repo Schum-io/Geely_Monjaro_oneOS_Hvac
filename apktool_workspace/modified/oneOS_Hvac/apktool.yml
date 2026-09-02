@@ -1,4 +1,4 @@
-version: 2.12.1
+version: 3.0.3
 apkFileName: oneOS_Hvac.apk
 usesFramework:
   ids:
@@ -6,11 +6,11 @@ usesFramework:
 sdkInfo:
   minSdkVersion: 26
   targetSdkVersion: 28
-packageInfo:
-  forcedPackageId: 127
 versionInfo:
   versionCode: 385
   versionName: 1.0.20240929G(181)
+resourcesInfo:
+  packageId: 127
 doNotCompress:
 - arsc
 - dex

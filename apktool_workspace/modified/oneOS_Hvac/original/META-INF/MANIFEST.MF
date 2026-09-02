@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 
 Name: AndroidManifest.xml
-SHA-256-Digest: +qVkIWzHubyCmS1Vyl0CBIAUDt7ePOB03st+LBTCn3o=
+SHA-256-Digest: dzC3YfX7dRSYRqBCiOwnknGVDxz4uOLtQ8eJFQ5AZMo=
 
 Name: META-INF/androidx.activity_activity.version
 SHA-256-Digest: 2C80rpqkG8Sgy1KaGsCJj+0J1rR5+xzETLZsNPFe6E0=
@@ -116,9 +116,6 @@ SHA-256-Digest: WYVJhIUxBN9cNT4vaBoV/HkkdC+aLkaMKa8kjc5FzgM=
 
 Name: META-INF/com.google.android.material_material.version
 SHA-256-Digest: eLWRQAxWt7Z7jLOyuKjmXpCTiX8Czgh45rVAXGhiD6c=
-
-Name: META-INF/com/android/build/gradle/app-metadata.properties
-SHA-256-Digest: q4Es+CumhdQb1gBfvYwvA5GUZOobntsg2fh8BA+1zd0=
 
 Name: assets/hvac_config/common.json
 SHA-256-Digest: SN2z/SpGT9zMvguQ3rRHFTKBPRo373Kn3tprsLGXM3w=
@@ -5316,6 +5313,207 @@ SHA-256-Digest: m8OZNEjU1ZEfxfniowZXWxevI3GnaocJvb0veNdaEYw=
 Name: assets/seat_regulate/light/left1_height_up/images/seq_0_9.png
 SHA-256-Digest: x/UL1PAgGEuubeCqNqOSDgvZDhBoQLSCH25rGECQVqU=
 
+Name: assets/seat_regulate/light/left2_height_up/animation.json
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_0.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_1.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_10.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_11.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_12.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_13.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_14.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_15.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_16.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_17.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_18.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_19.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_2.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_20.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_21.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_22.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_23.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_24.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_25.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_26.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_27.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_28.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_29.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_3.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_30.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_31.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_32.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_33.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_34.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_35.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_36.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_37.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_38.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_39.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_4.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_40.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_41.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_42.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_43.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_44.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_45.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_46.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_47.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_48.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_49.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_5.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_50.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_51.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_52.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_53.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_54.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_55.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_56.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_57.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_58.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_59.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_6.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_60.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_61.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_62.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_63.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_64.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_65.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_7.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_8.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/seat_regulate/light/left2_height_up/images/seq_0_9.png
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
 Name: assets/seat_regulate/light/main_to_assistant/animation.json
 SHA-256-Digest: xdFr5ZmsYizvvaZDiEYY5+oeb8zVJYhSZqOvWnl4C+4=
 
@@ -5581,6 +5779,207 @@ Name: assets/seat_regulate/light/right1_height_up/images/seq_0_8.png
 SHA-256-Digest: EB3JFC+s7SQ+HiNpeyyXfdYB9b0HKVg92IF+kkQo9Z0=
 
 Name: assets/seat_regulate/light/right1_height_up/images/seq_0_9.png
+SHA-256-Digest: PugwQnGlnrgG0FDUTCZ/kRo90DaUHOyHWke/jAAphfg=
+
+Name: assets/seat_regulate/light/right2_height_up/animation.json
+SHA-256-Digest: vh9VZ6+VVWtQZzSBMyrAmvjHj3a60z2dnwls7mXI9FY=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_0.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_1.png
+SHA-256-Digest: VL7M6uEWbZlto6X1Kwj34urFNSQz2Zd00QyQgGEPxFI=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_10.png
+SHA-256-Digest: zrlfk3TM+T6SG8ySzUnQg8aGbsYV3HUZLIbTzP1+eeE=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_11.png
+SHA-256-Digest: uGBT1b216JtIx/DjEkR/ZWMognHjJ5at32jFWI2Qj1Y=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_12.png
+SHA-256-Digest: 0rI4TpsOEfkU5vus8SxkLnOr4eBDjUuyka1jq12Ec8A=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_13.png
+SHA-256-Digest: dPWirVKRdIbfM2YRwz1pkK1f8Exupz9NO9w/vCNVN5s=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_14.png
+SHA-256-Digest: afeQXDkGxybTiwakPTAYYtZIWNZ8Pfp/AlKjM0kEeLI=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_15.png
+SHA-256-Digest: mmKRwHF+CrAsQb1z2R+AOU+/ocEv9eBTOIgF3LkuG9g=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_16.png
+SHA-256-Digest: xfxaebGwyq5rPYID1qjtPdwRgMxU1GquYIT5WmUX5IY=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_17.png
+SHA-256-Digest: g8kk4BmQLH5plOMlew+OsqNfepjI678quadUtauckpE=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_18.png
+SHA-256-Digest: O65WLumaSMUc8DeaV7eJMAMqGucPW9uwjS2YVH1rF4o=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_19.png
+SHA-256-Digest: bW6+2913GiSKJDCS/SjD0k0yel/8I/RTa/s9peQ74tI=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_2.png
+SHA-256-Digest: TA2uuwfSaingrWzGbTCHCnUn/H1lDpqSq1pVjnfXnEQ=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_20.png
+SHA-256-Digest: he+GoOdM+sYggJ5qRURsDH7wsrt+se6o2EitcWBLfbU=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_21.png
+SHA-256-Digest: xpAOo06nNrmpWup+lrc0gtk2acABvKNQjTXgspbxCPk=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_22.png
+SHA-256-Digest: XVtAP+7KUhBK76SDxblPa3uB8Y5NcxSJofHpv3HLyu0=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_23.png
+SHA-256-Digest: jch8/zCH6iilB5VydS+ZdHmOZVnoHeGW+AUFu5qo9NU=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_24.png
+SHA-256-Digest: x6OSGZpeCUaAQamacRLq0Qy/4EiZ25DzCC2Gulnok+E=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_25.png
+SHA-256-Digest: dNvK+hselemk0psUnl/aDdfttaKceH2FZOUWRj58Cts=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_26.png
+SHA-256-Digest: 19C0xEaVdUkSKVOq7ZG/2B1S/KzX9iUt4Ni5f0AzyGM=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_27.png
+SHA-256-Digest: C6RVQMetp3fKI0kSCVbxzzfMgGidIhOl+ahgZ0iqS8E=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_28.png
+SHA-256-Digest: BLhEWxnNxXxM94AErVrAhV2L8pek75GhOEIP4AAuGN4=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_29.png
+SHA-256-Digest: 1TaN6CO+qIv6sMg5wUQZzm9I+dwA3DDmMBkdch04eS0=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_3.png
+SHA-256-Digest: +ceBEt8lqKq3/lZiT9NwcFlfp5hjHMKWKNQWrdkIXWk=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_30.png
+SHA-256-Digest: uAYqrgYrKm8DihhkG9yZaMtZmcka7mHM2AI4vZ/I4gc=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_31.png
+SHA-256-Digest: NpqUX+WROwKpdkLPClrH1tyJMVMLuIpasHID28hixWE=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_32.png
+SHA-256-Digest: LApBvb7fu4lwvM2xPdhuLEJy5NuKYt8HYVttjlJPwPM=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_33.png
+SHA-256-Digest: GsWxDR6Z0A/TJYCVpddAT5tyFTHyOszOwzr+69tVSt8=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_34.png
+SHA-256-Digest: x+xjsd+psVL9JPgIE/7+gDGB/CfULjHBC6CBWC4D7jA=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_35.png
+SHA-256-Digest: c2R8mfTvK7s15O2C27jyJY4nTGBhCIsSzRUTuLv3vDQ=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_36.png
+SHA-256-Digest: W88j628oiIsNL1IPyzoprMRtagXObt5yAkDG+Ue3dhg=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_37.png
+SHA-256-Digest: kNfSVUWXILxRYdRSNB/uaG8Kb3V7WDJhB9d7DHbVUPY=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_38.png
+SHA-256-Digest: di5M6BZMf6dfbLuF3P7djtSOvZWRfzRWxwkr1T13hQo=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_39.png
+SHA-256-Digest: sS3ihEYMMeJOpM/v7batuXC4RqsnvW0QUqRgpeAp4dk=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_4.png
+SHA-256-Digest: b8c8wHuCqGTnviyYuRVkakqeg4wK77BrK2Rt/+QXPoU=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_40.png
+SHA-256-Digest: c91T9WZ1N7WUpezWocuP3bVg4tBavzowsqWMmmhD36w=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_41.png
+SHA-256-Digest: w0cklq4B6MvzsopW4rYEHCYMCvFSQN7XmZhFbQIPItE=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_42.png
+SHA-256-Digest: YiuVEKoGvXSPmp6oAeap/26iIbQPtPXHC3abFdux9kM=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_43.png
+SHA-256-Digest: GCgK4jey58l181iXJdMGoWqyvhekLx0jmXlhTfg1fNc=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_44.png
+SHA-256-Digest: qsa6bBfzS4XmvaTi4AdoCRVyGguAeCZCBUPpMVdit98=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_45.png
+SHA-256-Digest: lHDRnDMwiuP0hPNZTY2zbZHRb419l6dmO/TZWXn4n7Y=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_46.png
+SHA-256-Digest: kzG141VrvWVA1KlBokrW+5mxeLL+6gqsfuhiAUX2HDQ=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_47.png
+SHA-256-Digest: dVSWApHzBuoSJbeF5HgkXAJXMlOZ/ADYH1qekm0JecQ=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_48.png
+SHA-256-Digest: Y/RKJRtEpxUtGXsgg0jtXFGS3l9/iN/KzGA5ft2SV1U=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_49.png
+SHA-256-Digest: IoiHQ3S5ytn74yUmHziK2nN/Cbv4O1zxtAxnKjK/GgU=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_5.png
+SHA-256-Digest: TPR13cpDZyuF01U5jcNs5BeJ8kaQYBmRh/rvdQ9Qeog=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_50.png
+SHA-256-Digest: 31my2TdtFFywgzc5Fk8QQU2sjkKsUp7zXELB+nx7LQI=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_51.png
+SHA-256-Digest: TbIsRNuqM4YQDHZ8Lw/2Ci2eBk3rREMwEiH4TSsk1P4=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_52.png
+SHA-256-Digest: 7wBoSsjy4PjArwGOfECzxGrnFu/FEC3hgeR9UrSuRPs=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_53.png
+SHA-256-Digest: EvpKAfTXpNgf7J20ImYyC3ejkpS5SgtgHe8Q99zOjXg=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_54.png
+SHA-256-Digest: k9tOnkb1t+p1E5rywC8luqU1w6wvWHS7wU0pGYeKMEs=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_55.png
+SHA-256-Digest: y+evRNG7TFEt1Cql03N2EeWyUIWDT6iacgMZkv9UDes=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_56.png
+SHA-256-Digest: gPwka4rcw2RYgTTlXzLTXzC2kzsP+w/OZdH1dTD/tN4=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_57.png
+SHA-256-Digest: i8FcKI9l8vn6lXZ5sW4nMYLCvAecrT6LuKpA3jj4pEk=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_58.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_59.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_6.png
+SHA-256-Digest: XJsVSUamhqKJf1PucAwMfhlPEoAXSdtbj/2HHSLJizQ=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_60.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_61.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_62.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_63.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_64.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_65.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_7.png
+SHA-256-Digest: L2xiQ/RtJ7UI6kbB9W7ObOgIZqcCJgtAD65p0zFvyEU=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_8.png
+SHA-256-Digest: EB3JFC+s7SQ+HiNpeyyXfdYB9b0HKVg92IF+kkQo9Z0=
+
+Name: assets/seat_regulate/light/right2_height_up/images/seq_0_9.png
 SHA-256-Digest: PugwQnGlnrgG0FDUTCZ/kRo90DaUHOyHWke/jAAphfg=
 
 Name: assets/seat_regulate/night/assistant_to_main/animation.json
@@ -5850,6 +6249,207 @@ SHA-256-Digest: m8OZNEjU1ZEfxfniowZXWxevI3GnaocJvb0veNdaEYw=
 Name: assets/seat_regulate/night/left1_height_up/images/seq_0_9.png
 SHA-256-Digest: x/UL1PAgGEuubeCqNqOSDgvZDhBoQLSCH25rGECQVqU=
 
+Name: assets/seat_regulate/night/left2_height_up/animation.json
+SHA-256-Digest: qKBiN1MsOh6a6HjCMtvoqybrHP1enafsUpYe+cUbTWE=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_0.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_1.png
+SHA-256-Digest: 08lOgC7hswOimh9oiTsiWzIL8PhljhgSRjCpU/+Dgbg=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_10.png
+SHA-256-Digest: zBwlr+egXY28GDf/7O0jd6GOvL8XUiJ4xtGzxOzKgyo=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_11.png
+SHA-256-Digest: q2iDDJgPpQIULYy7uIBbey5w9qX0K3YD4MbbKGxpsiE=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_12.png
+SHA-256-Digest: OFlvXI75aIzVJjf3XCEK1h9mkpn5ugiLcwG/JfKKn08=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_13.png
+SHA-256-Digest: sTd4SmHzfepjIjhy7BT5vv2u/rOlG1B/qbydKh9VqZs=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_14.png
+SHA-256-Digest: K0UxSLpbSC1oe1KLiGsfanofBUkb9UtRlJUdoFTFCfw=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_15.png
+SHA-256-Digest: f7FlSsFwc6KXjECzZtl8hisWY3nyFkUTwF/WXAzY3ok=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_16.png
+SHA-256-Digest: n2DCNJDjR3PV8i39xw78+jDRfI96az83r/v6nVodIqw=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_17.png
+SHA-256-Digest: o/rJEaZ2gmzhebZaMH+3sHqkv2aL7dJ43eUMTiGzJ8s=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_18.png
+SHA-256-Digest: vCWRXbQp6fbiayerYuIJnO6PrlYNjf8Q9Fn8iZJoOhs=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_19.png
+SHA-256-Digest: KI9HPokgkMG/QLEi1ov21QuqNAFrCrgBj0jho7oAUtE=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_2.png
+SHA-256-Digest: vuGwUFLA3y7I0LTq+rVtGnpadKsLq2zNpyyE/wMrXYs=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_20.png
+SHA-256-Digest: gsAM98lFiHNsI0NKgjCdvv99hoTYs/kot4an5LezZ/w=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_21.png
+SHA-256-Digest: UF9II4fjd1R4Zdd5wovN/yq1Ju4U8QDDfB24h1I73W0=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_22.png
+SHA-256-Digest: UkOID6r/1glO81fbwzdmJlmcVlVTwirix7yyBaow+Oo=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_23.png
+SHA-256-Digest: 1YGEjiiaaS+NbBgMsde5psdwMec1i+/3onUPDRgxSCk=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_24.png
+SHA-256-Digest: CWdVMHdhAuOFakP2AxX+/+y4BlrNXAhV9SjerCncLqU=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_25.png
+SHA-256-Digest: Ig8uSIlcaeYcT7ktSVz7F0iu8HoPFCvl47EwHItLQns=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_26.png
+SHA-256-Digest: IaryT3laCh0FzNakO8K0VIo2H7dIbPDx5udIcWyxcAw=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_27.png
+SHA-256-Digest: 6cxi/x0g/Tipoz4dVIpOWMRGzFsi4fUTqJ7fwPl67Pc=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_28.png
+SHA-256-Digest: iRZpT8p3TKFJr8Rn07ji12l0mWUDXzvcKrV3uovIbV0=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_29.png
+SHA-256-Digest: w2LnHW3i03DT7W2gaqhzI1BTb+qA6iUSuEDrULSnMu4=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_3.png
+SHA-256-Digest: 4ZYU8YrXtOx4F6LOVOJ/q55rtWxsjYeO4eo0c+7jHjU=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_30.png
+SHA-256-Digest: ipWzumbev0Tgt9MPBCSILOCYO/Gcmz4r+n9XpYWXv3U=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_31.png
+SHA-256-Digest: 0n/oUjj5YVz5BAAbqTxeKI9H+Xo62GpdSz//gHC6Jsg=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_32.png
+SHA-256-Digest: NS40aBBV6o4nuQBYxuwpn0UwGR5aYtuJracQW5wS9lA=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_33.png
+SHA-256-Digest: hWdKwIS8wD+H2Z6hlEn7qZKL35U+5OeEwbhfOpogPiw=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_34.png
+SHA-256-Digest: czyV518gX6Q5UYji7wq9x13dwYoZLdN//UYtNfb73Ds=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_35.png
+SHA-256-Digest: EW8KmhpKpPjsk0UEcSDLbYQPNGx0d8TKbLDbH7ZMxxs=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_36.png
+SHA-256-Digest: BAuFpCpMj7ZQNL+EBs7TVuv2+qxIHuCGg9LnWa7M2JQ=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_37.png
+SHA-256-Digest: 5UXb72MmVhFgVB3m0FiFC9iDfz0b8/4mOCUhqSvFZkY=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_38.png
+SHA-256-Digest: qVvatvuXY5tyjKX+DSuFd/feDWtztD68evdFnDKgaD0=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_39.png
+SHA-256-Digest: onQZsZNPY5Z6gBSs68aGaKfWzNu9kWWax8N33LV6lxM=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_4.png
+SHA-256-Digest: zsvn1LBYGR/HCH4KGryF5K1wbAN3L2l94aT9A1R81Ls=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_40.png
+SHA-256-Digest: cQPbtINAw7CN09UCb3j/YBzVMIcRjAW7rqxp0QnSwM8=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_41.png
+SHA-256-Digest: 7M8Sez3cx62oKAG26nYjhsdSRDix2D7rqxZUMYmVX08=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_42.png
+SHA-256-Digest: 7kGr8ESwLpyIN/kRtg6mAD/M8KkmWRV9zbR5apA4SAY=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_43.png
+SHA-256-Digest: x07v4XIxS8hXGPj6zsrN2fNleRVBLafh+BXJDBmdOiA=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_44.png
+SHA-256-Digest: ZiVd8KuTS/n+x3o8FFxTfIBwoH62oYZp5moFHpEnhfk=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_45.png
+SHA-256-Digest: zlE7AmdKEbIrbWTObmowL7SdFjRZ1n+CJ/wdib3OpsE=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_46.png
+SHA-256-Digest: UzXAehZY5/OppFAAht0n33sMGBwvOn16fO8iFfY1Kxw=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_47.png
+SHA-256-Digest: awmCsCsz6q7+ID7jUj/DLalIXJ/HpbB/JL7VRGGX6Qc=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_48.png
+SHA-256-Digest: YPY8wQLEoQNgciB+6xPM+TEg0KtHuffgb1DWFr5bRII=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_49.png
+SHA-256-Digest: MDOuj63K6J3/YCzdnly/7AisDo9zRcnC8rX9nUiH5Ds=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_5.png
+SHA-256-Digest: Rce/lcV9kkaMJFpo0AsAH79gkQCAC0IrmMHGhPkaeHo=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_50.png
+SHA-256-Digest: c/SKMggxbPpXy6nlqzQHkLT4pbblN1wlROMFHTfXsvA=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_51.png
+SHA-256-Digest: q49ZTrmeqVld/7efVGjmyWGe22MMlPuKePvxToz4QxI=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_52.png
+SHA-256-Digest: xZRbPzSc6ai0al4PaFpSufSzQlKSg9My8bMTi8Bz/+c=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_53.png
+SHA-256-Digest: S8IrhKjFe+C595h8j2MhVvKIEX4Nd2ehY38Ynv5R03w=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_54.png
+SHA-256-Digest: T/fwR4JnGJad2pcU6Wx1Aq67/m2xGUwury8Y708ClFY=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_55.png
+SHA-256-Digest: SpaC9mYrEI2HJWzWccHE1Zi6FXdpYTIeyKSGd01MLOE=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_56.png
+SHA-256-Digest: BqV/keB+7ex3elHoXTfDLoQubCNOlqaY2DPmj4MoWfA=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_57.png
+SHA-256-Digest: WLev7COE/sGbQ9PWW52/w+5LL53hGQXBZMM9i8/3Ba4=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_58.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_59.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_6.png
+SHA-256-Digest: QisvQnObSkCTUngJj2X9Hp3iNFt/DAAS59+9FejdYow=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_60.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_61.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_62.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_63.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_64.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_65.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_7.png
+SHA-256-Digest: Lz7bsdknGCJ1l1d9Jghzjqz+NtnBFJdb6r4myNyr07s=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_8.png
+SHA-256-Digest: m8OZNEjU1ZEfxfniowZXWxevI3GnaocJvb0veNdaEYw=
+
+Name: assets/seat_regulate/night/left2_height_up/images/seq_0_9.png
+SHA-256-Digest: x/UL1PAgGEuubeCqNqOSDgvZDhBoQLSCH25rGECQVqU=
+
 Name: assets/seat_regulate/night/main_to_assistant/animation.json
 SHA-256-Digest: 1WeBbp1XaIl4LvaWXHTgOwXpst5lOwoLKh7ojGV5Lc8=
 
@@ -6115,6 +6715,207 @@ Name: assets/seat_regulate/night/right1_height_up/images/seq_0_8.png
 SHA-256-Digest: EB3JFC+s7SQ+HiNpeyyXfdYB9b0HKVg92IF+kkQo9Z0=
 
 Name: assets/seat_regulate/night/right1_height_up/images/seq_0_9.png
+SHA-256-Digest: PugwQnGlnrgG0FDUTCZ/kRo90DaUHOyHWke/jAAphfg=
+
+Name: assets/seat_regulate/night/right2_height_up/animation.json
+SHA-256-Digest: vh9VZ6+VVWtQZzSBMyrAmvjHj3a60z2dnwls7mXI9FY=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_0.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_1.png
+SHA-256-Digest: VL7M6uEWbZlto6X1Kwj34urFNSQz2Zd00QyQgGEPxFI=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_10.png
+SHA-256-Digest: zrlfk3TM+T6SG8ySzUnQg8aGbsYV3HUZLIbTzP1+eeE=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_11.png
+SHA-256-Digest: uGBT1b216JtIx/DjEkR/ZWMognHjJ5at32jFWI2Qj1Y=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_12.png
+SHA-256-Digest: 0rI4TpsOEfkU5vus8SxkLnOr4eBDjUuyka1jq12Ec8A=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_13.png
+SHA-256-Digest: dPWirVKRdIbfM2YRwz1pkK1f8Exupz9NO9w/vCNVN5s=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_14.png
+SHA-256-Digest: afeQXDkGxybTiwakPTAYYtZIWNZ8Pfp/AlKjM0kEeLI=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_15.png
+SHA-256-Digest: mmKRwHF+CrAsQb1z2R+AOU+/ocEv9eBTOIgF3LkuG9g=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_16.png
+SHA-256-Digest: xfxaebGwyq5rPYID1qjtPdwRgMxU1GquYIT5WmUX5IY=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_17.png
+SHA-256-Digest: g8kk4BmQLH5plOMlew+OsqNfepjI678quadUtauckpE=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_18.png
+SHA-256-Digest: O65WLumaSMUc8DeaV7eJMAMqGucPW9uwjS2YVH1rF4o=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_19.png
+SHA-256-Digest: bW6+2913GiSKJDCS/SjD0k0yel/8I/RTa/s9peQ74tI=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_2.png
+SHA-256-Digest: TA2uuwfSaingrWzGbTCHCnUn/H1lDpqSq1pVjnfXnEQ=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_20.png
+SHA-256-Digest: he+GoOdM+sYggJ5qRURsDH7wsrt+se6o2EitcWBLfbU=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_21.png
+SHA-256-Digest: xpAOo06nNrmpWup+lrc0gtk2acABvKNQjTXgspbxCPk=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_22.png
+SHA-256-Digest: XVtAP+7KUhBK76SDxblPa3uB8Y5NcxSJofHpv3HLyu0=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_23.png
+SHA-256-Digest: jch8/zCH6iilB5VydS+ZdHmOZVnoHeGW+AUFu5qo9NU=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_24.png
+SHA-256-Digest: x6OSGZpeCUaAQamacRLq0Qy/4EiZ25DzCC2Gulnok+E=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_25.png
+SHA-256-Digest: dNvK+hselemk0psUnl/aDdfttaKceH2FZOUWRj58Cts=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_26.png
+SHA-256-Digest: 19C0xEaVdUkSKVOq7ZG/2B1S/KzX9iUt4Ni5f0AzyGM=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_27.png
+SHA-256-Digest: C6RVQMetp3fKI0kSCVbxzzfMgGidIhOl+ahgZ0iqS8E=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_28.png
+SHA-256-Digest: BLhEWxnNxXxM94AErVrAhV2L8pek75GhOEIP4AAuGN4=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_29.png
+SHA-256-Digest: 1TaN6CO+qIv6sMg5wUQZzm9I+dwA3DDmMBkdch04eS0=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_3.png
+SHA-256-Digest: +ceBEt8lqKq3/lZiT9NwcFlfp5hjHMKWKNQWrdkIXWk=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_30.png
+SHA-256-Digest: uAYqrgYrKm8DihhkG9yZaMtZmcka7mHM2AI4vZ/I4gc=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_31.png
+SHA-256-Digest: NpqUX+WROwKpdkLPClrH1tyJMVMLuIpasHID28hixWE=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_32.png
+SHA-256-Digest: LApBvb7fu4lwvM2xPdhuLEJy5NuKYt8HYVttjlJPwPM=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_33.png
+SHA-256-Digest: GsWxDR6Z0A/TJYCVpddAT5tyFTHyOszOwzr+69tVSt8=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_34.png
+SHA-256-Digest: x+xjsd+psVL9JPgIE/7+gDGB/CfULjHBC6CBWC4D7jA=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_35.png
+SHA-256-Digest: c2R8mfTvK7s15O2C27jyJY4nTGBhCIsSzRUTuLv3vDQ=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_36.png
+SHA-256-Digest: W88j628oiIsNL1IPyzoprMRtagXObt5yAkDG+Ue3dhg=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_37.png
+SHA-256-Digest: kNfSVUWXILxRYdRSNB/uaG8Kb3V7WDJhB9d7DHbVUPY=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_38.png
+SHA-256-Digest: di5M6BZMf6dfbLuF3P7djtSOvZWRfzRWxwkr1T13hQo=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_39.png
+SHA-256-Digest: sS3ihEYMMeJOpM/v7batuXC4RqsnvW0QUqRgpeAp4dk=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_4.png
+SHA-256-Digest: b8c8wHuCqGTnviyYuRVkakqeg4wK77BrK2Rt/+QXPoU=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_40.png
+SHA-256-Digest: c91T9WZ1N7WUpezWocuP3bVg4tBavzowsqWMmmhD36w=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_41.png
+SHA-256-Digest: w0cklq4B6MvzsopW4rYEHCYMCvFSQN7XmZhFbQIPItE=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_42.png
+SHA-256-Digest: YiuVEKoGvXSPmp6oAeap/26iIbQPtPXHC3abFdux9kM=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_43.png
+SHA-256-Digest: GCgK4jey58l181iXJdMGoWqyvhekLx0jmXlhTfg1fNc=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_44.png
+SHA-256-Digest: qsa6bBfzS4XmvaTi4AdoCRVyGguAeCZCBUPpMVdit98=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_45.png
+SHA-256-Digest: lHDRnDMwiuP0hPNZTY2zbZHRb419l6dmO/TZWXn4n7Y=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_46.png
+SHA-256-Digest: kzG141VrvWVA1KlBokrW+5mxeLL+6gqsfuhiAUX2HDQ=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_47.png
+SHA-256-Digest: dVSWApHzBuoSJbeF5HgkXAJXMlOZ/ADYH1qekm0JecQ=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_48.png
+SHA-256-Digest: Y/RKJRtEpxUtGXsgg0jtXFGS3l9/iN/KzGA5ft2SV1U=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_49.png
+SHA-256-Digest: IoiHQ3S5ytn74yUmHziK2nN/Cbv4O1zxtAxnKjK/GgU=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_5.png
+SHA-256-Digest: TPR13cpDZyuF01U5jcNs5BeJ8kaQYBmRh/rvdQ9Qeog=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_50.png
+SHA-256-Digest: 31my2TdtFFywgzc5Fk8QQU2sjkKsUp7zXELB+nx7LQI=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_51.png
+SHA-256-Digest: TbIsRNuqM4YQDHZ8Lw/2Ci2eBk3rREMwEiH4TSsk1P4=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_52.png
+SHA-256-Digest: 7wBoSsjy4PjArwGOfECzxGrnFu/FEC3hgeR9UrSuRPs=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_53.png
+SHA-256-Digest: EvpKAfTXpNgf7J20ImYyC3ejkpS5SgtgHe8Q99zOjXg=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_54.png
+SHA-256-Digest: k9tOnkb1t+p1E5rywC8luqU1w6wvWHS7wU0pGYeKMEs=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_55.png
+SHA-256-Digest: y+evRNG7TFEt1Cql03N2EeWyUIWDT6iacgMZkv9UDes=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_56.png
+SHA-256-Digest: gPwka4rcw2RYgTTlXzLTXzC2kzsP+w/OZdH1dTD/tN4=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_57.png
+SHA-256-Digest: i8FcKI9l8vn6lXZ5sW4nMYLCvAecrT6LuKpA3jj4pEk=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_58.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_59.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_6.png
+SHA-256-Digest: XJsVSUamhqKJf1PucAwMfhlPEoAXSdtbj/2HHSLJizQ=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_60.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_61.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_62.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_63.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_64.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_65.png
+SHA-256-Digest: LInh57yty5YqmXswsyMKXuJ7cAwM9pYGaivOy/sH54k=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_7.png
+SHA-256-Digest: L2xiQ/RtJ7UI6kbB9W7ObOgIZqcCJgtAD65p0zFvyEU=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_8.png
+SHA-256-Digest: EB3JFC+s7SQ+HiNpeyyXfdYB9b0HKVg92IF+kkQo9Z0=
+
+Name: assets/seat_regulate/night/right2_height_up/images/seq_0_9.png
 SHA-256-Digest: PugwQnGlnrgG0FDUTCZ/kRo90DaUHOyHWke/jAAphfg=
 
 Name: assets/seat_regulate_kx11a3/light/assistant_to_main/animation.js
@@ -8613,7 +9414,7 @@ Name: assets/temperature/scroll.wav
 SHA-256-Digest: B0RvCBu+Tc0XENWRyl1PrI3Zw40z5rLk4M210eQ/4ig=
 
 Name: classes.dex
-SHA-256-Digest: OVTDHECyqYVihYRSzQRgpkO+DEBZIZ54mH6Lk4Ohb9E=
+SHA-256-Digest: DgKVM5X/AUJPJRVysYC14AuK/bx5MT9vD0Ek3q85yCw=
 
 Name: classes2.dex
 SHA-256-Digest: lCOSMsSGMOd1H3wSUW332JxpHo4wqlLMvYYbL4BQqRE=
@@ -13539,5 +14340,5 @@ Name: res/xml/standalone_badge_offset.xml
 SHA-256-Digest: iqsyBxnwytmNKxdsTXYlCm/JN+4V/DAACNPrHMXZJZI=
 
 Name: resources.arsc
-SHA-256-Digest: RZ58tqyj3iK6aBnY6lGSo+X0a3uV/YHNZM6hl7BacuY=
+SHA-256-Digest: Qs9ioRCo/VEoORa6NCgSz28b0XYnCfBdDQBER85XPEw=
 

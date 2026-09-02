@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:width="8.0dip" android:top="30.0dip" android:bottom="30.0dip" android:end="16.0dip">
+    <item android:width="8.0dp" android:top="30.0dp" android:bottom="30.0dp" android:end="16.0dp">
         <shape>
-            <corners android:radius="4.0dip" />
+            <corners android:radius="4.0dp" />
             <solid android:color="@color/oneoshmi_long_scroll_color" />
         </shape>
     </item>

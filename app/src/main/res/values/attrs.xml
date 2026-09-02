@@ -716,11 +716,11 @@
     <attr name="hmi_sl_indicator_margin_top" format="dimension" />
     <attr name="hmi_sl_indicator_width" format="dimension" />
     <attr name="hmi_sl_textAllCaps" format="boolean" />
-<!--    <attr name="hmi_sl_textBold">-->
-<!--        <enum name="BOTH" value="2" />-->
-<!--        <enum name="NONE" value="0" />-->
-<!--        <enum name="SELECT" value="1" />-->
-<!--    </attr>-->
+    <attr name="hmi_sl_textBold">
+        <enum name="BOTH" value="2" />
+        <enum name="NONE" value="0" />
+        <enum name="SELECT" value="1" />
+    </attr>
     <attr name="hmi_sl_textSelectColor" format="color" />
     <attr name="hmi_sl_textSize" format="dimension" />
     <attr name="hmi_sl_textUnselectColor" format="color" />
@@ -1683,8 +1683,33 @@
     <attr name="yearTodayStyle" format="reference" />
 
     <declare-styleable name="ViewWithBackground">
+        <attr name="disableBackColor" />
+        <attr name="disableTextColor" />
+        <attr name="displayView" />
         <attr name="radius" />
         <attr name="normalColor" />
+        <attr name="normalTextColor" />
+        <attr name="pressColor" />
+        <attr name="pressTextColor" />
+    </declare-styleable>
+
+    <declare-styleable name="ImgUpDowStatus">
+        <attr name="activeImg" />
+        <attr name="normalImg" />
+    </declare-styleable>
+
+    <declare-styleable name="Switch">
+        <attr name="switchBgActiveColor" />
+        <attr name="switchBgDisableColor" />
+        <attr name="switchBgUnActiveColor" />
+        <attr name="switchIndicatorActiveColor" />
+        <attr name="switchIndicatorDisableColor" />
+        <attr name="switchIndicatorRadius" />
+        <attr name="switchIndicatorUnActiveColor" />
+    </declare-styleable>
+
+    <declare-styleable name="TouchDelegateView">
+        <attr name="touchDelegateViewId" />
     </declare-styleable>
 
     <declare-styleable name="TextViewWithBg">
@@ -1817,6 +1842,94 @@
     <declare-styleable name="FragranceTypeItem">
         <attr name="fragranceTypeIcon" format="reference" />
         <attr name="fragranceTypeDes" format="string" />
+    </declare-styleable>
+
+    <!-- Styleable groups restored from the decompiled APK for layout preview. -->
+    <declare-styleable name="TrackBallHelper">
+        <attr name="track_ball_radius" />
+        <attr name="track_ball_scale" />
+        <attr name="track_ball_stroke_color" />
+        <attr name="track_ball_stroke_width" />
+    </declare-styleable>
+
+    <declare-styleable name="GlyRadioGroup">
+        <attr name="rgAnimDuration" />
+        <attr name="rgBackgroundColor" />
+        <attr name="rgButtonColor" />
+        <attr name="rgCorner" />
+        <attr name="rgSelectIndex" />
+        <attr name="rgSeparateLineColor" />
+        <attr name="rgSeparateLineLen" />
+        <attr name="rgShadeColor" />
+    </declare-styleable>
+
+    <declare-styleable name="LottieAnimationView">
+        <attr name="lottie_asyncUpdates" />
+        <attr name="lottie_autoPlay" />
+        <attr name="lottie_cacheComposition" />
+        <attr name="lottie_clipToCompositionBounds" />
+        <attr name="lottie_colorFilter" />
+        <attr name="lottie_defaultFontFileExtension" />
+        <attr name="lottie_enableMergePathsForKitKatAndAbove" />
+        <attr name="lottie_fallbackRes" />
+        <attr name="lottie_fileName" />
+        <attr name="lottie_ignoreDisabledSystemAnimations" />
+        <attr name="lottie_imageAssetsFolder" />
+        <attr name="lottie_loop" />
+        <attr name="lottie_progress" />
+        <attr name="lottie_rawRes" />
+        <attr name="lottie_renderMode" />
+        <attr name="lottie_repeatCount" />
+        <attr name="lottie_repeatMode" />
+        <attr name="lottie_scale" />
+        <attr name="lottie_speed" />
+        <attr name="lottie_url" />
+        <attr name="lottie_useCompositionFrameRate" />
+    </declare-styleable>
+
+    <declare-styleable name="OneStateLottieView">
+        <attr name="oneStateLottieViewLight" />
+        <attr name="oneStateLottieViewNight" />
+    </declare-styleable>
+
+    <declare-styleable name="SeatFeatureLevel">
+        <attr name="seatFeatureLevel0LightPath" />
+        <attr name="seatFeatureLevel0NightPath" />
+        <attr name="seatFeatureLevel1LightPath" />
+        <attr name="seatFeatureLevel1NightPath" />
+        <attr name="seatFeatureLevel2LightPath" />
+        <attr name="seatFeatureLevel2NightPath" />
+        <attr name="seatFeatureLevel3LightPath" />
+        <attr name="seatFeatureLevel3NightPath" />
+        <attr name="seatFeatureLevelBgRadius" />
+        <attr name="seatFeatureLevelDisableBgColor" />
+        <attr name="seatFeatureLevelDisableImg" />
+    </declare-styleable>
+
+    <declare-styleable name="SeatHeatWindState">
+        <attr name="disableBg" />
+        <attr name="disableSrc" />
+        <attr name="leve0Bg" />
+        <attr name="leve0Src" />
+        <attr name="leve1Src" />
+        <attr name="leve2Src" />
+        <attr name="leve3Src" />
+        <attr name="openBg" />
+    </declare-styleable>
+
+    <declare-styleable name="Selector">
+        <attr name="selectorActiveColor" />
+        <attr name="selectorIndicatorBg" />
+        <attr name="selectorIndicatorHeight" />
+        <attr name="selectorIndicatorRadius" />
+        <attr name="selectorIndicatorWidth" />
+        <attr name="selectorItemBg" />
+        <attr name="selectorItemHeight" />
+        <attr name="selectorItemRadius" />
+        <attr name="selectorItemWidth" />
+        <attr name="selectorLabel" />
+        <attr name="selectorNormalColor" />
+        <attr name="selectorTextSize" />
     </declare-styleable>
 
 </resources>

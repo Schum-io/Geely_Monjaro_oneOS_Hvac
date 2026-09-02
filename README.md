@@ -2,12 +2,15 @@
 
 [![Release](https://img.shields.io/github/v/release/Schum-io/Geely_Monjaro_oneOS_Hvac)](https://github.com/Schum-io/Geely_Monjaro_oneOS_Hvac/releases)
 [![Download Latest](https://img.shields.io/badge/Download-Latest%20Release-blue)](https://github.com/Schum-io/Geely_Monjaro_oneOS_Hvac/releases)
+[![Downloads](https://img.shields.io/github/downloads/Schum-io/Geely_Monjaro_oneOS_Hvac/total)](https://github.com/Schum-io/Geely_Monjaro_oneOS_Hvac/releases)
 
 Magisk-модуль, расширяющий стандартное приложение климата (HVAC) головного устройства **Geely Monjaro REST 1**.
 
 За основу взят APK из прошивки **GMC** (Geely Mod Custom).
 
 Добавляет на главный экран климата управление обогревом, вентиляцией и массажем сидений — функции, которые в оригинальном приложении спрятаны в дополнительном меню.
+
+Дополнительно добавляет в меню настроек (шестерёнка на экране климата) переключатель **«Отключить автозакрытие»** — окно климата перестаёт закрываться само через 10 секунд.
 
 ---
 
@@ -27,6 +30,22 @@ Magisk-модуль, расширяющий стандартное прилож�
 
 ---
 
+## Отключение автозакрытия
+
+В стоковом приложении окно климата само сворачивается через **10 секунд** после последнего касания. Таймер задан в коде (`AutoHideActivity`: `mOpenTime = 10000`, `mAutoHide = true`) и через интерфейс не настраивается.
+
+Модуль добавляет третью строку в меню за шестерёнкой:
+
+| Переключатель | Что делает |
+|---|---|
+| **Отключить автозакрытие**<br>*Окно климата не будет закрываться само* | Выключено (по умолчанию) — стоковое поведение, окно сворачивается через 10 с.<br>Включено — окно остаётся открытым, пока его не закрыть тапом вне панели. |
+
+Состояние сохраняется в настройках самого приложения (`SharedPreferences`, ключ `mod_disable_auto_hide`) и применяется сразу — перезагрузка не нужна.
+
+Всплывающие диалоги приложения (в том числе само меню настроек) продолжают закрываться автоматически, как в стоке.
+
+---
+
 ## Изменённые файлы
 
 ### Layout
@@ -37,19 +56,32 @@ Magisk-модуль, расширяющий стандартное прилож�
 
 ### Smali (декомпилированный байткод)
 
-Все файлы находятся в пакете `com/geely/hvac/adapter/`:
+**Управление сиденьями** — добавленные классы в пакете `com/geely/hvac/adapter/`:
 
 | Класс | Описание |
 |-------|----------|
 | `AirConditionViewHolder$AcPanelController` | Основной контроллер панели климата |
 | `AirConditionViewHolder$AcPanelController$ContainerRunnable` | Управление контейнером панели |
 | `AirConditionViewHolder$AcPanelController$Row1LeftHeatRunnable` | Обогрев, левая сторона (ряд 1) |
+| `AirConditionViewHolder$AcPanelController$Row1LeftMassageRunnable` | Массаж, левая сторона (ряд 1) |
 | `AirConditionViewHolder$AcPanelController$Row1LeftWindRunnable` | Вентиляция, левая сторона (ряд 1) |
 | `AirConditionViewHolder$AcPanelController$Row1RightHeatRunnable` | Обогрев, правая сторона (ряд 1) |
 | `AirConditionViewHolder$AcPanelController$Row1RightWindRunnable` | Вентиляция, правая сторона (ряд 1) |
 | `AirConditionViewHolder$AcPanelController$Row1SteeringWheelHeatRunnable` | Обогрев руля (ряд 1) |
 | `AirConditionViewHolder$AcPanelController$Row2LeftRunnable` | Управление, левая сторона (ряд 2) |
 | `AirConditionViewHolder$AcPanelController$Row2RightRunnable` | Управление, правая сторона (ряд 2) |
+
+Изменён `AirConditionViewHolder` — из конструктора вызывается `initAcPanelController()`.
+
+**Отключение автозакрытия** — пакет `com/geely/hvac/activity/`:
+
+| Класс | Описание |
+|-------|----------|
+| `AcSetActivity$AutoHideSwitchListener` | Добавлен — сохраняет состояние переключателя |
+| `AcSetActivity` | Изменён — в `getView()` строится новая строка меню настроек |
+| `GlyMainActivity` | Изменён — в `onResume()` читается флаг и вызывается `setAutoHide()` |
+
+Новая строка меню создаётся кодом, а не в `layout_ac_set.xml`: эта разметка использует Data Binding, и добавление в неё ещё одного элемента потребовало бы правки сгенерированного класса привязки. Поэтому ресурсы приложения не меняются вовсе — подписи переключателя зашиты в smali.
 
 ---
 

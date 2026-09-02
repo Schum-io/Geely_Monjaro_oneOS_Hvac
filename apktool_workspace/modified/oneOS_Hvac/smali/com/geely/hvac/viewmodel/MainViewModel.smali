@@ -12165,6 +12165,67 @@
     return-void
 .end method
 
+.method protected applicationStartActivity()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/geely/hvac/viewmodel/MainViewModel;->applicationStartActivity(I)V
+
+    return-void
+.end method
+
+.method protected applicationStartActivity(I)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "displayId"
+        }
+    .end annotation
+
+    iget-boolean v0, p0, Lcom/geely/hvac/viewmodel/MainViewModel;->mSeatDetailShow:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-static {}, Lcom/geely/hvac/GlyAcApp;->getInstance()Lcom/geely/hvac/GlyAcApp;
+
+    move-result-object v1
+
+    const-class v2, Lcom/geely/hvac/activity/SeatSetDetailActivity;
+
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const/high16 v2, 0x10000000
+
+    invoke-virtual {v0, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Landroid/app/ActivityOptions;->setLaunchDisplayId(I)Landroid/app/ActivityOptions;
+
+    invoke-virtual {v1}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
+
+    move-result-object v1
+
+    invoke-static {}, Lcom/geely/hvac/GlyAcApp;->getInstance()Lcom/geely/hvac/GlyAcApp;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0, v1}, Lcom/geely/hvac/GlyAcApp;->startActivity(Landroid/content/Intent;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
 .method public autoCloseWindowRemindClick(Landroid/view/View;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
@@ -21290,18 +21351,28 @@
 
     invoke-static {v2, v3}, Lcom/geely/hvac/utils/LogUtil;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
+    invoke-static {}, Lcom/geely/hvac/GlyAcApp;->getInstance()Lcom/geely/hvac/GlyAcApp;
+
+    move-result-object v3
+
+    const v0, 0x7f1000dc
+
+    invoke-virtual {v3, v0}, Lcom/geely/hvac/GlyAcApp;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
     .line 3181
     iget-object v2, p0, Lcom/geely/hvac/viewmodel/MainViewModel;->mSeatSaveTags:Landroidx/databinding/ObservableField;
 
-    new-array v3, v10, [Ljava/lang/String;
+    new-array v0, v10, [Ljava/lang/String;
 
-    aput-object v4, v3, v9
+    aput-object v4, v0, v9
 
-    aput-object v6, v3, v1
+    aput-object v6, v0, v1
 
-    aput-object v0, v3, v11
+    aput-object v3, v0, v11
 
-    invoke-virtual {v2, v3}, Landroidx/databinding/ObservableField;->set(Ljava/lang/Object;)V
+    invoke-virtual {v2, v0}, Landroidx/databinding/ObservableField;->set(Ljava/lang/Object;)V
 
     .line 3182
     iget-object v0, p0, Lcom/geely/hvac/viewmodel/MainViewModel;->mSeatSaveTabIndex:Landroidx/databinding/ObservableInt;
@@ -21369,7 +21440,17 @@
 
     aput-object v4, v3, v1
 
-    aput-object v0, v3, v11
+    invoke-static {}, Lcom/geely/hvac/GlyAcApp;->getInstance()Lcom/geely/hvac/GlyAcApp;
+
+    move-result-object v4
+
+    const v0, 0x7f1000dc
+
+    invoke-virtual {v4, v0}, Lcom/geely/hvac/GlyAcApp;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v3, v11
 
     invoke-virtual {v2, v3}, Landroidx/databinding/ObservableField;->set(Ljava/lang/Object;)V
 
@@ -30439,7 +30520,7 @@
     if-nez v1, :cond_b
 
     .line 3577
-    invoke-virtual/range {p0 .. p0}, Lcom/geely/hvac/viewmodel/MainViewModel;->startRightSeatPhysicsSaveDialog()V
+    invoke-virtual/range {p0 .. p0}, Lcom/geely/hvac/viewmodel/MainViewModel;->startRightSeatDetailActivity()V
 
     .line 3579
     :cond_b
@@ -30472,7 +30553,7 @@
     if-nez v1, :cond_e
 
     .line 3568
-    invoke-virtual/range {p0 .. p0}, Lcom/geely/hvac/viewmodel/MainViewModel;->startLeftSeatPhysicsSaveDialog()V
+    invoke-virtual/range {p0 .. p0}, Lcom/geely/hvac/viewmodel/MainViewModel;->startLeftSeatDetailActivity()V
 
     .line 3570
     :cond_e
@@ -30514,7 +30595,7 @@
     if-nez v1, :cond_11
 
     .line 3551
-    invoke-virtual/range {p0 .. p0}, Lcom/geely/hvac/viewmodel/MainViewModel;->startLeftSeatPhysicsSaveDialog()V
+    invoke-virtual/range {p0 .. p0}, Lcom/geely/hvac/viewmodel/MainViewModel;->startLeftSeatDetailActivity()V
 
     .line 3553
     :cond_11
@@ -30568,7 +30649,7 @@
     if-nez v1, :cond_14
 
     .line 3602
-    invoke-virtual/range {p0 .. p0}, Lcom/geely/hvac/viewmodel/MainViewModel;->startRightSeatPhysicsSaveDialog()V
+    invoke-virtual/range {p0 .. p0}, Lcom/geely/hvac/viewmodel/MainViewModel;->startRightSeatDetailActivity()V
 
     .line 3604
     :cond_14
@@ -30601,7 +30682,7 @@
     if-nez v1, :cond_17
 
     .line 3593
-    invoke-virtual/range {p0 .. p0}, Lcom/geely/hvac/viewmodel/MainViewModel;->startLeftSeatPhysicsSaveDialog()V
+    invoke-virtual/range {p0 .. p0}, Lcom/geely/hvac/viewmodel/MainViewModel;->startLeftSeatDetailActivity()V
 
     .line 3595
     :cond_17
@@ -30655,7 +30736,7 @@
     if-nez v1, :cond_1a
 
     .line 3625
-    invoke-virtual/range {p0 .. p0}, Lcom/geely/hvac/viewmodel/MainViewModel;->startRightSeatPhysicsSaveDialog()V
+    invoke-virtual/range {p0 .. p0}, Lcom/geely/hvac/viewmodel/MainViewModel;->startRightSeatDetailActivity()V
 
     .line 3627
     :cond_1a
@@ -30688,7 +30769,7 @@
     if-nez v1, :cond_1d
 
     .line 3616
-    invoke-virtual/range {p0 .. p0}, Lcom/geely/hvac/viewmodel/MainViewModel;->startLeftSeatPhysicsSaveDialog()V
+    invoke-virtual/range {p0 .. p0}, Lcom/geely/hvac/viewmodel/MainViewModel;->startLeftSeatDetailActivity()V
 
     .line 3618
     :cond_1d
@@ -45191,6 +45272,20 @@
     return p1
 .end method
 
+.method protected startLeftSeatDetailActivity()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/geely/hvac/viewmodel/MainViewModel;->mSeatDetailPositionIndex:Landroidx/databinding/ObservableInt;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroidx/databinding/ObservableInt;->set(I)V
+
+    invoke-virtual {p0, v1}, Lcom/geely/hvac/viewmodel/MainViewModel;->applicationStartActivity(I)V
+
+    return-void
+.end method
+
 .method protected startLeftSeatPhysicsSaveDialog()V
     .locals 4
 
@@ -45431,6 +45526,22 @@
 
     :goto_0
     return p1
+.end method
+
+.method protected startRightSeatDetailActivity()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/geely/hvac/viewmodel/MainViewModel;->mSeatDetailPositionIndex:Landroidx/databinding/ObservableInt;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroidx/databinding/ObservableInt;->set(I)V
+
+    const/4 v1, 0x2
+
+    invoke-virtual {p0, v1}, Lcom/geely/hvac/viewmodel/MainViewModel;->applicationStartActivity(I)V
+
+    return-void
 .end method
 
 .method protected startRightSeatPhysicsSaveDialog()V

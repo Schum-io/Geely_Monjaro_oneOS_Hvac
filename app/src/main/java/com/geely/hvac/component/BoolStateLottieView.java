@@ -79,6 +79,20 @@ public class BoolStateLottieView extends ConstraintLayout {
     }
 
     private void updateVisibility() {
+        if (isInEditMode()) {
+            // Layoutlib does not start GlyAcApp, so DayNightUtil and Lottie assets
+            // are unavailable in Android Studio Preview. Show the configured
+            // disabled/off drawable as a stable design-time representation.
+            this.mBinding.lottie.setVisibility(GONE);
+            this.mBinding.img.setVisibility(VISIBLE);
+            int previewDrawable = this.mDisableFalseDrawableRes != 0
+                    ? this.mDisableFalseDrawableRes
+                    : this.mDisableTrueDrawableRes;
+            if (previewDrawable != 0) {
+                this.mBinding.img.setImageResource(previewDrawable);
+            }
+            return;
+        }
         this.mBinding.img.setVisibility(this.mEnable ? 8 : 0);
         this.mBinding.lottie.setVisibility(this.mEnable ? 0 : 8);
         if (this.mEnable) {

@@ -225,7 +225,7 @@
     <string name="seat_position_save">Сохранить</string>
     <string name="seat_position_save_text1">Память 1</string>
     <string name="seat_position_save_text2">Память 2</string>
-    <string name="seat_position_save_text3">Особые привычки</string>
+    <string name="seat_position_save_text3">Память 3</string>
     <string name="seat_position_set">Восстановить</string>
     <string name="seat_reset_fail_hint">Не удалось восстановить положение</string>
     <string name="seat_save_successful">Успешно сохранено</string>

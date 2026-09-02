@@ -7,7 +7,7 @@ import android.util.AttributeSet;
 import android.view.TouchDelegate;
 import android.view.View;
 import android.view.ViewGroup;
-import com.geely.hvac.common.R;
+import com.geely.hvac.R;
 import com.geely.hvac.utils.LogUtil;
 
 /* loaded from: classes.dex */

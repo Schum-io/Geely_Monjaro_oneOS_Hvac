@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector android:height="80.0dip" android:width="80.0dip" android:viewportWidth="80.0" android:viewportHeight="80.0"
+<vector android:height="80.0dp" android:width="80.0dp" android:viewportWidth="80.0" android:viewportHeight="80.0"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <path android:fillColor="@color/oneoshmi_icon_background_color" android:pathData="M39,46C38.4477,46 38,45.5523 38,45V27C38,26.4477 38.4477,26 39,26H41C41.5523,26 42,26.4477 42,27V45C42,45.5523 41.5523,46 41,46H39Z" android:fillAlpha="0.9" />
     <path android:fillColor="@color/oneoshmi_icon_background_color" android:pathData="M40,56C41.6569,56 43,54.6569 43,53C43,51.3431 41.6569,50 40,50C38.3431,50 37,51.3431 37,53C37,54.6569 38.3431,56 40,56Z" android:fillAlpha="0.9" />

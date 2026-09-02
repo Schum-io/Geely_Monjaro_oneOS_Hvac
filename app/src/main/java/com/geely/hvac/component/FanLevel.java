@@ -180,6 +180,18 @@ public class FanLevel extends ConstraintLayout {
         layoutFanLevelBindingInflate.setView(this);
         this.mBinding.add.setOnClickListener(this::lambda$init$0$FanLevel);
         this.mBinding.reduce.setOnClickListener(this::lambda$init$1$FanLevel);
+        if (isInEditMode()) {
+            // Lottie assets and DayNightUtil depend on the running vehicle app.
+            // Use the bundled disabled icons and a representative fan level in
+            // Android Studio instead.
+            this.mBinding.add.setVisibility(GONE);
+            this.mBinding.reduce.setVisibility(GONE);
+            this.mBinding.addDisable.setVisibility(VISIBLE);
+            this.mBinding.reduceDisable.setVisibility(VISIBLE);
+            this.mBinding.manualFanLevel.setMaxLevel(this.mMaxFanLevel.get());
+            this.mBinding.manualFanLevel.setCurrentLevel(4);
+            return;
+        }
         updateAddReduceEnable();
         setAutoFan(this.mIsAutoFan, true);
     }

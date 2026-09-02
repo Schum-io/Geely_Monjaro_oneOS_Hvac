@@ -3,15 +3,15 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_checked="true">
         <shape android:shape="rectangle">
-            <size android:height="48.0dip" android:width="96.0dip" />
-            <corners android:radius="40.0dip" />
+            <size android:height="48.0dp" android:width="96.0dp" />
+            <corners android:radius="40.0dp" />
             <solid android:color="@color/oneoshmi_main_theme_color" />
         </shape>
     </item>
     <item android:state_checked="false">
         <shape android:shape="rectangle">
-            <size android:height="48.0dip" android:width="96.0dip" />
-            <corners android:radius="40.0dip" />
+            <size android:height="48.0dp" android:width="96.0dp" />
+            <corners android:radius="40.0dp" />
             <solid android:color="@color/oneoshmi_switcher_color_unchecked" />
         </shape>
     </item>

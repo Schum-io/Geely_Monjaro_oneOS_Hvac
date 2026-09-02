@@ -115,6 +115,14 @@ public abstract class SeatFeatureLevel extends ConstraintLayout {
         if (this.mDisableResId != 0) {
             this.mBinding.disableImg.setImageResource(this.mDisableResId);
         }
+        if (isInEditMode()) {
+            // External Lottie files are supplied by the vehicle at runtime and
+            // are unavailable to layoutlib. Keep the configured static icon on
+            // top in Android Studio Preview.
+            this.mBinding.lottie.setVisibility(GONE);
+            this.mBinding.disableBg.setVisibility(VISIBLE);
+            this.mBinding.disableImg.setVisibility(VISIBLE);
+        }
     }
 
     private String getPath(Context context, int index) {
@@ -123,6 +131,9 @@ public abstract class SeatFeatureLevel extends ConstraintLayout {
     }
 
     private void updateAnimate() {
+        if (isInEditMode()) {
+            return;
+        }
         if (this.mEnable.get()) {
             String path = getPath(getContext(), this.mLevel);
             if (!path.equals(this.mAnimatePath)) {
