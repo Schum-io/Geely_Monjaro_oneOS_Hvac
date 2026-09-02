@@ -154,22 +154,17 @@ public class SeatTab extends ConstraintLayout {
 
     public void itemClick(View view) {
         int i = this.mTabIndex.get();
-        switch (view.getId()) {
-            case R.id.item0 /* 2131296613 */:
-                i = 0;
-                break;
-            case R.id.item1 /* 2131296615 */:
-                i = 1;
-                break;
-            case R.id.item2 /* 2131296617 */:
-                i = 2;
-                break;
-            case R.id.item3 /* 2131296619 */:
-                i = 3;
-                break;
-            case R.id.item4 /* 2131296621 */:
-                i = 4;
-                break;
+        int id = view.getId();
+        if (id == R.id.item0) {
+            i = 0;
+        } else if (id == R.id.item1) {
+            i = 1;
+        } else if (id == R.id.item2) {
+            i = 2;
+        } else if (id == R.id.item3) {
+            i = 3;
+        } else if (id == R.id.item4) {
+            i = 4;
         }
         if (i == this.mTabIndex.get()) {
             return;

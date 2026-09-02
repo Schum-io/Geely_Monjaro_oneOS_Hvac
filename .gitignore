@@ -47,3 +47,9 @@ replay_pid*
 magisk/system/app/oneOS_Hvac/oneOS_Hvac.apk
 /apktool_workspace/original/oneOS_Hvac*
 /apktool_workspace/modified/oneOS_Hvac_old
+/caches
+/daemon
+/native
+/wrapper
+/.tmp
+/kotlin-profile

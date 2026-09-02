@@ -132,20 +132,14 @@ public class SeatTimeSelector extends ConstraintLayout {
 
     public void onItemClick(View v) {
         int id = v.getId();
-        if (id != R.id.retain) {
-            switch (id) {
-                case R.id.level1 /* 2131296663 */:
-                    select(0, false);
-                    break;
-                case R.id.level2 /* 2131296664 */:
-                    select(1, false);
-                    break;
-                case R.id.level3 /* 2131296665 */:
-                    select(2, false);
-                    break;
-            }
-            return;
+        if (id == R.id.retain) {
+            select(3, false);
+        } else if (id == R.id.level1) {
+            select(0, false);
+        } else if (id == R.id.level2) {
+            select(1, false);
+        } else if (id == R.id.level3) {
+            select(2, false);
         }
-        select(3, false);
     }
 }

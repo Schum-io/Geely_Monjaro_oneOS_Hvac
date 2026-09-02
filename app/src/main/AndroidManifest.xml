@@ -6,7 +6,6 @@
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:configChanges="locale"
-        android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher_new"
         android:label="@string/aircondition"
         android:supportsRtl="true"

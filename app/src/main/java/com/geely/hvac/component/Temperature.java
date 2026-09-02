@@ -375,6 +375,13 @@ public class Temperature extends View {
         float fMax = Math.max((this.mTempList.size() - 1) * this.mTextMargin, 0.0f);
         this.mScrollHeight = fMax;
         this.mMaxScrollY = fMax + (this.mMaxTextHeight / 2.0f);
+        if (isInEditMode()) {
+            int previewIndex = this.mTempList.indexOf(Float.valueOf(this.mTemperature));
+            if (previewIndex >= 0) {
+                setMyScrollY(getTargetScrollY(previewIndex));
+                invalidate();
+            }
+        }
         LogUtil.d(TAG, "onSizeChanged, textMargin:" + this.mTextMargin + ", mScrollHeight:" + this.mScrollHeight + ", mMaxScrollY:" + this.mMaxScrollY);
     }
 
@@ -411,6 +418,12 @@ public class Temperature extends View {
         float fRound = Math.round(this.mMaxTextHeight / 2.0f);
         this.mMinScrollY = fRound;
         setMyScrollY(fRound);
+        if (isInEditMode()) {
+            // The real temperature list is populated by Data Binding from the car.
+            // Layout Preview has no ViewModel, so provide a representative value.
+            this.mTemperature = 22.0f;
+            updateTempList();
+        }
         LogUtil.d(TAG, "init, mMaxTextHeight:" + this.mMaxTextHeight + ", mMinTextHeight:" + this.mMinTextHeight + ", mMinScrollY:" + this.mMinScrollY);
     }
 

@@ -188,19 +188,15 @@ public class SeatDetailType extends ConstraintLayout {
     }
 
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.item0 /* 2131296613 */:
-                select(0);
-                break;
-            case R.id.item1 /* 2131296615 */:
-                select(1);
-                break;
-            case R.id.item2 /* 2131296617 */:
-                select(2);
-                break;
-            case R.id.item3 /* 2131296619 */:
-                select(3);
-                break;
+        int id = view.getId();
+        if (id == R.id.item0) {
+            select(0);
+        } else if (id == R.id.item1) {
+            select(1);
+        } else if (id == R.id.item2) {
+            select(2);
+        } else if (id == R.id.item3) {
+            select(3);
         }
         SensorsDataAutoTrackHelper.trackViewOnClick(view);
     }

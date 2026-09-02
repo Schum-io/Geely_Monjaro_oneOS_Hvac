@@ -10,6 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:tag="layout/pager_item_aircondition_0">
@@ -20,6 +21,7 @@
             android:layout_height="@dimen/ac_behind_bg_height"
             android:layout_marginTop="@dimen/ac_behind_bg_top"
             android:tag="binding_1"
+            tools:src="@mipmap/behind_ac_bg"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -30,6 +32,7 @@
             android:layout_height="@dimen/ac_front_bg_height"
             android:layout_marginTop="@dimen/ac_front_bg_top"
             android:tag="binding_2"
+            tools:src="@mipmap/ac_front"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -282,6 +285,7 @@
             android:layout_marginEnd="@dimen/front_defrost_margin_right"
             android:tag="binding_23"
             android:visibility="gone"
+            tools:visibility="visible"
             app:layout_constraintBottom_toBottomOf="@id/defrost_region_bg"
             app:layout_constraintRight_toRightOf="@id/defrost_region_bg"
             app:layout_constraintTop_toTopOf="@id/defrost_region_bg"
@@ -296,6 +300,7 @@
             android:layout_marginEnd="@dimen/front_defrost_margin_right"
             android:tag="binding_24"
             android:visibility="gone"
+            tools:visibility="visible"
             app:stateFalseImage="@drawable/gclean_off"
             app:stateTrueImage="@drawable/gclean_on" />
 
@@ -848,6 +853,7 @@
                 android:layout_width="@dimen/ac_icon_width"
                 android:layout_height="@dimen/ac_icon_height"
                 android:layout_marginStart="@dimen/behind_wind_blow_face_margin"
+                android:src="@drawable/window_blow_face_unactive"
                 android:tag="binding_48"
                 app:layout_constraintBottom_toBottomOf="@id/behind_below_region_bg"
                 app:layout_constraintLeft_toLeftOf="@id/behind_below_region_bg"

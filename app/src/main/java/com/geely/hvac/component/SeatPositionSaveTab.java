@@ -117,16 +117,13 @@ public class SeatPositionSaveTab extends LinearLayout {
 
     public void itemClick(View view) {
         int i = this.mTabIndex.get();
-        switch (view.getId()) {
-            case R.id.label1 /* 2131296635 */:
-                i = 0;
-                break;
-            case R.id.label2 /* 2131296636 */:
-                i = 1;
-                break;
-            case R.id.label3 /* 2131296637 */:
-                i = 2;
-                break;
+        int id = view.getId();
+        if (id == R.id.label1) {
+            i = 0;
+        } else if (id == R.id.label2) {
+            i = 1;
+        } else if (id == R.id.label3) {
+            i = 2;
         }
         this.mTabIndex.set(i);
         SeatPositionSaveTabChangeListener seatPositionSaveTabChangeListener = this.mOnTabChangeListener;

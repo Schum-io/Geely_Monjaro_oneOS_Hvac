@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import com.geely.hvac.common.R;
+import com.geely.hvac.R;
 import com.geely.hvac.utils.LogUtil;
 import com.geely.hvac.utils.UiUtil;
 
