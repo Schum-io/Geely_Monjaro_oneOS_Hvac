@@ -13,8 +13,8 @@ apktool d oneOS_Hvac.apk
 package: name='com.geely.hvac'
 versionCode='385'
 versionName='1.0.20240929G(181)'
-platformBuildVersionName='9'
-platformBuildVersionCode='28' 
-compileSdkVersion='28'
-compileSdkVersionCodename='9'
+platformBuildVersionName='6.0-2438415'
+platformBuildVersionCode='23'
+compileSdkVersion='23'
+compileSdkVersionCodename='6.0-2438415'
 ```

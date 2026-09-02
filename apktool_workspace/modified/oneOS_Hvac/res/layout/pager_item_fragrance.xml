@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/pager_item_fragrance_0" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/pager_item_fragrance_0" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <com.geely.hvac.component.FragranceLeveView android:id="@id/fragrance_level" android:tag="binding_1" android:layout_width="@dimen/fragrance_level_region_width" android:layout_height="@dimen/fragrance_level_region_height" android:layout_marginTop="@dimen/fragrance_level_region_margin_top" android:layout_marginStart="@dimen/fragrance_level_region_margin_left" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
     <com.geely.hvac.component.FragranceType android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fragrance_type_margin_top" android:layout_marginStart="@dimen/fragrance_type_margin_left" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />

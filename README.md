@@ -44,6 +44,7 @@ Magisk-модуль, расширяющий стандартное прилож�
 | `AirConditionViewHolder$AcPanelController` | Основной контроллер панели климата |
 | `AirConditionViewHolder$AcPanelController$ContainerRunnable` | Управление контейнером панели |
 | `AirConditionViewHolder$AcPanelController$Row1LeftHeatRunnable` | Обогрев, левая сторона (ряд 1) |
+| `AirConditionViewHolder$AcPanelController$Row1LeftMassageRunnable` | Массаж, левая сторона (ряд 1) |
 | `AirConditionViewHolder$AcPanelController$Row1LeftWindRunnable` | Вентиляция, левая сторона (ряд 1) |
 | `AirConditionViewHolder$AcPanelController$Row1RightHeatRunnable` | Обогрев, правая сторона (ряд 1) |
 | `AirConditionViewHolder$AcPanelController$Row1RightWindRunnable` | Вентиляция, правая сторона (ряд 1) |

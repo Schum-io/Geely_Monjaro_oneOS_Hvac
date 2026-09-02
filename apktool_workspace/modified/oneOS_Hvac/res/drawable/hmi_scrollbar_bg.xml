@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:width="8.0dip" android:top="@dimen/oneoshmi_scrollview_top" android:end="16.0dip">
+    <item android:width="8.0dp" android:top="@dimen/oneoshmi_scrollview_top" android:end="16.0dp">
         <shape>
-            <corners android:radius="4.0dip" />
+            <corners android:radius="4.0dp" />
             <solid android:color="@color/oneoshmi_netscroll_bar_bg" />
         </shape>
     </item>
