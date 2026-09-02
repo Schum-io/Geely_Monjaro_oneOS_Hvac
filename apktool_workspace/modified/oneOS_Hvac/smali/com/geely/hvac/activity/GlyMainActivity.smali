@@ -2265,6 +2265,33 @@
     .line 311
     invoke-super {p0}, Lcom/geely/hvac/activity/AutoHideActivity;->onResume()V
 
+    #########################################################################
+    # MOD: honour the "disable auto hide" switch from the AC settings dialog
+    #
+    # AutoHideActivity schedules mHideRunnable for mOpenTime (10 s) in
+    # onResume and only calls onAutoHide() when mAutoHide is set, so clearing
+    # the flag is enough to keep the climate window open. Closing it by hand
+    # (tap outside the panel -> moveToBack) is unaffected.
+    #
+    # Read here rather than in onCreate: this activity is singleTask and
+    # long-lived, while onResume runs every time the panel is shown and on the
+    # way back from AcSetActivity, so the switch takes effect at once.
+    #########################################################################
+    const-string v0, "mod_disable_auto_hide"
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/geely/hvac/utils/SpUtils;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcom/geely/hvac/activity/GlyMainActivity;->setAutoHide(Z)V
+    #########################################################################
+    # MOD end
+    #########################################################################
+
     .line 312
     iget-object v0, p0, Lcom/geely/hvac/activity/GlyMainActivity;->TAG:Ljava/lang/String;
 

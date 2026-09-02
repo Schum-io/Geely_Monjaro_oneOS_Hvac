@@ -63,24 +63,33 @@ Two things follow that are easy to get wrong:
 
 ## 2. The change set (canonical)
 
-Exactly 12 changes relative to the pristine APK, plus one dex relocation and one
+Exactly 15 changes relative to the pristine APK, plus one dex relocation and one
 deletion. If `diff -rq` against a freshly unpacked original shows anything else,
 something is wrong.
+
+Two independent features live in here: the **AC panel** (§2.1–§2.3, extra seat and
+steering-wheel controls on the main climate screen) and the **auto-hide switch**
+(§2.7, an extra row in the settings dialog that keeps the climate window open).
 
 ### 2.1 Layout (1 file)
 
 - `res/layout/pager_item_aircondition.xml` — new controls added.
 
-### 2.2 Smali, modified (1 file)
+### 2.2 Smali, modified (3 files)
 
 - `smali/com/geely/hvac/adapter/AirConditionViewHolder.smali`
   — adds a `MemberClasses` annotation, a private method
   `initAcPanelController(Lcom/geely/hvac/databinding/PagerItemAirconditionBinding;)V`,
   and a call to it from the constructor.
+- `smali/com/geely/hvac/activity/AcSetActivity.smali` — §2.7: adds a
+  `MemberClasses` annotation and, in `getView()`, builds the third settings row
+  (`.locals` 2 → 6).
+- `smali/com/geely/hvac/activity/GlyMainActivity.smali` — §2.7: in `onResume()`,
+  reads the flag and calls `setAutoHide()`.
 
-### 2.3 Smali, added (10 files)
+### 2.3 Smali, added (11 files)
 
-All under `smali/com/geely/hvac/adapter/`:
+Ten under `smali/com/geely/hvac/adapter/`:
 
 | Class | Purpose |
 |-------|---------|
@@ -94,6 +103,12 @@ All under `smali/com/geely/hvac/adapter/`:
 | `…$Row1LeftMassageRunnable` | massage, left (row 1) |
 | `…$Row2LeftRunnable` | seat heat, left (row 2) |
 | `…$Row2RightRunnable` | seat heat, right (row 2) |
+
+One under `smali/com/geely/hvac/activity/` (§2.7):
+
+| Class | Purpose |
+|-------|---------|
+| `AcSetActivity$AutoHideSwitchListener` | persists the auto-hide switch |
 
 ### 2.4 64K method limit — dex relocation (mandatory)
 
@@ -157,6 +172,41 @@ androidx `.version` marker files) **stays**.
 Rebuilt APK with the directory gone: 86.87 MB, module zip 72.22 MB. Full analysis,
 including what was deliberately *not* deleted (`assets/seat_regulate_kx11a3/`,
 25 MB, is live code for a different seat configuration): `docs/orphan-resources.md`.
+
+### 2.7 The auto-hide switch
+
+Stock behaviour: `AutoHideActivity` (the superclass of `GlyMainActivity`) posts
+`mHideRunnable` after `mOpenTime` = `0x2710` = 10 s on every `onResume`, resets it on
+every `ACTION_UP`, and on firing calls `onAutoHide()` — which for `GlyMainActivity`
+means `startCloseAnimation()`. Both `mOpenTime` and `mAutoHide` are set in the
+constructor and `GlyMainActivity` never touches them, hence the fixed 10 seconds.
+
+The mod adds a third row to the settings dialog behind the gear icon and lets the
+runnable fire into the "not hide" branch instead:
+
+- **Storage** — `SpUtils` (the app's own `hvac_other_data` SharedPreferences), key
+  `mod_disable_auto_hide`, default `false` = stock behaviour. *Not* `Settings.Global`:
+  writing there needs `WRITE_SECURE_SETTINGS` actually granted, and although the
+  manifest asks for `sharedUserId="android.uid.system"` the APK is re-signed with a
+  local key, so the system uid is not guaranteed. Reader and writer are the same app
+  in one process (no `android:process` anywhere), so prefs are enough.
+- **Write** — `AcSetActivity.getView()` builds an `AcSetItem` **in code** and adds it
+  to `LayoutAcSetBinding.contentWrap`; the switch calls
+  `AcSetActivity$AutoHideSwitchListener.onSwitchChange()`, which stores the flag.
+  Built in code, not in `res/layout/layout_ac_set.xml`, because that layout is data
+  bound (`binding_1` / `binding_2`) and a third bound row would mean patching the
+  generated `LayoutAcSetBindingImpl` and its dirty-flag bookkeeping. Doing it this way
+  needs no new resource id and no layout change — height and bottom margin are copied
+  from the stock `comfort_close` row at runtime.
+- **Read** — `GlyMainActivity.onResume()`, after `invoke-super`:
+  `setAutoHide(!SpUtils.getBoolean("mod_disable_auto_hide", false))`. In `onResume`
+  rather than `onCreate` because the activity is `singleTask` and long-lived, so the
+  switch has to take effect on the way back from the settings dialog.
+- **No new resources**, so the row's title and description are literals in
+  `AcSetActivity.smali`, in Russian, and not localised.
+- Dialogs (`BaseDialogActivity`, `BaseDialogActivityV2`, and so the settings dialog
+  itself) call `setAutoHide` on their own and keep auto-hiding as in stock. Closing the
+  climate window by hand still works: `onTouchEvent` → `moveToBack()`.
 
 ---
 
@@ -245,10 +295,15 @@ resource noise will swamp this diff and only the smali part is trustworthy.
 ### Step 6. Port the smali
 
 ```bash
-SRC=modified/oneOS_Hvac_old/smali/com/geely/hvac/adapter
-DST=modified/oneOS_Hvac/smali/com/geely/hvac/adapter
-cp "$SRC"/AirConditionViewHolder*.smali "$DST"/
+SRC=modified/oneOS_Hvac_old/smali/com/geely/hvac
+DST=modified/oneOS_Hvac/smali/com/geely/hvac
+cp "$SRC"/adapter/AirConditionViewHolder*.smali  "$DST"/adapter/
+cp "$SRC"/activity/'AcSetActivity$AutoHideSwitchListener.smali' "$DST"/activity/
 ```
+
+`AcSetActivity.smali` and `GlyMainActivity.smali` are **modified** stock files, not
+added ones — copy them over only if Step 4 showed the dex identical. Otherwise re-apply
+the two edits of §2.7 by hand.
 
 ### Step 7. Relocate the dex packages (§2.4)
 
@@ -288,9 +343,10 @@ file, not the unpacked `res/layout/`, is the source of truth.
 diff -rq original/oneOS_Hvac modified/oneOS_Hvac
 ```
 
-Expected, and nothing more: 1 changed layout, 1 changed `AirConditionViewHolder.smali`,
-10 added smali files, 4 relocated `androidx` packages, and `unknown/res` present only
-in the original (~1330 "Only in" lines — §2.6).
+Expected, and nothing more: 1 changed layout, 3 changed smali files
+(`AirConditionViewHolder`, `AcSetActivity`, `GlyMainActivity`), 11 added smali files,
+4 relocated `androidx` packages, and `unknown/res` present only in the original
+(~1330 "Only in" lines — §2.6).
 
 ### Step 11. Build and check the output
 
@@ -300,9 +356,10 @@ rm -rf modified/oneOS_Hvac/build   # see §4
 ```
 
 Then confirm the mod really is in the APK — decode the output and check that the
-10 classes are present, that `initAcPanelController` is called from the constructor,
-that the new ids appear in the layout, and that no `androidx` package exists in both
-dex files at once. Also confirm the orphans are gone and nothing real went with them
+11 added classes are present, that `initAcPanelController` is called from the
+constructor, that the new ids appear in the layout, that `AcSetActivity.getView()`
+still builds the extra row and `GlyMainActivity.onResume()` still calls `setAutoHide`
+(§2.7), and that no `androidx` package exists in both dex files at once. Also confirm the orphans are gone and nothing real went with them
 (see the verification snippet in `docs/orphan-resources.md`): every `res/` entry in
 the built APK must be referenced by `resources.arsc`, and nothing referenced may be
 missing.
