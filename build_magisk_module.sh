@@ -230,7 +230,7 @@ rm -f ./build/oneOS_Hvac.zip
 # visible on the device at /data/adb/modules/oneOS_Hvac/module.prop.
 echo -e "${YELLOW}Injecting the build date into module.prop...${NC}"
 
-BUILD_DATE=$(date '+%Y-%m-%d %H:%M')
+BUILD_DATE=$(date '+%Y-%m-%d')
 APK_VERSION=$(grep '^versionName=' magisk/module.prop | cut -d= -f2- | tr -d "'\"")
 
 # If the template has no versionName, show at least the date

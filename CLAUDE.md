@@ -444,8 +444,8 @@ The script copies the layout (Data Binding stripped) → `apktool b` → `jarsig
 the script writes a stamped copy into a temp dir and injects that into the archive root,
 so builds leave no git churn:
 
-- `version=<versionName> (<YYYY-MM-DD HH:MM>)` — what Magisk Manager shows;
-- `buildDate=<YYYY-MM-DD HH:MM>` — the same timestamp, machine-readable, readable on
+- `version=<versionName> (<YYYY-MM-DD>)` — what Magisk Manager shows;
+- `buildDate=<YYYY-MM-DD>` — the same timestamp, machine-readable, readable on
   device at `/data/adb/modules/oneOS_Hvac/module.prop`.
 
 Both lines are regenerated on every build, so do not add them to the template by hand.
